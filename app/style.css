@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Style the track (the container) */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Style the thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: #bbb;
+  }
+
+  /* Style the track on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+}
