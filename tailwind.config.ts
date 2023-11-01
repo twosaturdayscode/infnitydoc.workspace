@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
+  presets: [require('./src/styles/animations.preset')],
   content: ['./app/**/*.{html,ts,tsx}', './src/components/**/*.tsx'],
   theme: {
     container: {

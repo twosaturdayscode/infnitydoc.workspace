@@ -3,10 +3,6 @@ import { MenuIcon, XIcon } from 'lucide-react'
 
 const menu = [
   {
-    title: 'Home',
-    href: '/',
-  },
-  {
     title: 'I nostri servizi',
     href: '/servizi',
   },
@@ -18,26 +14,28 @@ const menu = [
 
 export function Header() {
   return (
-    <div className="bg-white h-28 py-5 lg:h-32">
+    <div className="h-28 bg-white py-5 lg:h-32">
       <Sheet>
-        <header className="px-10 flex justify-between items-center h-full lg:container">
-          <div className="flex gap-20 items-center">
-            <div className="flex items-center gap-3">
-              <img
-                src="/assets/infinitydoc-logo-brand.svg"
-                alt=""
-                className="w-12"
-              />
-              <span className="font-bold md:text-2xl tracking-wider text-brand.secondary">
-                InfinityDoc
-              </span>
-            </div>
-            <div className='hidden lg:flex gap-7'>
+        <header className="flex h-full items-center justify-between px-10 lg:container">
+          <div className="flex items-center gap-20">
+            <a href="/">
+              <div className="flex items-center gap-3">
+                <img
+                  src="/assets/infinitydoc-logo-brand.svg"
+                  alt=""
+                  className="w-12"
+                />
+                <span className="font-extrabold tracking-wider text-brand.secondary md:text-2xl">
+                  InfinityDoc
+                </span>
+              </div>
+            </a>
+            <div className="hidden gap-7 lg:flex">
               {menu.map(item => (
                 <a
                   key={item.title}
                   href={item.href}
-                  className="text-brand.secondary font-bold text-lg"
+                  className="text-xl text-brand.secondary transition-colors hover:text-brand"
                 >
                   {item.title}
                 </a>
@@ -45,11 +43,13 @@ export function Header() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button size="lg">
-              <span className="text-white">Contattaci</span>
+            <Button size="lg" asChild>
+              <a href="/contattaci" className="text-white">
+                Contattaci
+              </a>
             </Button>
           </div>
-          <Sheet.Trigger className="bg-white rounded-full p-2 lg:hidden">
+          <Sheet.Trigger className="rounded-full bg-white p-2 lg:hidden">
             <MenuIcon className="text-brand" />
           </Sheet.Trigger>
           <Sheet.Content side="right" className="bg-white">
@@ -69,14 +69,16 @@ export function Header() {
                   <a
                     key={item.title}
                     href={item.href}
-                    className="text-brand.secondary font-bold text-lg"
+                    className="text-lg font-bold text-brand.secondary"
                   >
                     {item.title}
                   </a>
                 ))}
               </div>
-              <Button>
-                <span className="text-white">Contattaci</span>
+              <Button asChild>
+                <a href="/contattaci" className="text-white">
+                  Contattaci
+                </a>
               </Button>
             </div>
           </Sheet.Content>

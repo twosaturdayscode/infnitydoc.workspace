@@ -4,7 +4,7 @@ import { CheckCircle2Icon } from 'lucide-react'
 
 export function PlanCard(ps: Plan) {
   return (
-    <div className="flex flex-col gap-10 w-full">
+    <div className="flex flex-col gap-10 w-full justify-between">
       <div className="flex flex-col gap-5">
         <img src={ps.image.src} alt="" className="w-24 h-24" />
         <div className="flex flex-col gap-2">
@@ -31,8 +31,8 @@ export function PlanCard(ps: Plan) {
           </span>
           <span className="text-secondary text-xl">/mese</span>
         </div>
-        <Button size="lg">
-          <span className="text-lg">Contattaci</span>
+        <Button size="lg" asChild>
+          <a  href="/contattaci" className="text-lg">Contattaci</a>
         </Button>
       </div>
     </div>

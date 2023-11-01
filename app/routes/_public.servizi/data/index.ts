@@ -20,14 +20,10 @@ export const plans = [
       'Accesso da app e da pc',
       'Televisite e videovisite con medico generico illimitate',
       '24 sessioni Check Salute',
-      'Monitoraggio dei parametri vitali illimitato',
-      'Storia medica online illimitata',
-      'Prenotazione e accesso al network convenzionato illimitato',
-      'Cerca farmaco e trova farmacie illimitato',
     ],
     image: {
-      src: '/assets/hosp-1.png'
-    }
+      src: '/assets/hosp-1.png',
+    },
   },
   {
     title: 'Premium',
@@ -42,12 +38,10 @@ export const plans = [
       '24 sessioni Check Salute',
       'Monitoraggio dei parametri vitali illimitato',
       'Storia medica online illimitata',
-      'Prenotazione e accesso al network convenzionato illimitato',
-      'Cerca farmaco e trova farmacie illimitato',
     ],
     image: {
-      src: '/assets/hosp-2.png'
-    }
+      src: '/assets/hosp-2.png',
+    },
   },
   {
     title: 'Family',
@@ -66,7 +60,7 @@ export const plans = [
       'Cerca farmaco e trova farmacie illimitato',
     ],
     image: {
-      src: '/assets/hosp-3.png'
-    }
+      src: '/assets/hosp-3.png',
+    },
   },
 ]

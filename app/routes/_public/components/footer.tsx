@@ -2,48 +2,50 @@ import { FacebookIcon, InstagramIcon, PhoneIcon } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="text-brand.secondary py-8">
-      <div className="container px-10 flex flex-col gap-10">
+    <footer className="py-8 text-brand.secondary">
+      <div className="container flex flex-col gap-10 px-10">
         <div className="flex justify-between">
-          <div className='hidden md:block'>
+          <div className="hidden md:block">
             <div className="flex items-center">
               <img
                 src="/assets/infinitydoc-logo-brand.svg"
                 alt="InfinityDoc logo, a stethoscope"
                 className="w-28 py-5"
               />
-              <span className="font-bold md:text-3xl tracking-wider text-brand.secondary">
+              <span className="font-bold tracking-wider text-brand.secondary md:text-3xl">
                 InfinityDoc
               </span>
             </div>
-            <p className='text-secondary'>Un nuovo modo di prendersi cura di se.</p>
+            <p className="text-secondary">
+              Un nuovo modo di prendersi cura di se.
+            </p>
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex items-center gap-5">
             <div className="flex flex-col gap-3">
-              <span className="font-bold text-2xl">Menu</span>
-              <ul className="flex flex-col gap-1 font-medium text-xl">
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Chi siamo</a>
+              <span className="text-2xl font-bold">Menu</span>
+              <ul className="flex flex-col gap-1 text-xl font-medium">
+                <li className="max-w-lg flex-1">
+                  <a href="/chi-siamo">Chi siamo</a>
                 </li>
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Servizi</a>
+                <li className="max-w-lg flex-1">
+                  <a href="/servizi">Servizi</a>
                 </li>
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Contattaci</a>
+                <li className="max-w-lg flex-1">
+                  <a href="/contattaci">Contattaci</a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-col gap-3">
-              <span className="font-bold text-2xl">Link utili</span>
-              <ul className="flex flex-col gap-1 font-medium text-xl">
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Dona</a>
+              <span className="text-2xl font-bold">Link utili</span>
+              <ul className="flex flex-col gap-1 text-xl font-medium">
+                <li className="max-w-lg flex-1">
+                  <a href="/dona">Dona</a>
                 </li>
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Termini di servizio</a>
+                <li className="max-w-lg flex-1">
+                  <a href="/tos">Termini di servizio</a>
                 </li>
-                <li className="flex-1 max-w-lg">
-                  <a href="/">Privacy</a>
+                <li className="max-w-lg flex-1">
+                  <a href="/privacy">Privacy</a>
                 </li>
               </ul>
             </div>
