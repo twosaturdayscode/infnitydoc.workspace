@@ -6,8 +6,11 @@ import { CheckCircle2Icon } from 'lucide-react'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
+    { title: 'Home | infinitydoc' },
+    {
+      name: 'description',
+      content: 'Infinitydoc, dove la tua salute viene prima di tutto',
+    },
   ]
 }
 

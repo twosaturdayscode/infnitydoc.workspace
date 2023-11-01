@@ -1,3 +1,9 @@
+import type { MetaFunction } from '@remix-run/cloudflare'
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Chi siamo | infinitydoc' }]
+}
+
 export default function ChiSiamoPage() {
   return (
     <div className="container py-20">
