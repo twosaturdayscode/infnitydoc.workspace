@@ -22,8 +22,8 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-5">
             <div className="flex flex-col gap-3">
-              <span className="text-2xl font-bold">Menu</span>
-              <ul className="flex flex-col gap-1 text-xl font-medium">
+              <span className="text-lg font-bold lg:text-2xl">Menu</span>
+              <ul className="flex flex-col gap-1 font-medium">
                 <li className="max-w-lg flex-1">
                   <a href="/chi-siamo">Chi siamo</a>
                 </li>
@@ -36,8 +36,8 @@ export function Footer() {
               </ul>
             </div>
             <div className="flex flex-col gap-3">
-              <span className="text-2xl font-bold">Link utili</span>
-              <ul className="flex flex-col gap-1 text-xl font-medium">
+              <span className="text-lg font-bold lg:text-2xl">Link utili</span>
+              <ul className="flex flex-col gap-1 font-medium">
                 <li className="max-w-lg flex-1">
                   <a href="/dona">Dona</a>
                 </li>

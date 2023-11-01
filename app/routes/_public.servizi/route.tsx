@@ -8,16 +8,16 @@ export const meta: MetaFunction = () => {
 
 export default function ServiziPage() {
   return (
-    <div className="py-20">
+    <div className="py-8 lg:py-20">
       <div className="flex flex-col gap-10">
         <div className="mx-auto flex max-w-2xl flex-col justify-center gap-5 text-center">
-          <span className="animate-fade-in text-xl uppercase text-brand opacity-0">
+          <span className="animate-fade-in text-lg uppercase text-brand opacity-0">
             i nostri piani
           </span>
-          <h1 className="animate-fade-rotate-scale-in text-6xl font-extrabold tracking-wide text-brand.secondary opacity-0 delay-200">
+          <h1 className="animate-fade-rotate-scale-in text-3xl lg:text-6xl font-extrabold tracking-wide text-brand.secondary opacity-0 delay-200">
             Piani intelligenti e convenienti per tutti
           </h1>
-          <p className="animate-fade-rotate-in-lg text-2xl text-secondary opacity-0 delay-500">
+          <p className="animate-fade-rotate-in-lg text-lg lg:text-2xl text-secondary opacity-0 delay-500">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
             dignissim aliquam interdu.
           </p>

@@ -14,7 +14,7 @@ const menu = [
 
 export function Header() {
   return (
-    <div className="h-28 bg-white py-5 lg:h-32">
+    <div className="sticky w-full top-0 h-20 bg-white/90 backdrop-blur-sm  py-5 lg:h-32 z-50">
       <Sheet>
         <header className="flex h-full items-center justify-between px-10 lg:container">
           <div className="flex items-center gap-20">
@@ -26,7 +26,7 @@ export function Header() {
                   className="w-12"
                 />
                 <span className="font-extrabold tracking-wider text-brand.secondary md:text-2xl">
-                  InfinityDoc
+                  Infinitydoc
                 </span>
               </div>
             </a>
@@ -55,11 +55,16 @@ export function Header() {
           <Sheet.Content side="right" className="bg-white">
             <div className="flex flex-col gap-10">
               <div className="flex justify-between">
-                <img
-                  src="/assets/infinitydoc-logo-brand.svg"
-                  alt=""
-                  className="w-12"
-                />
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/assets/infinitydoc-logo-brand.svg"
+                    alt=""
+                    className="w-12"
+                  />
+                  <span className="font-extrabold tracking-wider text-brand.secondary md:text-2xl">
+                    Infinitydoc
+                  </span>
+                </div>
                 <Sheet.Close>
                   <XIcon />
                 </Sheet.Close>

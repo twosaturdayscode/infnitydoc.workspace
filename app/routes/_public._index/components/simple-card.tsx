@@ -1,13 +1,17 @@
+import type { LucideProps } from 'lucide-react'
+
 export const SimpleCard = (props: {
   title: string
   description: string
-  icon: () => JSX.Element
+  icon: (ps: LucideProps) => JSX.Element
 }) => (
   <div className="flex flex-1 flex-col justify-between rounded-lg border border-muted px-10 py-7 shadow-lg transition-colors">
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-4">
-        <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-brand/10 p-1">
-          {props.icon()}
+        <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 p-1 lg:h-24 lg:w-24">
+          {props.icon({
+            className: 'h-10 w-10 lg:h-16 lg:w-16 text-brand.secondary',
+          })}
         </div>
         <h2 className="text-xl font-bold text-brand.secondary md:text-3xl">
           {props.title}

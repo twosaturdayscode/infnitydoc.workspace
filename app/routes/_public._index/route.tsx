@@ -60,7 +60,7 @@ export default function Index() {
         </div>
       </div>
 
-      <section className="relative flex flex-col gap-10 px-10 lg:px-28">
+      <section className="relative flex flex-col gap-10 lg:px-28">
         <div className="container flex flex-col gap-4">
           <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
             I nostri servizi
@@ -76,17 +76,11 @@ export default function Index() {
           </p>
         </div>
 
-        <div className="grid grid-flow-row grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-flow-row grid-cols-1 gap-10 px-10 md:grid-cols-2 xl:grid-cols-4">
           {cards.map((card, index) => (
             <SimpleCard key={index} {...card} />
           ))}
         </div>
-
-        {/* <div className="flex justify-center">
-          <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
-            <a href="/servizi">Scopri di più</a>
-          </Button>
-        </div> */}
       </section>
 
       <section className="relative flex flex-col gap-14 py-40">

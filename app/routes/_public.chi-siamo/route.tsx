@@ -6,7 +6,7 @@ export const meta: MetaFunction = () => {
 
 export default function ChiSiamoPage() {
   return (
-    <div className="container py-20">
+    <div className="container py-8 lg:py-20">
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row-reverse md:gap-20">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl font-bold text-brand.secondary md:text-5xl">
