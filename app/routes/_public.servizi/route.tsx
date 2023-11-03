@@ -14,7 +14,7 @@ export default function ServiziPage() {
           <span className="animate-fade-in text-lg uppercase text-brand opacity-0">
             i nostri piani
           </span>
-          <h1 className="animate-fade-rotate-scale-in text-3xl lg:text-6xl font-extrabold tracking-wide text-brand.secondary opacity-0 delay-200">
+          <h1 className="animate-fade-rotate-scale-in text-3xl lg:text-6xl font-extrabold tracking-wide text-brand opacity-0 delay-200">
             Piani intelligenti e convenienti per tutti
           </h1>
           <p className="animate-fade-rotate-in-lg text-lg lg:text-2xl text-secondary opacity-0 delay-500">

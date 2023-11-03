@@ -14,19 +14,19 @@ const menu = [
 
 export function Header() {
   return (
-    <div className="sticky w-full top-0 h-20 bg-white/90 backdrop-blur-sm  py-5 lg:h-32 z-50">
+    <div className="sticky w-full top-0 h-20 bg-brand backdrop-blur-sm  py-5 z-50">
       <Sheet>
         <header className="flex h-full items-center justify-between px-10 lg:container">
           <div className="flex items-center gap-20">
             <a href="/">
               <div className="flex items-center gap-3">
                 <img
-                  src="/assets/infinitydoc-logo-brand.svg"
+                  src="/assets/infinity-doc-logo-white.svg"
                   alt=""
                   className="w-12"
                 />
-                <span className="font-extrabold tracking-wider text-brand.secondary md:text-2xl">
-                  Infinitydoc
+                <span className="font-extrabold tracking-wider text-white md:text-2xl">
+                  InfinityDoc
                 </span>
               </div>
             </a>
@@ -35,7 +35,7 @@ export function Header() {
                 <a
                   key={item.title}
                   href={item.href}
-                  className="text-xl text-brand.secondary transition-colors hover:text-brand"
+                  className="text-2xl text-white transition-colors"
                 >
                   {item.title}
                 </a>
@@ -43,8 +43,8 @@ export function Header() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button size="lg" asChild>
-              <a href="/contattaci" className="text-white">
+            <Button asChild className='bg-white text-brand hover:bg-white/90'>
+              <a href="/contattaci">
                 Contattaci
               </a>
             </Button>
@@ -61,7 +61,7 @@ export function Header() {
                     alt=""
                     className="w-12"
                   />
-                  <span className="font-extrabold tracking-wider text-brand.secondary md:text-2xl">
+                  <span className="font-extrabold tracking-wider text-brand md:text-2xl">
                     Infinitydoc
                   </span>
                 </div>
@@ -74,7 +74,7 @@ export function Header() {
                   <a
                     key={item.title}
                     href={item.href}
-                    className="text-lg font-bold text-brand.secondary"
+                    className="text-lg font-bold text-brand"
                   >
                     {item.title}
                   </a>

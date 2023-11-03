@@ -4,20 +4,17 @@ import { CheckCircle2Icon } from 'lucide-react'
 
 export function PlanCard(ps: Plan) {
   return (
-    <div className="flex flex-col gap-10 w-full justify-between">
+    <div className="flex w-full flex-col justify-between gap-10">
       <div className="flex flex-col gap-5">
-        <img src={ps.image.src} alt="" className="w-24 h-24" />
         <div className="flex flex-col gap-2">
-          <h2 className="font-bold text-4xl text-brand.secondary">
-            {ps.title}
-          </h2>
-          <p className="text-secondary text-lg">{ps.description}</p>
+          <h2 className="text-4xl font-bold text-brand">{ps.title}</h2>
+          <p className="text-lg text-secondary">{ps.description}</p>
         </div>
         <ul className="flex flex-col gap-2">
           {ps.features.map(f => (
-            <li className="flex items-center gap-3 flex-1" key={f}>
-              <CheckCircle2Icon className="text-white fill-brand.secondary w-7 h-7" />
-              <span className="text-brand.secondary text-xl flex-1 font-semibold">
+            <li className="flex flex-1 items-center gap-3" key={f}>
+              <CheckCircle2Icon className="h-7 w-7 fill-brand.secondary text-white" />
+              <span className="flex-1 text-xl font-semibold text-brand">
                 {f}
               </span>
             </li>
@@ -25,14 +22,14 @@ export function PlanCard(ps: Plan) {
         </ul>
       </div>
       <div className="flex flex-col gap-5">
-        <div className="flex items-center gap-2 justify-center">
-          <span className="text-6xl font-bold text-brand.secondary">
-            € {ps.price}
-          </span>
-          <span className="text-secondary text-xl">/mese</span>
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-6xl font-bold text-brand">€ {ps.price}</span>
+          <span className="text-xl text-secondary">/mese</span>
         </div>
         <Button size="lg" asChild>
-          <a  href="/contattaci" className="text-lg">Contattaci</a>
+          <a href="/contattaci" className="text-lg">
+            Contattaci
+          </a>
         </Button>
       </div>
     </div>

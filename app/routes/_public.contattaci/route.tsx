@@ -12,7 +12,7 @@ export default function ChiSiamoPage() {
           <span className="animate-fade-in text-lg uppercase text-brand opacity-0">
             qui per ascoltarti
           </span>
-          <h1 className="animate-fade-rotate-scale-in text-3xl font-extrabold tracking-wide text-brand.secondary opacity-0 delay-200 lg:text-6xl">
+          <h1 className="animate-fade-rotate-scale-in text-3xl font-extrabold tracking-wide text-brand opacity-0 delay-200 lg:text-6xl">
             Contattaci
           </h1>
           <p className="animate-fade-rotate-in-lg text-lg text-secondary opacity-0 delay-500 lg:text-2xl">
@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
               ></iframe>
               <div className="relative flex flex-wrap rounded bg-white py-6 shadow-md">
                 <div className="px-6 lg:w-1/2">
-                  <h2 className="font-semibold tracking-widest text-brand.secondary">
+                  <h2 className="font-semibold tracking-widest text-brand">
                     Indirizzo
                   </h2>
                   <p className="mt-1 flex flex-col gap-2">
@@ -45,14 +45,14 @@ export default function ChiSiamoPage() {
                       href="https://maps.app.goo.gl/bbAJ6GcJN4pi2N246"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-brand.secondary underline"
+                      className="text-brand underline"
                     >
                       Vedi su Google Maps
                     </a>
                   </p>
                 </div>
                 <div className="mt-4 px-6 lg:mt-0 lg:w-1/2">
-                  <h2 className="font-semibold tracking-widest text-brand.secondary">
+                  <h2 className="font-semibold tracking-widest text-brand">
                     Email
                   </h2>
                   <a
@@ -61,14 +61,14 @@ export default function ChiSiamoPage() {
                   >
                     info@infinidydoc.it
                   </a>
-                  <h2 className="mt-4 font-semibold tracking-widest text-brand.secondary">
+                  <h2 className="mt-4 font-semibold tracking-widest text-brand">
                     Telefono
                   </h2>
                   <p className="leading-relaxed">338 887 70022</p>
                 </div>
               </div>
             </div>
-            <form className="mt-8 flex w-full flex-col text-brand.secondary md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
+            <form className="mt-8 flex w-full flex-col text-brand md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
               <p className="mb-5 text-lg text-secondary">
                 Per favore lasciaci il tuo nome e la tua email e ti risponderemo
                 il prima possibile.

@@ -10,17 +10,17 @@ export const SimpleCard = (props: {
       <div className="flex flex-col gap-4">
         <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 p-1 lg:h-24 lg:w-24">
           {props.icon({
-            className: 'h-10 w-10 lg:h-16 lg:w-16 text-brand.secondary',
+            className: 'h-10 w-10 lg:h-16 lg:w-16 text-brand',
           })}
         </div>
-        <h2 className="text-xl font-bold text-brand.secondary md:text-3xl">
+        <h2 className="text-xl font-bold text-brand md:text-3xl">
           {props.title}
         </h2>
       </div>
       <div className="h-px w-full bg-muted/50" />
       <p className="text-secondary md:text-lg">{props.description}</p>
     </div>
-    <a href="/servizi" className="mt-3 text-brand.secondary underline">
+    <a href="/servizi" className="mt-3 text-brand underline">
       Scopri di più
     </a>
   </div>

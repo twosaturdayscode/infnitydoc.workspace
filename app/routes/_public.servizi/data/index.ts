@@ -3,9 +3,6 @@ export interface Plan {
   price: number
   description: string
   features: string[]
-  image: {
-    src: string
-  }
 }
 
 export const plans = [
@@ -21,9 +18,6 @@ export const plans = [
       'Televisite e videovisite con medico generico illimitate',
       '24 sessioni Check Salute',
     ],
-    image: {
-      src: '/assets/hosp-1.png',
-    },
   },
   {
     title: 'Premium',
@@ -39,9 +33,6 @@ export const plans = [
       'Monitoraggio dei parametri vitali illimitato',
       'Storia medica online illimitata',
     ],
-    image: {
-      src: '/assets/hosp-2.png',
-    },
   },
   {
     title: 'Family',
@@ -59,8 +50,5 @@ export const plans = [
       'Prenotazione e accesso al network convenzionato illimitato',
       'Cerca farmaco e trova farmacie illimitato',
     ],
-    image: {
-      src: '/assets/hosp-3.png',
-    },
   },
 ]
