@@ -1,5 +1,6 @@
-import { Button, Sheet } from '@src/components'
+import { Button, Sheet, tm } from '@src/components'
 import { MenuIcon, XIcon } from 'lucide-react'
+import { useState, useEffect } from 'react'
 
 const menu = [
   {
@@ -13,8 +14,15 @@ const menu = [
 ]
 
 export function Header() {
+  const dir = useScrollDirection()
+
   return (
-    <div className="sticky w-full top-0 h-20 bg-brand backdrop-blur-sm  py-5 z-50">
+    <div
+      className={tm(
+        'fixed top-0 z-50 h-20 w-full bg-brand/90 py-5 backdrop-blur-sm transition-all',
+        dir === 'down' && '-top-20',
+      )}
+    >
       <Sheet>
         <header className="flex h-full items-center justify-between px-10 lg:container">
           <div className="flex items-center gap-20">
@@ -43,10 +51,8 @@ export function Header() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button asChild className='bg-white text-brand hover:bg-white/90'>
-              <a href="/contattaci">
-                Contattaci
-              </a>
+            <Button asChild className="bg-white text-brand hover:bg-white/90">
+              <a href="/contattaci">Contattaci</a>
             </Button>
           </div>
           <Sheet.Trigger className="rounded-full bg-white p-2 lg:hidden">
@@ -91,4 +97,46 @@ export function Header() {
       </Sheet>
     </div>
   )
+}
+
+const useScrollDirection = () => {
+  const [direction, setDirection] = useState<'up' | 'down'>('up')
+  const [lastScrollTop, setLastScrollTop] = useState(0)
+  const dLastScrollTop = useDebounce(lastScrollTop, 300)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+
+      if (scrollTop > dLastScrollTop) {
+        setDirection('down')
+      } else {
+        setDirection('up')
+      }
+
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop)
+    }
+
+    /** should be debounced */
+    window.addEventListener('scroll', onScroll)
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [dLastScrollTop])
+
+  console.log(dLastScrollTop, lastScrollTop, direction)
+  return direction
+}
+
+function useDebounce<T>(value: T, delay?: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [value, delay])
+
+  return debouncedValue
 }
