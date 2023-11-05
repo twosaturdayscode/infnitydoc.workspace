@@ -1,8 +1,8 @@
 import type { MetaFunction } from '@remix-run/cloudflare'
 import { Button } from '@src/components'
-import { cards, reasons } from './content'
+import { cards, plans, reasons } from './content'
 import { SimpleCard } from './components/simple-card'
-import { CheckCircle2Icon } from 'lucide-react'
+import { ArrowRightIcon, CheckCircle2Icon } from 'lucide-react'
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <main className="relative overflow-x-hidden text-primary pt-20">
+    <main className="relative overflow-x-hidden pt-20 text-primary">
       <img
         src="/assets/blob.svg"
         alt="blob"
@@ -36,7 +36,7 @@ export default function Index() {
             </span>
           </div>
           <div className="flex flex-col gap-5">
-            <h1 className="animate-fade-rotate-in-lg text-4xl font-black text-brand opacity-0 delay-200 md:text-5xl lg:text-7xl">
+            <h1 className="animate-fade-rotate-in-lg text-4xl font-black opacity-0 delay-200 md:text-5xl lg:text-7xl">
               La tua salute viene prima di tutto
             </h1>
             <p className="animate-fade-rotate-in-lg text-secondary opacity-0 delay-500 lg:text-xl">
@@ -58,8 +58,16 @@ export default function Index() {
             className="absolute -left-7 w-[340px] rounded-[32px] shadow-md"
           />
 
-          <img src="/assets/dots.svg" alt="" className="absolute -top-5 w-40 opacity-40 left-52 -z-10" />
-          <img src="/assets/dots.svg" alt="" className="absolute -bottom-10 w-40 opacity-40 left-20 -z-10" />
+          <img
+            src="/assets/dots.svg"
+            alt=""
+            className="absolute -top-5 left-52 -z-10 w-40 opacity-40"
+          />
+          <img
+            src="/assets/dots.svg"
+            alt=""
+            className="absolute -bottom-10 left-20 -z-10 w-40 opacity-40"
+          />
 
           <div className="absolute -right-40 flex flex-col gap-7">
             <img
@@ -79,17 +87,188 @@ export default function Index() {
       <section className="relative flex flex-col gap-10 lg:px-28">
         <div className="container flex flex-col gap-4">
           <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
-            I nostri servizi
+            Di cosa si tratta?
           </span>
-          <h2 className="animate-fade-rotate-in-lg text-3xl font-bold text-brand opacity-0 delay-500 lg:text-5xl">
-            Servizi 360 gradi
+          <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+            Ecco come funziona InfinityDoc
           </h2>
           <p className="text-xl text-secondary">
-            Con Infinitydoc hai un medico 24 ore su 24, anche di notte e nei
+            Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
             weekend, puoi programmare consulti specialistici e tenere sotto
             controllo i tuoi parametri vitali. Avrai sempre con te la tua storia
             medica e i tuoi dati da app e da pc.
           </p>
+        </div>
+
+        <div className="container flex flex-col gap-8 px-20">
+          <div className="flex items-center justify-between">
+            <div className="flex max-w-lg flex-col gap-3">
+              <span className="text-lg font-medium uppercase text-brand">
+                step 1
+              </span>
+              <h2 className="text-3xl font-semibold">
+                Seleziona un piano di abbonamento
+              </h2>
+              <p className="text-xl text-secondary">
+                We'll need you to fill out a quick intake form to let us know
+                your needs. This will only take a few minutes. No sign-up
+                required.
+              </p>
+            </div>
+            <img src="/assets/headache.png" alt="" className="w-[420px]" />
+          </div>
+
+          <div className="flex flex-row-reverse items-center justify-between">
+            <div className="flex max-w-lg flex-col gap-3">
+              <span className="text-lg font-medium uppercase text-brand">
+                step 2
+              </span>
+              <h2 className="text-3xl font-semibold">
+                Seleziona un piano di abbonamento
+              </h2>
+              <p className="text-xl text-secondary">
+                We'll need you to fill out a quick intake form to let us know
+                your needs. This will only take a few minutes. No sign-up
+                required.
+              </p>
+            </div>
+            <img src="/assets/headache.png" alt="" className="w-[420px]" />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div className="flex max-w-lg flex-col gap-3">
+              <span className="text-lg font-medium uppercase text-brand">
+                step 3
+              </span>
+              <h2 className="text-3xl font-semibold">
+                Seleziona un piano di abbonamento
+              </h2>
+              <p className="text-xl text-secondary">
+                We'll need you to fill out a quick intake form to let us know
+                your needs. This will only take a few minutes. No sign-up
+                required.
+              </p>
+            </div>
+            <img src="/assets/headache.png" alt="" className="w-[420px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-10">
+          <div className="container flex flex-col gap-4">
+            <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
+              I nostri piani
+            </span>
+            <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+              Siamo sicuri che farà al caso tuo
+            </h2>
+            <p className="text-xl text-secondary">
+              Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
+              weekend, puoi programmare consulti specialistici e tenere sotto
+              controllo i tuoi parametri vitali. Avrai sempre con te la tua
+              storia medica e i tuoi dati da app e da pc.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-12">
+            <div className="flex justify-center gap-10">
+              {plans.map(p => (
+                <div
+                  key={p.title}
+                  className="flex max-w-md flex-1 flex-col justify-between gap-8 rounded bg-stone-50 px-7 py-8"
+                >
+                  <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-3">
+                      <span className="text-xl text-secondary">
+                        {p.description}
+                      </span>
+                      <h1 className="text-4xl font-semibold">{p.title}</h1>
+                      <p className="flex items-center gap-2 text-4xl">
+                        <b>{p.price}</b>
+                        <span className="text-xl text-secondary">/mese</span>
+                      </p>
+                    </div>
+                    <div className="flex">
+                      <Button
+                        size="lg"
+                        className="flex w-full items-center justify-between text-2xl"
+                      >
+                        Acquista
+                        <ArrowRightIcon className="ml-2 h-6 w-6" />
+                      </Button>
+                    </div>
+                    <div className="flex flex-col items-start gap-3">
+                      {p.features.map(f => (
+                        <div key={f} className="flex flex-1 items-center gap-3">
+                          <CheckCircle2Icon className="h-7 w-7 text-brand" />
+                          <span className="flex-1 text-xl">{f}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <footer className="flex justify-end self-end">
+                    <a href="/" className="underline">
+                      <span className="text-xl text-secondary">
+                        Vedi dettagli
+                      </span>
+                    </a>
+                  </footer>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-between gap-16">
+            <article className="flex flex-1 flex-col gap-4 rounded bg-stone-50 p-8">
+              <h1 className="text-4xl font-medium">
+                Teleconsulenza/Videconsulenza
+              </h1>
+              <p className="text-2xl text-secondary">
+                Per consulenze mediche immediate e comode
+              </p>
+
+              <span className="text-5xl font-medium">€20</span>
+
+              <p>
+                Una volta effettuato l'acquisto ti manderemo un link o un numero
+                telefonico per la consulenza
+              </p>
+
+              <div className="flex justify-end">
+                <Button
+                  size="lg"
+                  className="flex items-center justify-between text-2xl"
+                >
+                  Acquista
+                  <ArrowRightIcon className="ml-2 h-6 w-6" />
+                </Button>
+              </div>
+            </article>
+            <article className="flex flex-1 flex-col gap-4 rounded bg-stone-50 p-8">
+              <h1 className="text-4xl font-medium">
+                Consulenza in ambulatorio
+              </h1>
+              <p className="text-2xl text-secondary">
+                Per consulenze mediche immediate e comode
+              </p>
+
+              <span className="text-5xl font-medium">€20</span>
+
+              <p>
+                Una volta effettuato l'acquisto ti manderemo un link o un numero
+                telefonico per la consulenza
+              </p>
+
+              <div className="flex justify-end">
+                <Button
+                  size="lg"
+                  className="flex items-center justify-between text-2xl"
+                >
+                  Acquista
+                  <ArrowRightIcon className="ml-2 h-6 w-6" />
+                </Button>
+              </div>
+            </article>
+          </div>
         </div>
 
         <div className="grid grid-flow-row grid-cols-1 gap-10 px-10 md:grid-cols-2 2xl:grid-cols-4">
@@ -108,10 +287,10 @@ export default function Index() {
 
         <div className="container flex flex-col justify-between gap-10 lg:flex-row">
           <div className="flex flex-col gap-4">
-            <span className="text-2xl font-medium uppercase text-brand">
+            <span className="text-2xl font-medium uppercase">
               I nostri punti forti
             </span>
-            <h2 className="text-3xl font-bold text-brand md:text-5xl">
+            <h2 className="text-3xl font-bold md:text-5xl">
               Tante funzionalità per la tua salute
             </h2>
             <p className="max-w-3xl text-xl text-secondary md:text-2xl">

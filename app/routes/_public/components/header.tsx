@@ -37,7 +37,7 @@ export function Header() {
                   alt=""
                   className="w-12"
                 />
-                <span className="font-extrabold tracking-wider text-white md:text-2xl">
+                <span className="font-semibold tracking-wider text-white md:text-xl">
                   InfinityDoc
                 </span>
               </div>

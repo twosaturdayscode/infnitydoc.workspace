@@ -9,18 +9,21 @@ export default {
       center: true,
       padding: '2rem',
       screens: {
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
         '2xl': '1400px',
       },
     },
     extend: {
       fontFamily: {
-        sans: ['DM Sans', ...fontFamily.sans],
+        sans: ['Atkinson Hyperlegible', ...fontFamily.sans],
       },
       colors: {
         'brand': '#04B8AD',
         'brand.secondary': '#3F9282',
-        'primary': '#1c1917',
-        'secondary': '#a8a29e',
+        'primary': '#3c4858',
+        'secondary': '#717e8f',
         'muted': '#d6d3d1',
         'border': '#e7e5e4',
       },
