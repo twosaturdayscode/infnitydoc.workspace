@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react'
 
 const menu = [
   {
+    title: 'Come funziona',
+    href: '/come-funziona',
+  },
+  {
     title: 'I nostri servizi',
     href: '/servizi',
   },

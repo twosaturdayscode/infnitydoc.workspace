@@ -52,3 +52,14 @@ export const plans = [
     ],
   },
 ]
+
+export const serviceNotes = [
+  {
+    note: 'Televisite e videovisite 24 / 7',
+    image: '/assets/teleconsultation.jpg',
+  },
+  { note: 'Accesso in ambulatorio', image: '/assets/chest-patient.jpg' },
+  { note: 'Rinvio a specialisti se necessario', image: '/assets/ct-scan.jpg' },
+  { note: 'Check-up salute annuale', image: '/assets/preparation-blood.jpg' },
+  { note: 'Prescrizione farmaceutiche', image: '/assets/pharmacist.jpg' },
+]

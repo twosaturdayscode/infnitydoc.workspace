@@ -23,7 +23,7 @@ export function PlanCard(ps: Plan) {
       </div>
       <div className="flex flex-col gap-5">
         <div className="flex items-center justify-center gap-2">
-          <span className="text-6xl font-bold text-brand">€ {ps.price}</span>
+          <span className="text-6xl font-bold">€ {ps.price}</span>
           <span className="text-xl text-secondary">/mese</span>
         </div>
         <Button size="lg" asChild>
