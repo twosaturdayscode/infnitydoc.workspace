@@ -5,20 +5,21 @@ import { useState, useEffect } from 'react'
 const menu = [
   {
     title: 'Come funziona',
-    href: '/come-funziona',
+    href: 'come-funziona',
   },
   {
     title: 'I nostri servizi',
-    href: '/servizi',
-  },
-  {
-    title: 'Chi siamo',
-    href: '/chi-siamo',
+    href: 'servizi',
   },
 ]
 
 export function Header() {
   const dir = useScrollDirection()
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div
@@ -35,7 +36,7 @@ export function Header() {
                 <img
                   src="/assets/infinity-doc-logo-white.svg"
                   alt=""
-                  className="w-12"
+                  className="w-10"
                 />
                 <span className="font-semibold tracking-wider text-white md:text-xl">
                   InfinityDoc
@@ -44,18 +45,22 @@ export function Header() {
             </a>
             <div className="hidden gap-7 lg:flex">
               {menu.map(item => (
-                <a
+                <button
                   key={item.title}
-                  href={item.href}
-                  className="text-2xl text-white transition-colors"
+                  className="text-xl text-white transition-colors"
+                  onClick={() => scrollTo(item.href)}
                 >
                   {item.title}
-                </a>
+                </button>
               ))}
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button asChild className="bg-white text-brand hover:bg-white/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-lg text-brand hover:bg-white/90"
+            >
               <a href="/contattaci">Contattaci</a>
             </Button>
           </div>
@@ -106,41 +111,24 @@ export function Header() {
 const useScrollDirection = () => {
   const [direction, setDirection] = useState<'up' | 'down'>('up')
   const [lastScrollTop, setLastScrollTop] = useState(0)
-  const dLastScrollTop = useDebounce(lastScrollTop, 300)
 
   useEffect(() => {
     const onScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
 
-      if (scrollTop > dLastScrollTop) {
-        setDirection('down')
-      } else {
-        setDirection('up')
-      }
-
       setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop)
+
+      if (scrollTop > lastScrollTop) return setDirection('down')
+
+      return setDirection('up')
     }
 
     /** should be debounced */
     window.addEventListener('scroll', onScroll)
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [dLastScrollTop])
+  }, [lastScrollTop])
 
-  console.log(dLastScrollTop, lastScrollTop, direction)
+  console.log(lastScrollTop, direction)
   return direction
-}
-
-function useDebounce<T>(value: T, delay?: number): T {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value)
-
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), delay || 500)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [value, delay])
-
-  return debouncedValue
 }
