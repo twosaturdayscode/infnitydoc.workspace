@@ -103,8 +103,8 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container flex flex-col gap-8 px-20">
-          <div className="flex items-center justify-between">
+        <div className="container flex flex-col gap-8 lg:px-20">
+          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 1
@@ -121,7 +121,7 @@ export default function IndexPage() {
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
           </div>
 
-          <div className="flex flex-row-reverse items-center justify-between">
+          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row-reverse">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 2
@@ -138,7 +138,7 @@ export default function IndexPage() {
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 3
