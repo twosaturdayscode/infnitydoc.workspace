@@ -24,7 +24,7 @@ export function Header() {
   return (
     <div
       className={tm(
-        'fixed top-0 z-50 h-20 w-full bg-brand/90 py-5 backdrop-blur-sm transition-all',
+        'fixed top-0 z-50 h-20 w-full border-b border-gray-200 bg-white/90 py-5 backdrop-blur-sm transition-all shadow-sm',
         dir === 'down' && '-top-20',
       )}
     >
@@ -34,11 +34,11 @@ export function Header() {
             <a href="/">
               <div className="flex items-center gap-3">
                 <img
-                  src="/assets/infinity-doc-logo-white.svg"
+                  src="/assets/infinity-doc-logo.png"
                   alt=""
                   className="w-10"
                 />
-                <span className="font-semibold tracking-wider text-white md:text-xl">
+                <span className="font-semibold tracking-wider text-brand md:text-xl">
                   InfinityDoc
                 </span>
               </div>
@@ -47,7 +47,7 @@ export function Header() {
               {menu.map(item => (
                 <button
                   key={item.title}
-                  className="text-xl text-white transition-colors"
+                  className="text-xl text-secondary transition-colors"
                   onClick={() => scrollTo(item.href)}
                 >
                   {item.title}
@@ -56,11 +56,7 @@ export function Header() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-lg text-brand hover:bg-white/90"
-            >
+            <Button asChild size="lg" className='text-lg font-medium'>
               <a href="/contattaci">Contattaci</a>
             </Button>
           </div>
