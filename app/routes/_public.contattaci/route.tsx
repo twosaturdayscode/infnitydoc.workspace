@@ -6,13 +6,13 @@ export const meta: MetaFunction = () => {
 
 export default function ChiSiamoPage() {
   return (
-    <div className="container py-8 lg:py-20">
-      <div className="flex flex-col gap-10">
+    <div className="container pt-20">
+      <div className="flex flex-col gap-10 py-8 lg:py-20">
         <div className="flex max-w-2xl flex-col gap-5">
           <span className="animate-fade-in text-lg uppercase text-brand opacity-0">
             qui per ascoltarti
           </span>
-          <h1 className="animate-fade-rotate-scale-in text-3xl font-extrabold tracking-wide text-brand opacity-0 delay-200 lg:text-6xl">
+          <h1 className="animate-fade-rotate-scale-in text-3xl font-extrabold tracking-wide opacity-0 delay-200 lg:text-6xl">
             Contattaci
           </h1>
           <p className="animate-fade-rotate-in-lg text-lg text-secondary opacity-0 delay-500 lg:text-2xl">

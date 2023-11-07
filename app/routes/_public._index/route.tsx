@@ -86,10 +86,13 @@ export default function Index() {
 
       <section className="relative flex flex-col gap-10 lg:px-28">
         <div className="container flex flex-col gap-4">
-          <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
+          <span
+            id="come-funziona"
+            className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl"
+          >
             Di cosa si tratta?
           </span>
-          <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+          <h2 className="animate-fade-rotate-in-lg py-5 text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
             Ecco come funziona InfinityDoc
           </h2>
           <p className="text-xl text-secondary">
@@ -159,7 +162,7 @@ export default function Index() {
               I nostri piani
             </span>
             <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
-              Siamo sicuri che farà al caso tuo
+              Scegli il piano che fa per te
             </h2>
             <p className="text-xl text-secondary">
               Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
@@ -217,64 +220,138 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex justify-between gap-16">
-            <article className="flex flex-1 flex-col gap-4 rounded bg-stone-50 p-8">
-              <h1 className="text-4xl font-medium">
-                Teleconsulenza/Videconsulenza
-              </h1>
-              <p className="text-2xl text-secondary">
-                Per consulenze mediche immediate e comode
+          <div className="flex flex-col gap-7 py-10">
+            <div className="container flex flex-col gap-4">
+              <span
+                id="servizi"
+                className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl"
+              >
+                I nostri servizi
+              </span>
+              <h2 className="animate-fade-rotate-in-lg py-5 text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+                I nostri servizi pensati per te
+              </h2>
+              <p className="text-xl text-secondary">
+                Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
+                weekend, puoi programmare consulti specialistici e tenere sotto
+                controllo i tuoi parametri vitali. Avrai sempre con te la tua
+                storia medica e i tuoi dati da app e da pc.
               </p>
+            </div>
 
-              <span className="text-5xl font-medium">€20</span>
-
-              <p>
-                Una volta effettuato l'acquisto ti manderemo un link o un numero
-                telefonico per la consulenza
-              </p>
-
-              <div className="flex justify-end">
-                <Button
-                  size="lg"
-                  className="flex items-center justify-between text-2xl"
-                >
-                  Acquista
-                  <ArrowRightIcon className="ml-2 h-6 w-6" />
-                </Button>
-              </div>
-            </article>
-            <article className="flex flex-1 flex-col gap-4 rounded bg-stone-50 p-8">
-              <h1 className="text-4xl font-medium">
-                Consulenza in ambulatorio
-              </h1>
-              <p className="text-2xl text-secondary">
-                Per consulenze mediche immediate e comode
-              </p>
-
-              <span className="text-5xl font-medium">€20</span>
-
-              <p>
-                Una volta effettuato l'acquisto ti manderemo un link o un numero
-                telefonico per la consulenza
-              </p>
-
-              <div className="flex justify-end">
-                <Button
-                  size="lg"
-                  className="flex items-center justify-between text-2xl"
-                >
-                  Acquista
-                  <ArrowRightIcon className="ml-2 h-6 w-6" />
-                </Button>
-              </div>
-            </article>
+            <div className="flex justify-between gap-16">
+              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl font-medium">
+                    Teleconsulenza/Videconsulenza
+                  </h1>
+                  <p className="text-2xl text-secondary">
+                    Per consulenze mediche immediate e comode
+                  </p>
+                  <span className="text-5xl font-semibold">€20</span>
+                  <p>
+                    Una volta effettuato l'acquisto ti manderemo un link o un
+                    numero telefonico per la consulenza
+                  </p>
+                </div>
+                <div className="flex justify-end">
+                  <Button
+                    size="lg"
+                    className="flex items-center justify-between text-2xl"
+                    asChild
+                  >
+                    <a href="/prenota">
+                      Prenota
+                      <ArrowRightIcon className="ml-2 h-6 w-6" />
+                    </a>
+                  </Button>
+                </div>
+              </article>
+              <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl font-medium">
+                    Consulenza in ambulatorio
+                  </h1>
+                  <p className="text-2xl text-secondary">
+                    Per consulenze mediche immediate e comode
+                  </p>
+                  <span className="text-5xl font-semibold">€20</span>
+                  <p>
+                    Una volta effettuato l'acquisto ti manderemo un link o un
+                    numero telefonico per la consulenza
+                  </p>
+                </div>
+                <div className="flex justify-end">
+                  <Button
+                    size="lg"
+                    className="flex items-center justify-between text-2xl"
+                    asChild
+                  >
+                    <a href="/prenota">
+                      Prenota
+                      <ArrowRightIcon className="ml-2 h-6 w-6" />
+                    </a>
+                  </Button>
+                </div>
+              </article>
+              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-4xl font-medium">
+                    Consulenza a domicilio
+                  </h1>
+                  <p className="text-2xl text-secondary">
+                    Consulenza medica a domicilio
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span>A partire da</span>
+                    <span className="text-5xl font-semibold">€60</span>
+                  </div>
+                  <p>
+                    Una volta prenotato il servizio ed organizzato la visita, il
+                    medico si recherà presso il tuo domicilio per la visita.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-0">
+                  <p className="text-sm">Solo per la città di Milano.</p>
+                  <div className="flex justify-end">
+                    <Button
+                      size="lg"
+                      className="flex items-center justify-between text-2xl"
+                      asChild
+                    >
+                      <a href="/prenota">
+                        Prenota
+                        <ArrowRightIcon className="ml-2 h-6 w-6" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-flow-row grid-cols-1 gap-10 px-10 md:grid-cols-2 2xl:grid-cols-4">
-          {cards.map((card, index) => (
-            <SimpleCard key={index} {...card} />
-          ))}
+        <div className="mt-5 flex flex-col gap-10">
+          <div className="container flex flex-col gap-4">
+            <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
+              Perchè scegliere noi?
+            </span>
+            <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+              Siamo sicuri che farà al caso tuo
+            </h2>
+            <p className="text-xl text-secondary">
+              Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
+              weekend, puoi programmare consulti specialistici e tenere sotto
+              controllo i tuoi parametri vitali. Avrai sempre con te la tua
+              storia medica e i tuoi dati da app e da pc.
+            </p>
+          </div>
+
+          <div className="grid grid-flow-row grid-cols-1 gap-10 px-10 md:grid-cols-2 2xl:grid-cols-4">
+            {cards.map((card, index) => (
+              <SimpleCard key={index} {...card} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -304,7 +381,7 @@ export default function Index() {
             {reasons.map((r, i) => (
               <div key={i} className="flex flex-1 items-center gap-4">
                 <CheckCircle2Icon className="h-10 w-10 text-brand" />
-                <span className="flex-1 text-2xl text-brand">{r}</span>
+                <span className="flex-1 text-2xl">{r}</span>
               </div>
             ))}
           </div>
@@ -317,18 +394,18 @@ export default function Index() {
             <span className="text-2xl font-medium uppercase text-brand">
               La nostra missione
             </span>
-            <h2 className="text-3xl font-bold text-brand md:text-5xl">
+            <h2 className="text-3xl font-bold md:text-5xl">
               Rendere l'assistenza medica più accessibile e conveniente
             </h2>
-            <p className="max-w-3xl text-xl text-brand/70  md:text-2xl">
+            <p className="max-w-3xl text-xl text-secondary  md:text-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
               dignissim aliquam interdum id tincidunt sed vitae lom elementum
               sapien. In amet sapien.
             </p>
           </div>
 
-          <div className="w-full max-w-2xl">
-            <img src="/assets/doctors.svg" alt="" />
+          <div className="w-full max-w-xl">
+            <img src="/assets/happy-woman.png" alt="" className="shadow" />
           </div>
         </div>
       </section>
