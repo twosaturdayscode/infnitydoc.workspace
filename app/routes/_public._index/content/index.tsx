@@ -33,11 +33,27 @@ export const cards = [
   },
 ]
 
-export const reasons = [
-  'Accessibile da smartphone, tablet e pc',
-  'Televisite e videovisite 24 / 7',
-  'Misurazioni, check salute e alert medico',
-  'Storia medica sempre con te',
+export const treatments = [
+  'Tosse, raffreddore, febbre',
+  'Infezioni del tratto urinario',
+  'Intossicazione alimentare, diarrea',
+  'Occhio rosa',
+  'Mal di gola, mal di gola',
+  "Infezioni sinusali, dolore all'orecchio",
+  'Infezioni da lieviti vaginali',
+  'Vaginosi batterica',
+  'Ipotiroidismo',
+  'Ordine di laboratorio per le malattie sessualmente trasmissibili',
+  'Ricariche di prescrizione',
+  'Eruzione cutanea ed eczema',
+  'Punture di insetti, infezioni della pelle',
+  'Asma',
+  'Reflusso acido',
+  'Acne',
+  'Disfunzione erettile',
+  'Herpes genitale',
+  'Herpes labiale',
+  'Gotta',
 ]
 
 export const plans = [

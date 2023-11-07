@@ -1,12 +1,12 @@
 import type { MetaFunction } from '@remix-run/cloudflare'
 import { Button } from '@src/components'
-import { cards, plans, reasons } from './content'
+import { cards, plans, treatments } from './content'
 import { SimpleCard } from './components/simple-card'
 import { ArrowRightIcon, CheckCircle2Icon } from 'lucide-react'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Home | infinitydoc' },
+    { title: 'Home | InfinityDoc' },
     {
       name: 'description',
       content: 'Infinitydoc, dove la tua salute viene prima di tutto',
@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
   ]
 }
 
-export default function Index() {
+export default function IndexPage() {
   return (
     <main className="relative overflow-x-hidden pt-20 text-primary">
       <img
@@ -362,7 +362,7 @@ export default function Index() {
           className="absolute right-48 top-0 will-change-transform"
         />
 
-        <div className="container flex flex-col justify-between gap-10 lg:flex-row">
+        <div className="container flex flex-col justify-between gap-10">
           <div className="flex flex-col gap-4">
             <span className="text-2xl font-medium uppercase">
               I nostri punti forti
@@ -377,8 +377,8 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
-            {reasons.map((r, i) => (
+          <div className="grid grid-cols-2 gap-4">
+            {treatments.map((r, i) => (
               <div key={i} className="flex flex-1 items-center gap-4">
                 <CheckCircle2Icon className="h-10 w-10 text-brand" />
                 <span className="flex-1 text-2xl">{r}</span>
