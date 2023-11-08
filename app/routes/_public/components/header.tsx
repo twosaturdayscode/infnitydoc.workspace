@@ -14,6 +14,7 @@ const menu = [
 ]
 
 export function Header() {
+  const [open, setOpen] = useState(false)
   const dir = useScrollDirection()
 
   const scrollTo = (id: string) => {
@@ -24,11 +25,11 @@ export function Header() {
   return (
     <div
       className={tm(
-        'fixed top-0 z-50 h-20 w-full border-b border-gray-200 bg-white/90 py-5 backdrop-blur-sm transition-all shadow-sm',
+        'fixed top-0 z-50 h-20 w-full border-b border-gray-200 bg-white/90 py-5 shadow-sm backdrop-blur-sm transition-all',
         dir === 'down' && '-top-20',
       )}
     >
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <header className="flex h-full items-center justify-between px-10 lg:container">
           <div className="flex items-center gap-20">
             <a href="/">
@@ -56,8 +57,8 @@ export function Header() {
             </div>
           </div>
           <div className="hidden lg:block">
-            <Button asChild size="lg" className='text-lg font-medium'>
-              <a href="/contattaci">Contattaci</a>
+            <Button asChild size="lg" className="text-lg font-medium">
+              <a href="/prenota">Prenota online</a>
             </Button>
           </div>
           <Sheet.Trigger className="rounded-full bg-white p-2 lg:hidden">
@@ -82,18 +83,21 @@ export function Header() {
               </div>
               <div className="flex flex-col gap-5">
                 {menu.map(item => (
-                  <a
+                  <button
                     key={item.title}
-                    href={item.href}
                     className="text-lg font-bold text-brand"
+                    onClick={() => {
+                      scrollTo(item.href)
+                      setOpen(false)
+                    }}
                   >
                     {item.title}
-                  </a>
+                  </button>
                 ))}
               </div>
               <Button asChild>
-                <a href="/contattaci" className="text-white">
-                  Contattaci
+                <a href="/prenota" className="text-white">
+                  Prenota online
                 </a>
               </Button>
             </div>

@@ -47,7 +47,7 @@ export default function IndexPage() {
           </div>
           <div className="flex animate-fade-rotate-in-lg">
             <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
-              <a href="/chi-siamo">Scopri di più</a>
+              <a href="#servizi">Scopri di più</a>
             </Button>
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function IndexPage() {
               </p>
             </div>
 
-            <div className="flex flex-col justify-between gap-9 lg:gap-16 lg:flex-row px-10 lg:px-0">
+            <div className="flex flex-col justify-between gap-9 px-10 lg:flex-row lg:gap-16 lg:px-0">
               <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
@@ -356,7 +356,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="relative flex flex-col gap-14 py-40">
+      <section className="relative flex flex-col gap-14 py-20">
         <img
           src="/assets/blob.svg"
           alt="blob"
@@ -378,7 +378,7 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {treatments.map((r, i) => (
               <div key={i} className="flex flex-1 items-center gap-4">
                 <CheckCircle2Icon className="h-10 w-10 text-brand" />
@@ -408,6 +408,118 @@ export default function IndexPage() {
           <div className="w-full max-w-xl">
             <img src="/assets/happy-woman.png" alt="" className="shadow" />
           </div>
+        </div>
+      </section>
+
+      <section className="container">
+        <div className="flex flex-col gap-5 py-8 lg:py-20">
+          <div className="flex max-w-2xl flex-col gap-5">
+            <span className="animate-fade-in text-lg uppercase text-brand opacity-0">
+              qui per ascoltarti
+            </span>
+            <h1 className="animate-fade-rotate-scale-in text-3xl font-extrabold tracking-wide opacity-0 delay-200 lg:text-6xl">
+              Vieni a trovarci
+            </h1>
+            <p className="animate-fade-rotate-in-lg text-lg text-secondary opacity-0 delay-500 lg:text-2xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
+              dignissim aliquam interdum id tincidunt sed vitae lom elementum
+              sapien. In amet sapien.
+            </p>
+          </div>
+
+          <section className="relative">
+            <div className="mx-auto flex flex-wrap py-5 sm:flex-nowrap">
+              <div className="relative flex items-end justify-start overflow-hidden rounded-lg bg-gray-300 p-10 sm:mr-10 md:w-1/2 lg:w-2/3">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  className="absolute inset-0"
+                  title="map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.622823347059!2d9.209506224148608!3d45.48499786482145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6dcb62ddc15%3A0xc9f0dbb97cdd103b!2sCaiazzo!5e0!3m2!1sen!2sit!4v1698854624071!5m2!1sen!2sit"
+                  style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}
+                />
+                <div className="relative flex flex-wrap rounded bg-white py-6 shadow-md">
+                  <div className="px-6 lg:w-1/2">
+                    <h2 className="font-semibold tracking-widest text-brand">
+                      Indirizzo
+                    </h2>
+                    <p className="mt-1 flex flex-col gap-2">
+                      Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata
+                      metro verde M2 Caiazzo
+                      <a
+                        href="https://maps.app.goo.gl/bbAJ6GcJN4pi2N246"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand underline"
+                      >
+                        Vedi su Google Maps
+                      </a>
+                    </p>
+                  </div>
+                  <div className="mt-4 px-6 lg:mt-0 lg:w-1/2">
+                    <h2 className="font-semibold tracking-widest text-brand">
+                      Email
+                    </h2>
+                    <a
+                      href="mailto:info@infinidydoc.it"
+                      className="leading-relaxed text-brand"
+                    >
+                      info@infinidydoc.it
+                    </a>
+                    <h2 className="mt-4 font-semibold tracking-widest text-brand">
+                      Telefono
+                    </h2>
+                    <p className="leading-relaxed">338 887 70022</p>
+                  </div>
+                </div>
+              </div>
+              {/* <form className="mt-8 flex w-full flex-col text-brand md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
+                <p className="mb-5 text-lg text-secondary">
+                  Per favore lasciaci il tuo nome e la tua email e ti
+                  risponderemo il prima possibile.
+                </p>
+                <div className="relative mb-4">
+                  <label htmlFor="name" className="leading-7">
+                    Nome
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  />
+                </div>
+                <div className="relative mb-4">
+                  <label htmlFor="email" className="leading-7">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  />
+                </div>
+                <div className="relative mb-4">
+                  <label htmlFor="message" className="leading-7">
+                    Messaggio o note
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="rounded border-0 bg-brand px-6 py-2 text-lg text-white hover:bg-brand/60 focus:outline-none"
+                >
+                  Invia
+                </button>
+                <p className="mt-3 text-gray-500">Nessun impegno e no spam.</p>
+              </form> */}
+            </div>
+          </section>
         </div>
       </section>
 
