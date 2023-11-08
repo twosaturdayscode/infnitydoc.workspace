@@ -3,6 +3,7 @@ import { Button } from '@src/components'
 import { cards, plans, treatments } from './content'
 import { SimpleCard } from './components/simple-card'
 import { ArrowRightIcon, CheckCircle2Icon } from 'lucide-react'
+import { GoToTopButton } from './components/go-to-top'
 
 export const meta: MetaFunction = () => {
   return [
@@ -409,6 +410,8 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+
+      <GoToTopButton />
     </main>
   )
 }
