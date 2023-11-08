@@ -241,10 +241,10 @@ export default function IndexPage() {
             </div>
 
             <div className="flex flex-col justify-between gap-9 px-10 lg:flex-row lg:gap-16 lg:px-0">
-              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
+              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 gap-7 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
-                    Teleconsulenza o Videconsulenza
+                    Tele e Videoconsulenza
                   </h1>
                   <p className="text-2xl text-secondary">
                     Per consulenze mediche immediate e comode
@@ -295,7 +295,7 @@ export default function IndexPage() {
                   </Button>
                 </div>
               </article>
-              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
+              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 gap-7 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Consulenza a domicilio
