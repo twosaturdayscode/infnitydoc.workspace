@@ -104,7 +104,7 @@ export default function IndexPage() {
         </div>
 
         <div className="container flex flex-col gap-8 lg:px-20">
-          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
+          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 1
@@ -121,7 +121,7 @@ export default function IndexPage() {
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
           </div>
 
-          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row-reverse">
+          <div className="flex flex-col items-center justify-between gap-5 md:flex-row-reverse">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 2
@@ -138,7 +138,7 @@ export default function IndexPage() {
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
           </div>
 
-          <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
+          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-lg font-medium uppercase text-brand">
                 step 3
@@ -173,7 +173,7 @@ export default function IndexPage() {
           </div>
 
           <div className="flex flex-col gap-12">
-            <div className="flex justify-center gap-10">
+            <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-stretch">
               {plans.map(p => (
                 <div
                   key={p.title}
@@ -239,10 +239,10 @@ export default function IndexPage() {
               </p>
             </div>
 
-            <div className="flex justify-between gap-16">
+            <div className="flex flex-col justify-between gap-9 lg:gap-16 lg:flex-row px-10 lg:px-0">
               <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
-                  <h1 className="text-4xl font-medium">
+                  <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Teleconsulenza/Videconsulenza
                   </h1>
                   <p className="text-2xl text-secondary">
@@ -269,7 +269,7 @@ export default function IndexPage() {
               </article>
               <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
-                  <h1 className="text-4xl font-medium">
+                  <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Consulenza in ambulatorio
                   </h1>
                   <p className="text-2xl text-secondary">
@@ -296,7 +296,7 @@ export default function IndexPage() {
               </article>
               <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
-                  <h1 className="text-4xl font-medium">
+                  <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Consulenza a domicilio
                   </h1>
                   <p className="text-2xl text-secondary">
