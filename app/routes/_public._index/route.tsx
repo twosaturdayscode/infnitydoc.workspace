@@ -243,7 +243,7 @@ export default function IndexPage() {
               <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
-                    Teleconsulenza/Videconsulenza
+                    Teleconsulenza o Videconsulenza
                   </h1>
                   <p className="text-2xl text-secondary">
                     Per consulenze mediche immediate e comode
