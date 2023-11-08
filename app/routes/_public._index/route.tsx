@@ -311,7 +311,7 @@ export default function IndexPage() {
                     medico si recherà presso il tuo domicilio per la visita.
                   </p>
                 </div>
-                <div className="flex flex-col gap-0">
+                <div className="flex flex-col gap-5">
                   <p className="text-sm">Solo per la città di Milano.</p>
                   <div className="flex justify-end">
                     <Button
@@ -377,7 +377,7 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {treatments.map((r, i) => (
               <div key={i} className="flex flex-1 items-center gap-4">
                 <CheckCircle2Icon className="h-10 w-10 text-brand" />

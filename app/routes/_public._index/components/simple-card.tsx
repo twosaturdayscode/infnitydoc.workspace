@@ -5,7 +5,7 @@ export const SimpleCard = (props: {
   description: string
   icon: (ps: LucideProps) => JSX.Element
 }) => (
-  <div className="flex flex-1 flex-col justify-between rounded-lg border border-muted px-10 py-7 shadow-lg transition-colors">
+  <div className="flex flex-col justify-between rounded-lg border border-muted px-10 py-7 shadow-lg transition-colors">
     <div className="flex flex-col gap-5">
       <div className="flex flex-col gap-4">
         <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-brand/10 p-1 lg:h-24 lg:w-24">
