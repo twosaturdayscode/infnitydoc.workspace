@@ -1,8 +1,40 @@
-import { RadioGroup } from '@src/components'
+import { Button, RadioGroup } from '@src/components'
+import { ChevronLeftIcon } from 'lucide-react'
+import { getCalApi } from '@calcom/embed-react'
+import { useEffect } from 'react'
 
 export default function PrenotaPage() {
+  useEffect(() => {
+    const calcom = async () => {
+      const cal = await getCalApi()
+      cal('ui', {
+        theme: 'light',
+        styles: { branding: { brandColor: '#94CCDC' } },
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+      })
+    }
+
+    calcom()
+  }, [])
+
   return (
-    <div className="pt-20 text-primary">
+    <div className="text-primary">
+      <header className="h-20 w-full border-b-2 border-border">
+        <div className="container flex h-full items-center">
+          <Button
+            variant="link"
+            size="lg"
+            className="text-2xl decoration-[none]"
+            asChild
+          >
+            <a href="/" className="flex items-center gap-3">
+              <ChevronLeftIcon className="h-8 w-8" />
+              Torna al sito
+            </a>
+          </Button>
+        </div>
+      </header>
       <div className="container flex flex-col gap-10 py-20">
         <div className="flex flex-col gap-5">
           <h1 className="text-center text-5xl font-medium">
@@ -23,7 +55,7 @@ export default function PrenotaPage() {
               1. Seleziona il servizio che desideri:{' '}
             </h2>
             <div className="flex items-center justify-center gap-5 py-10">
-              <RadioGroup name="service" className="flex gap-10">
+              {/* <RadioGroup name="service" className="flex gap-10">
                 <RadioGroup.Item
                   value="tele-video-consult"
                   id="tele-video-consult"
@@ -81,7 +113,14 @@ export default function PrenotaPage() {
                     <p>Disponibili 24/7 per qualsiasi necessità</p>
                   </label>
                 </RadioGroup.Item>
-              </RadioGroup>
+              </RadioGroup> */}
+
+              <button
+                data-cal-link="infinitydoc/video-tele-consulto"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Video/Tele consulti
+              </button>
             </div>
           </div>
         </div>

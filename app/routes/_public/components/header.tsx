@@ -129,6 +129,5 @@ const useScrollDirection = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [lastScrollTop])
 
-  console.log(lastScrollTop, direction)
   return direction
 }
