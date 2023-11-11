@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => {
 
 export default function IndexPage() {
   return (
-    <main className="relative overflow-x-hidden pt-20 text-primary">
+    <div className="relative overflow-x-hidden pt-20 text-primary">
       <img
         src="/assets/blob.svg"
         alt="blob"
@@ -241,7 +241,7 @@ export default function IndexPage() {
             </div>
 
             <div className="flex flex-col justify-between gap-9 px-10 lg:flex-row lg:gap-16 lg:px-0">
-              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 gap-7 p-8">
+              <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Tele e Videoconsulenza
@@ -295,7 +295,7 @@ export default function IndexPage() {
                   </Button>
                 </div>
               </article>
-              <article className="flex flex-1 flex-col justify-between rounded bg-stone-50 gap-7 p-8">
+              <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                 <div className="flex flex-col gap-4">
                   <h1 className="w-full whitespace-pre-line text-4xl font-medium">
                     Consulenza a domicilio
@@ -473,57 +473,12 @@ export default function IndexPage() {
                   </div>
                 </div>
               </div>
-              {/* <form className="mt-8 flex w-full flex-col text-brand md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
-                <p className="mb-5 text-lg text-secondary">
-                  Per favore lasciaci il tuo nome e la tua email e ti
-                  risponderemo il prima possibile.
-                </p>
-                <div className="relative mb-4">
-                  <label htmlFor="name" className="leading-7">
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  />
-                </div>
-                <div className="relative mb-4">
-                  <label htmlFor="email" className="leading-7">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  />
-                </div>
-                <div className="relative mb-4">
-                  <label htmlFor="message" className="leading-7">
-                    Messaggio o note
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="rounded border-0 bg-brand px-6 py-2 text-lg text-white hover:bg-brand/60 focus:outline-none"
-                >
-                  Invia
-                </button>
-                <p className="mt-3 text-gray-500">Nessun impegno e no spam.</p>
-              </form> */}
             </div>
           </section>
         </div>
       </section>
 
       <GoToTopButton />
-    </main>
+    </div>
   )
 }
