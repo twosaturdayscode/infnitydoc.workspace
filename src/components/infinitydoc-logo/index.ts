@@ -1,1 +1,0 @@
-export { InfinitydocLogo } from './logo'
