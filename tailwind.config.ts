@@ -20,7 +20,7 @@ export default {
         sans: ['Atkinson Hyperlegible', ...fontFamily.sans],
       },
       colors: {
-        'brand': '#94CCDC',
+        'brand': '#04B8AD',
         'brand.secondary': '#3F9282',
         'primary': '#3c4858',
         'secondary': '#717e8f',
