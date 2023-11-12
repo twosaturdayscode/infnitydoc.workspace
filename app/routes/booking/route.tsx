@@ -76,7 +76,7 @@ export default function PrenotaPage() {
                   className="h-6 w-6"
                 />
                 <b className="text-xl">
-                  Confermo che il pazienta interessato è di età superiore ai 4
+                  Confermo che il paziente interessato è di età superiore ai 4
                   anni
                 </b>
               </label>
@@ -149,6 +149,9 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
+                      <Button data-cal-link="infinitydoc/visita-ambulatoriale">
+                        Seleziona
+                      </Button>
                     </div>
                   </article>
                   <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
@@ -165,6 +168,9 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
+                      <Button data-cal-link="infinitydoc/visita-a-domicilio">
+                        Seleziona
+                      </Button>
                     </div>
                   </article>
                 </div>

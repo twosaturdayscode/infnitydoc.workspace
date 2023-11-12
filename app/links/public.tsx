@@ -32,7 +32,7 @@ export const publicLinks = {
     )
   },
   booking: () => (
-    <Button size="lg" className='text-xl'>
+    <Button size="lg" className="hidden text-xl lg:block">
       <a href="/booking">Prenota online</a>
     </Button>
   ),
