@@ -21,9 +21,8 @@ export default {
       },
       colors: {
         'brand': '#04B8AD',
-        'brand.secondary': '#3F9282',
-        'primary': '#3c4858',
-        'secondary': '#717e8f',
+        'primary': '#292524',
+        'secondary': '#44403c',
         'muted': '#d6d3d1',
         'border': '#e7e5e4',
       },

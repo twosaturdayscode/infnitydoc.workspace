@@ -436,7 +436,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="bg-brand.secondary/10 py-16">
+      <section className="bg-brand/10 py-16">
         <div className="container flex flex-col items-center justify-between gap-10 md:flex-row-reverse md:gap-20">
           <div className="flex flex-col gap-4">
             <span className="text-2xl font-medium uppercase text-brand">

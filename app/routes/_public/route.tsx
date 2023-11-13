@@ -33,7 +33,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         <header
           {...h.getProps(Layout.Header)}
           className={tm(
-            'fixed top-0 z-50 h-20 w-full border-b border-gray-200 bg-white/90 py-5 shadow-sm backdrop-blur-sm transition-all',
+            'fixed flex justify-between items-center pr-8 top-0 z-50 h-20 w-full border-b border-gray-100 bg-white/90 py-5 shadow-sm backdrop-blur-sm transition-all',
             direction === 'down' && '-top-20',
           )}
         />

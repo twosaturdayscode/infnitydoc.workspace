@@ -2,17 +2,17 @@ import { FacebookIcon, InstagramIcon, PhoneIcon } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-brand text-white py-5">
-      <div className="container flex flex-col gap-5 px-10">
-        <div className="flex justify-between">
-          <div className="hidden md:block">
-            <div className="flex items-center">
+    <footer className="bg-brand py-6 text-white">
+      <div className="container flex flex-col justify-center gap-5 px-10">
+        <div className="flex gap-10">
+          <div className="hidden flex-col gap-3 md:flex">
+            <div className="flex items-center gap-3">
               <img
                 src="/assets/infinity-doc-logo-white.svg"
                 alt="InfinityDoc logo, a stethoscope"
-                className="w-28 py-5"
+                className="w-14"
               />
-              <span className="font-bold tracking-wider text-white md:text-3xl">
+              <span className="font-bold tracking-wider text-white md:text-xl">
                 InfinityDoc
               </span>
             </div>
@@ -50,35 +50,34 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-4">
-          <ul className="flex gap-2">
-            <li>
-              <a
-                href="https://facebook.com/InfinityDocIt"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <FacebookIcon />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/InfinityDocmi"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <InstagramIcon />
-              </a>
-            </li>
-            <li>
-              <div className='flex gap-4'>
-                <PhoneIcon />
+        <ul className="flex gap-2">
+          <li>
+            <a
+              href="https://facebook.com/InfinityDocIt"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FacebookIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/InfinityDocmi"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <InstagramIcon />
+            </a>
+          </li>
+          <li>
+            <div className="flex gap-4">
+              <PhoneIcon />
 
-                <span className='text-2xl font-medium'>0039.33888770022</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+              <span className="text-lg font-medium">0039.33888770022</span>
+            </div>
+          </li>
+        </ul>
+
         <p className="lg:text-lg">
           © {new Date().getFullYear()} Infinity Doc Milano. Tutti i diritti
           riservati

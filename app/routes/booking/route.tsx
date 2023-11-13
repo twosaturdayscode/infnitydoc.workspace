@@ -41,7 +41,7 @@ export default function PrenotaPage() {
             <Button
               variant="link"
               size="lg"
-              className="text-lg decoration-[none]"
+              className="text-lg decoration-[none] px-0"
               asChild
             >
               <a href="/" className="flex items-center gap-3">
@@ -92,12 +92,12 @@ export default function PrenotaPage() {
 
           <div>
             {isAllowed && (
-              <div className="flex animate-fade-in flex-col gap-3 opacity-0">
+              <div className="flex animate-fade-in flex-col gap-10 opacity-0">
                 <h2 className="text-3xl">
                   <b>2.</b> Scegli la tipologia di consulenza:
                 </h2>
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
+                  <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                     <div className="flex flex-col gap-4">
                       <h1 className="flex w-full items-center gap-2 text-xl font-medium">
                         <PhoneCallIcon className="h-6 w-6" />
@@ -111,12 +111,12 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
-                      <Button data-cal-link="infinitydoc/tele-consulto">
-                        Seleziona
-                      </Button>
                     </div>
+                    <Button data-cal-link="infinitydoc/tele-consulto">
+                      Seleziona
+                    </Button>
                   </article>
-                  <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
+                  <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                     <div className="flex flex-col gap-4">
                       <h1 className="flex w-full items-center gap-2 text-xl font-medium">
                         <VideoIcon className="h-6 w-6" />
@@ -130,16 +130,16 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
-                      <Button data-cal-link="infinitydoc/video-consulto">
-                        Seleziona
-                      </Button>
                     </div>
+                    <Button data-cal-link="infinitydoc/video-consulto">
+                      Seleziona
+                    </Button>
                   </article>
-                  <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
+                  <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                     <div className="flex flex-col gap-4">
                       <h1 className="flex w-full items-center gap-2 whitespace-pre-line text-xl font-medium">
                         <HotelIcon className="h-6 w-6" />
-                        Consulenza in ambulatorio
+                        Visita in ambulatorio
                       </h1>
                       <p className="text-lg text-secondary">
                         Per consulenze mediche immediate e comode
@@ -149,16 +149,16 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
-                      <Button data-cal-link="infinitydoc/visita-ambulatoriale">
-                        Seleziona
-                      </Button>
                     </div>
+                    <Button data-cal-link="infinitydoc/visita-ambulatoriale">
+                      Seleziona
+                    </Button>
                   </article>
-                  <article className="flex flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
+                  <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
                     <div className="flex flex-col gap-4">
                       <h1 className="flex w-full items-center gap-2 text-xl font-medium">
                         <HomeIcon className="h-6 w-6" />
-                        Consulenza a domicilio
+                        Visita a domicilio
                       </h1>
                       <p className="text-lg text-secondary">
                         Per consulenze mediche immediate e comode
@@ -168,10 +168,10 @@ export default function PrenotaPage() {
                         Una volta effettuato l'acquisto ti manderemo un link o
                         un numero telefonico per la consulenza
                       </p>
-                      <Button data-cal-link="infinitydoc/visita-a-domicilio">
-                        Seleziona
-                      </Button>
                     </div>
+                    <Button data-cal-link="infinitydoc/visita-a-domicilio">
+                      Seleziona
+                    </Button>
                   </article>
                 </div>
               </div>

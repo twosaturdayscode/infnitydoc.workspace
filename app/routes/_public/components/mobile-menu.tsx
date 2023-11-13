@@ -25,7 +25,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ps => {
                 alt=""
                 className="w-12"
               />
-              <span className="font-extrabold tracking-wider text-brand md:text-2xl">
+              <span className="font-extrabold tracking-wider text-brand md:text-2xl uppercase">
                 Infinitydoc
               </span>
             </div>
@@ -33,8 +33,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ps => {
               <XIcon />
             </Sheet.Close>
           </div>
-          <div className="flex flex-col gap-5">
-            <ps.links.home />
+          <div className="flex flex-col gap-5 text-left">
             <ps.links.howItWorks />
             <ps.links.services />
           </div>

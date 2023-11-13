@@ -1,5 +1,3 @@
-import { Button } from '@src/components'
-
 export const publicLinks = {
   home: () => (
     <a href="/" className="flex items-center gap-3">
@@ -8,7 +6,7 @@ export const publicLinks = {
         alt="Logo of infinitydoc"
         className="h-10 w-10"
       />
-      <span className="text-lg text-brand">InfinityDoc</span>
+      <span className="text-lg uppercase text-brand">InfinityDoc</span>
     </a>
   ),
   howItWorks: () => {
@@ -31,10 +29,20 @@ export const publicLinks = {
       </button>
     )
   },
+  whereWeAre: () => {
+    return (
+      <button
+        className="text-lg text-secondary transition-colors hover:text-primary"
+        onClick={() => scrollTo('where-we-are')}
+      >
+        Dove siamo
+      </button>
+    )
+  },
   booking: () => (
-    <Button size="lg" className="hidden text-xl lg:block">
+    <button className="text-sm-flat group order-1 block whitespace-nowrap rounded-lg border-2 border-brand bg-brand px-6 py-3 text-center font-medium leading-5 text-white transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
       <a href="/booking">Prenota online</a>
-    </Button>
+    </button>
   ),
 }
 
