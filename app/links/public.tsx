@@ -6,7 +6,7 @@ export const publicLinks = {
         alt="Logo of infinitydoc"
         className="h-10 w-10"
       />
-      <span className="text-lg uppercase text-brand">InfinityDoc</span>
+      <span className="text-lg text-brand font-bold">infinitydoc</span>
     </a>
   ),
   howItWorks: () => {

@@ -38,11 +38,13 @@ export default function IndexPage() {
           </div>
           <div className="flex flex-col gap-5">
             <h1 className="animate-fade-rotate-in-lg text-4xl font-black opacity-0 delay-200 md:text-5xl lg:text-7xl">
-              La tua salute viene prima di tutto
+              Un medico sempre a portata di mano
             </h1>
             <p className="animate-fade-rotate-in-lg text-secondary opacity-0 delay-500 lg:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-              mauris nulla tincidunt fermentum. Sagittis pellentesque.
+              Ovunque tu sia e in qualsiasi momento, con InfinityDoc hai un
+              medico sempre a portata di mano. Puoi prenotare una visita, fare
+              una consulenza medica, tenere sotto controllo la tua salute e
+              molto altro.
             </p>
           </div>
           <div className="flex animate-fade-rotate-in-lg">
@@ -56,7 +58,7 @@ export default function IndexPage() {
           <img
             src="/assets/doctor-watch.png"
             alt=""
-            className="absolute -left-7 w-[340px] rounded-[32px] shadow-md"
+            className="absolute -left-7 w-[340px] animate-fade-rotate-in-lg rounded-[32px] opacity-0 shadow-md"
           />
 
           <img
@@ -70,7 +72,7 @@ export default function IndexPage() {
             className="absolute -bottom-10 left-20 -z-10 w-40 opacity-40"
           />
 
-          <div className="absolute -right-40 flex flex-col gap-7">
+          <div className="absolute -right-40 flex animate-fade-rotate-in-lg flex-col gap-7 opacity-0">
             <img
               src="/assets/tools.png"
               alt=""
@@ -79,7 +81,7 @@ export default function IndexPage() {
             <img
               src="/assets/doctor-bg.png"
               alt=""
-              className="w-[400px] rounded-[32px] shadow-md"
+              className="w-[400px] animate-fade-rotate-in-lg rounded-[32px] opacity-0 shadow-md"
             />
           </div>
         </div>
@@ -141,13 +143,12 @@ export default function IndexPage() {
             Di cosa si tratta?
           </span>
           <h2 className="animate-fade-rotate-in-lg py-5 text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
-            Ecco come funziona InfinityDoc
+            In pochi passi sei in contatto con il tuo medico
           </h2>
           <p className="text-xl text-secondary">
-            Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
-            weekend, puoi programmare consulti specialistici e tenere sotto
-            controllo i tuoi parametri vitali. Avrai sempre con te la tua storia
-            medica e i tuoi dati da app e da pc.
+            Con infinitydoc puoi prenotare una visita e fare una consulenza con
+            un medico di fiducia, anche di notte e nei weekend, sia in studio
+            che a domicilio.
           </p>
         </div>
 
@@ -158,12 +159,13 @@ export default function IndexPage() {
                 step 1
               </span>
               <h2 className="text-3xl font-semibold">
-                Seleziona un piano di abbonamento
+                Seleziona la tipologia di visita
               </h2>
               <p className="text-xl text-secondary">
-                We'll need you to fill out a quick intake form to let us know
-                your needs. This will only take a few minutes. No sign-up
-                required.
+                Il nostro impegno è ampliare l'accesso alle cure mediche e
+                rendere il sistema sanitario più efficiente, per questo abbiamo
+                creato un servizio di telemedicina che ti permette di avere un
+                medico sempre a portata di mano.
               </p>
             </div>
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
@@ -175,12 +177,12 @@ export default function IndexPage() {
                 step 2
               </span>
               <h2 className="text-3xl font-semibold">
-                Seleziona un piano di abbonamento
+                Seleziona la data e l'orario
               </h2>
               <p className="text-xl text-secondary">
-                We'll need you to fill out a quick intake form to let us know
-                your needs. This will only take a few minutes. No sign-up
-                required.
+                Vogliamo rompere le barriere che possono ostacolare l'accesso
+                alle cure mediche, perciò offriamo un servizio 24 ore su 24, 7
+                giorni su 7, anche di notte e nei weekend.
               </p>
             </div>
             <img src="/assets/headache.png" alt="" className="w-[420px]" />
@@ -192,12 +194,12 @@ export default function IndexPage() {
                 step 3
               </span>
               <h2 className="text-3xl font-semibold">
-                Seleziona un piano di abbonamento
+                Fatto! Ora consultare il tuo medico
               </h2>
               <p className="text-xl text-secondary">
-                We'll need you to fill out a quick intake form to let us know
-                your needs. This will only take a few minutes. No sign-up
-                required.
+                Siamo qui per rispondere alle tue domande e aiutarti a risolvere
+                i tuoi problemi di salute. Il nostro obiettivo è fornire un
+                servizio di qualità, che sia conveniente e accessibile a tutti.
               </p>
             </div>
             <img src="/assets/headache.png" alt="" className="w-[420px]" />

@@ -17,12 +17,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Atkinson Hyperlegible', ...fontFamily.sans],
+        sans: ['Circular', ...fontFamily.sans],
       },
       colors: {
         'brand': '#04B8AD',
-        'primary': '#292524',
-        'secondary': '#44403c',
+        'primary': '#222',
+        'secondary': '#717171',
         'muted': '#d6d3d1',
         'border': '#e7e5e4',
       },
