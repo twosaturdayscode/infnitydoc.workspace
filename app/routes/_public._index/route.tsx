@@ -98,7 +98,7 @@ export default function IndexPage() {
         <div className="container flex flex-col gap-4">
           <span
             id="services"
-            className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl"
+            className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-lg"
           >
             I nostri servizi
           </span>
@@ -159,13 +159,13 @@ export default function IndexPage() {
           <div className="flex flex-col gap-2">
             <span
               id="how-it-works"
-              className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl"
+              className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-lg"
             >
               Di cosa si tratta?
             </span>
-            <h2 className="animate-fade-rotate-in-lg py-5 text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
+            <Title of="section">
               In pochi click sei in contatto con il tuo medico
-            </h2>
+            </Title>
           </div>
           <p className="text-xl text-secondary">
             Abbiamo ripensato il processo di prenotazione di una visita medica
@@ -175,10 +175,10 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container flex flex-col gap-8 lg:px-20">
+        <div className="container -space-y-10 lg:px-52">
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-lg font-bold uppercase text-brand">
+              <span className="text-2xl font-bold uppercase text-brand">
                 step 1
               </span>
               <h2 className="text-3xl font-semibold">
@@ -190,52 +190,39 @@ export default function IndexPage() {
 
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row-reverse">
             <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-lg font-medium uppercase text-brand">
+              <span className="text-2xl font-bold uppercase text-brand">
                 step 2
               </span>
               <h2 className="text-3xl font-semibold">
                 Seleziona la data e l'orario
               </h2>
-              <p className="text-xl text-secondary">
-                Vogliamo rompere le barriere che possono ostacolare l'accesso
-                alle cure mediche, perciò offriamo un servizio 24 ore su 24, 7
-                giorni su 7, anche di notte e nei weekend.
-              </p>
             </div>
-            <img src="/assets/headache.png" alt="" className="w-[420px]" />
+            <img src="/assets/step-2.png" alt="" className="h-[380px]" />
           </div>
 
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-lg font-medium uppercase text-brand">
+              <span className="text-2xl font-bold uppercase text-brand">
                 step 3
               </span>
               <h2 className="text-3xl font-semibold">
-                Fatto! Ora consultare il tuo medico
+                Fatto! Il tuo medico ti aspetta
               </h2>
-              <p className="text-xl text-secondary">
-                Siamo qui per rispondere alle tue domande e aiutarti a risolvere
-                i tuoi problemi di salute. Il nostro obiettivo è fornire un
-                servizio di qualità, che sia conveniente e accessibile a tutti.
-              </p>
             </div>
-            <img src="/assets/headache.png" alt="" className="w-[420px]" />
+            <img src="/assets/step-1.png" alt="" className="h-[380px]" />
           </div>
         </div>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 py-20">
           <div className="container flex flex-col gap-4">
             <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
               I nostri piani
             </span>
-            <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
-              Scegli il piano che fa per te
-            </h2>
-            <p className="text-xl text-secondary">
-              Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
-              weekend, puoi programmare consulti specialistici e tenere sotto
-              controllo i tuoi parametri vitali. Avrai sempre con te la tua
-              storia medica e i tuoi dati da app e da pc.
+            <Title of="section">La vera rivoluzione che stavi aspettando</Title>
+            <p className="text-lg text-secondary">
+              Iscriviti a infinitydoc e non dovrai più preoccuparti di nulla.
+              <br />
+              Tutti i nostri servizi a un prezzo fisso mensile.
             </p>
           </div>
 
@@ -244,25 +231,23 @@ export default function IndexPage() {
               {plans.map(p => (
                 <div
                   key={p.title}
-                  className="flex max-w-md flex-1 flex-col justify-between gap-8 rounded bg-stone-50 px-7 py-8"
+                  className="flex max-w-md flex-1 flex-col justify-between gap-8 rounded bg-white px-7 py-8 shadow-md"
                 >
                   <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-3">
-                      <span className="text-xl text-secondary">
-                        {p.description}
-                      </span>
-                      <h1 className="text-4xl font-semibold">{p.title}</h1>
-                      <p className="flex items-center gap-2 text-4xl">
+                      <span className="text-secondary">{p.description}</span>
+                      <h1 className="text-2xl font-semibold">{p.title}</h1>
+                      <p className="flex items-center gap-2 text-2xl">
                         <b>{p.price}</b>
-                        <span className="text-xl text-secondary">/mese</span>
+                        <span className="text-secondary">/mese</span>
                       </p>
                     </div>
                     <div className="flex">
                       <Button
                         size="lg"
-                        className="flex w-full items-center justify-between text-2xl"
+                        className="flex w-full items-center justify-between"
                       >
-                        Acquista
+                        Scopri
                         <ArrowRight className="ml-2 h-6 w-6" />
                       </Button>
                     </div>
@@ -270,7 +255,7 @@ export default function IndexPage() {
                       {p.features.map(f => (
                         <div key={f} className="flex flex-1 items-center gap-3">
                           <CheckCircle className="h-7 w-7 text-brand" />
-                          <span className="flex-1 text-xl">{f}</span>
+                          <span className="flex-1">{f}</span>
                         </div>
                       ))}
                     </div>
@@ -288,15 +273,13 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="mt-5 flex flex-col gap-10">
+        <div className="mt-5 flex flex-col gap-10 py-20">
           <div className="container flex flex-col gap-4">
             <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
               Perchè scegliere noi?
             </span>
-            <h2 className="animate-fade-rotate-in-lg text-3xl font-bold opacity-0 delay-500 lg:text-5xl">
-              Siamo sicuri che farà al caso tuo
-            </h2>
-            <p className="text-xl text-secondary">
+            <Title of="section">Siamo sicuri che farà al caso tuo</Title>
+            <p className="text-secondary">
               Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
               weekend, puoi programmare consulti specialistici e tenere sotto
               controllo i tuoi parametri vitali. Avrai sempre con te la tua

@@ -19,7 +19,7 @@ export default function PrenotaPage() {
       const cal = await getCalApi()
       cal('ui', {
         theme: 'light',
-        styles: { branding: { brandColor: '#04B8AD' } },
+        styles: { branding: { brandColor: '#415DA1' } },
         hideEventTypeDetails: false,
         layout: 'month_view',
       })
