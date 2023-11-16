@@ -184,7 +184,7 @@ export default function IndexPage() {
                 Seleziona la tipologia di visita
               </h2>
             </div>
-            <img src="/assets/step-1.png" alt="" className="w-[380px]" />
+            <img src="/assets/step-1.png" alt="" className="h-[380px]" />
           </div>
 
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row-reverse">
