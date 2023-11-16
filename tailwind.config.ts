@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
   presets: [require('./src/styles/animations.preset')],
-  content: ['./app/**/*.{html,ts,tsx}', './src/components/**/*.tsx'],
+  content: ['./app/**/*.{html,ts,tsx}', './src/**/*.tsx'],
   theme: {
     container: {
       center: true,
@@ -17,12 +17,13 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Circular', ...fontFamily.sans],
+        sans: ['Plus Jakarta Sans', ...fontFamily.sans],
       },
       colors: {
-        'brand': '#04B8AD',
+        'brand': '#415DA1',
+        'brand-light': '#EBF2FF',
         'primary': '#222',
-        'secondary': '#717171',
+        'secondary': '#39394A',
         'muted': '#d6d3d1',
         'border': '#e7e5e4',
       },

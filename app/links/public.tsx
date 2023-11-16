@@ -2,7 +2,7 @@ export const publicLinks = {
   home: () => (
     <a href="/" className="flex items-center gap-3">
       <img
-        src="/assets/infinity-doc-logo.png"
+        src="/assets/new-id-logo.svg"
         alt="Logo of infinitydoc"
         className="h-10 w-10"
       />

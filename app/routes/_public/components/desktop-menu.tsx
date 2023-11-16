@@ -17,7 +17,9 @@ export function DesktopMenu(ps: DesktopMenuProps) {
         <ps.links.services />
         <ps.links.whereWeAre />
       </div>
-      <ps.links.booking />
+      <div className="hidden lg:block">
+        <ps.links.booking />
+      </div>
     </div>
   )
 }
