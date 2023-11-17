@@ -1,16 +1,19 @@
 import { Button } from '@src/components'
-import {
-  ChevronLeftIcon,
-  HomeIcon,
-  HotelIcon,
-  PhoneCallIcon,
-  VideoIcon,
-} from 'lucide-react'
 /** @ts-ignore */
 import { getCalApi } from '@calcom/embed-react'
 import { useEffect } from 'react'
 import { publicLinks } from '@app/links/public'
 import { useNavigate } from '@remix-run/react'
+import { ServiceCard } from '../_public._index/components/service-card'
+import {
+  ArrowLeft,
+  Buildings,
+  HouseLine,
+  Microphone,
+  VideoCamera,
+} from '@phosphor-icons/react/dist/ssr'
+import { Footer } from '../_public/components/footer'
+import { Faq } from '../_public._index/components/faq'
 
 export default function PrenotaPage() {
   const nav = useNavigate()
@@ -42,8 +45,8 @@ export default function PrenotaPage() {
           <publicLinks.home />
         </div>
       </header>
-      <div className="container flex flex-col gap-10 py-5">
-        <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-20 py-5">
+        <div className="container flex flex-col gap-4">
           <div>
             <Button
               variant="link"
@@ -52,7 +55,7 @@ export default function PrenotaPage() {
               asChild
             >
               <a href="/" className="flex items-center gap-3">
-                <ChevronLeftIcon className="h-5 w-5" />
+                <ArrowLeft className="h-5 w-5" />
                 Torna al sito
               </a>
             </Button>
@@ -65,89 +68,71 @@ export default function PrenotaPage() {
           </p>
         </div>
 
-        <div className="flex w-full flex-col gap-16">
+        <div className="flex w-full flex-col gap-16 px-10 lg:px-40">
           <div className="flex animate-fade-in flex-col gap-10 opacity-0">
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
-                <div className="flex flex-col gap-4">
-                  <h1 className="flex w-full items-center gap-2 text-xl font-medium">
-                    <PhoneCallIcon className="h-6 w-6" />
-                    Teleconsulenza
-                  </h1>
-                  <p className="text-lg text-secondary">
-                    Per consulenze mediche immediate e comode
-                  </p>
-                  <span className="text-3xl font-semibold">€20</span>
-                  <p>
-                    Una volta effettuato l'acquisto ti manderemo un link o un
-                    numero telefonico per la consulenza
-                  </p>
-                </div>
-                <Button data-cal-link="infinitydoc/tele-consulto">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+              <ServiceCard>
+                <ServiceCard.Icon>
+                  <Microphone className="h-7 w-7 text-brand" />
+                </ServiceCard.Icon>
+                <ServiceCard.Title>Teleconsulenza</ServiceCard.Title>
+                <ServiceCard.Price>€ 30</ServiceCard.Price>
+                <ServiceCard.Description>
+                  Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata
+                  con uno dei nostri medici professionisti.
+                </ServiceCard.Description>
+                <ServiceCard.Action data-cal-link="infinitydoc/tele-consulto">
                   Seleziona
-                </Button>
-              </article>
-              <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
-                <div className="flex flex-col gap-4">
-                  <h1 className="flex w-full items-center gap-2 text-xl font-medium">
-                    <VideoIcon className="h-6 w-6" />
-                    Videoconsulenza
-                  </h1>
-                  <p className="text-lg text-secondary">
-                    Per consulenze mediche immediate e comode
-                  </p>
-                  <span className="text-3xl font-semibold">€20</span>
-                  <p>
-                    Una volta effettuato l'acquisto ti manderemo un link o un
-                    numero telefonico per la consulenza
-                  </p>
-                </div>
-                <Button data-cal-link="infinitydoc/video-consulto">
+                </ServiceCard.Action>
+              </ServiceCard>
+              <ServiceCard>
+                <ServiceCard.Icon>
+                  <VideoCamera className="h-7 w-7 text-brand" />
+                </ServiceCard.Icon>
+                <ServiceCard.Title>Videoconsulenza</ServiceCard.Title>
+                <ServiceCard.Description>
+                  Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata
+                  immediata con uno dei nostri medici professionisti.
+                </ServiceCard.Description>
+                <ServiceCard.Price>€ 30</ServiceCard.Price>
+                <ServiceCard.Action data-cal-link="infinitydoc/video-consulto">
                   Seleziona
-                </Button>
-              </article>
-              <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
-                <div className="flex flex-col gap-4">
-                  <h1 className="flex w-full items-center gap-2 whitespace-pre-line text-xl font-medium">
-                    <HotelIcon className="h-6 w-6" />
-                    Visita in ambulatorio
-                  </h1>
-                  <p className="text-lg text-secondary">
-                    Per consulenze mediche immediate e comode
-                  </p>
-                  <span className="text-3xl font-semibold">€20</span>
-                  <p>
-                    Una volta effettuato l'acquisto ti manderemo un link o un
-                    numero telefonico per la consulenza
-                  </p>
-                </div>
-                <Button data-cal-link="infinitydoc/visita-ambulatoriale">
+                </ServiceCard.Action>
+              </ServiceCard>
+              <ServiceCard>
+                <ServiceCard.Icon>
+                  <Buildings className="h-7 w-7 text-brand" />
+                </ServiceCard.Icon>
+                <ServiceCard.Title>Consulenza in ambulatorio</ServiceCard.Title>
+                <ServiceCard.Description>
+                  Prenota una visita presso la nostra clinica in centro a
+                  Milano.
+                </ServiceCard.Description>
+                <ServiceCard.Price>€ 30</ServiceCard.Price>
+                <ServiceCard.Action data-cal-link="infinitydoc/visita-ambulatoriale">
                   Seleziona
-                </Button>
-              </article>
-              <article className="flex h-full flex-1 flex-col justify-between gap-7 rounded bg-stone-50 p-8">
-                <div className="flex flex-col gap-4">
-                  <h1 className="flex w-full items-center gap-2 text-xl font-medium">
-                    <HomeIcon className="h-6 w-6" />
-                    Visita a domicilio
-                  </h1>
-                  <p className="text-lg text-secondary">
-                    Per consulenze mediche immediate e comode
-                  </p>
-                  <span className="text-3xl font-semibold">€20</span>
-                  <p>
-                    Una volta effettuato l'acquisto ti manderemo un link o un
-                    numero telefonico per la consulenza
-                  </p>
-                </div>
-                <Button data-cal-link="infinitydoc/visita-a-domicilio">
+                </ServiceCard.Action>
+              </ServiceCard>
+              <ServiceCard>
+                <ServiceCard.Icon>
+                  <HouseLine className="h-7 w-7 text-brand" />
+                </ServiceCard.Icon>
+                <ServiceCard.Title>Consulenza a domicilio</ServiceCard.Title>
+                <ServiceCard.Description>
+                  Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*
+                </ServiceCard.Description>
+                <ServiceCard.Price>€ 30</ServiceCard.Price>
+                <ServiceCard.Action data-cal-link="infinitydoc/visita-a-domicilio">
                   Seleziona
-                </Button>
-              </article>
+                </ServiceCard.Action>
+              </ServiceCard>
             </div>
           </div>
         </div>
+
+        <Faq />
       </div>
+      <Footer />
     </div>
   )
 }

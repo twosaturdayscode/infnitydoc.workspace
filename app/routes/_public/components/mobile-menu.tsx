@@ -25,7 +25,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ps => {
                 alt=""
                 className="w-12"
               />
-              <span className="font-extrabold tracking-wider text-brand md:text-2xl uppercase">
+              <span className="font-extrabold uppercase tracking-wider text-brand md:text-2xl">
                 Infinitydoc
               </span>
             </div>

@@ -6,7 +6,7 @@ export const publicLinks = {
         alt="Logo of infinitydoc"
         className="h-10 w-10"
       />
-      <span className="text-lg text-brand font-bold">infinitydoc</span>
+      <span className="text-lg font-bold text-brand">infinitydoc</span>
     </a>
   ),
   howItWorks: () => {
@@ -40,7 +40,7 @@ export const publicLinks = {
     )
   },
   booking: () => (
-    <button className="text-sm-flat group order-1 block whitespace-nowrap rounded-lg border-2 border-brand bg-brand px-6 py-3 text-center font-medium leading-5 text-white transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
+    <button className="group order-1 block whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium leading-5 text-white transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
       <a href="/booking">Prenota online</a>
     </button>
   ),

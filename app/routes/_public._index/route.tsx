@@ -12,6 +12,7 @@ import {
 import { GoToTopButton } from './components/go-to-top'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
+import { Faq } from './components/faq'
 
 export const meta: MetaFunction = () => {
   return [
@@ -60,7 +61,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="relative hidden flex-1 bg-[url(/assets/rect.png)] bg-cover xl:flex xl:items-center">
+        <div className="relative hidden flex-1 rounded-2xl bg-[url(/assets/rectangle.svg)] bg-cover xl:flex xl:items-center">
           <img
             src="/assets/doctor-watch.png"
             alt=""
@@ -121,6 +122,9 @@ export default function IndexPage() {
               Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con
               uno dei nostri medici professionisti.
             </ServiceCard.Description>
+            <ServiceCard.Action>
+              <a href="/booking">Prenota</a>
+            </ServiceCard.Action>
           </ServiceCard>
           <ServiceCard>
             <ServiceCard.Icon>
@@ -131,6 +135,9 @@ export default function IndexPage() {
               Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata
               con uno dei nostri medici professionisti.
             </ServiceCard.Description>
+            <ServiceCard.Action>
+              <a href="/booking">Prenota</a>
+            </ServiceCard.Action>
           </ServiceCard>
           <ServiceCard>
             <ServiceCard.Icon>
@@ -140,6 +147,9 @@ export default function IndexPage() {
             <ServiceCard.Description>
               Prenota una visita presso la nostra clinica in centro a Milano.
             </ServiceCard.Description>
+            <ServiceCard.Action>
+              <a href="/booking">Prenota</a>
+            </ServiceCard.Action>
           </ServiceCard>
           <ServiceCard>
             <ServiceCard.Icon>
@@ -149,6 +159,9 @@ export default function IndexPage() {
             <ServiceCard.Description>
               Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*
             </ServiceCard.Description>
+            <ServiceCard.Action>
+              <a href="/booking">Prenota</a>
+            </ServiceCard.Action>
           </ServiceCard>
         </div>
       </div>
@@ -183,6 +196,10 @@ export default function IndexPage() {
               <h2 className="text-3xl font-semibold">
                 Seleziona la tipologia di visita
               </h2>
+              <p className="text-secondary">
+                Scegli tra teleconsulenza, videoconsulenza, visita in
+                ambulatorio o visita a domicilio.
+              </p>
             </div>
             <img src="/assets/step-1.png" alt="" className="h-[380px]" />
           </div>
@@ -195,6 +212,10 @@ export default function IndexPage() {
               <h2 className="text-3xl font-semibold">
                 Seleziona la data e l'orario
               </h2>
+              <p className="text-secondary">
+                Scegli la data e l'orario che preferisci per la tua visita
+                medica.
+              </p>
             </div>
             <img src="/assets/step-2.png" alt="" className="h-[380px]" />
           </div>
@@ -207,6 +228,10 @@ export default function IndexPage() {
               <h2 className="text-3xl font-semibold">
                 Fatto! Il tuo medico ti aspetta
               </h2>
+              <p className="text-secondary">
+                Il tuo medico ti contatterà all'orario stabilito per la tua
+                visita medica.
+              </p>
             </div>
             <img src="/assets/step-1.png" alt="" className="h-[380px]" />
           </div>
@@ -234,11 +259,11 @@ export default function IndexPage() {
                 >
                   <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-3">
-                      <span className="text-secondary">{p.description}</span>
+                      <span className="text-brand">{p.description}</span>
                       <h1 className="text-2xl font-semibold">{p.title}</h1>
-                      <p className="flex items-center gap-2 text-2xl">
+                      <p className="flex items-center gap-2 text-3xl text-brand">
                         <b>{p.price}</b>
-                        <span className="text-secondary">/mese</span>
+                        <span className="text-sm text-secondary">/mese</span>
                       </p>
                     </div>
                     <div className="flex">
@@ -324,15 +349,17 @@ export default function IndexPage() {
             <img
               src="/assets/happy-woman.png"
               alt=""
-              className="-rotate-6 shadow-md rounded-lg"
+              className="-rotate-6 rounded-lg shadow-md"
             />
           </div>
         </div>
       </section>
 
-      <section className="container">
+      <Faq />
+
+      <section className="container" id="where-we-are">
         <div className="flex flex-col items-center justify-center gap-10 py-8 lg:py-20">
-          <div className="flex max-w-3xl flex-col justify-center text-center gap-5">
+          <div className="flex max-w-3xl flex-col justify-center gap-5 text-center">
             <span className="animate-fade-in text-lg font-medium uppercase text-brand opacity-0">
               qui per ascoltarti
             </span>
@@ -344,7 +371,7 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg bg-gray-300 p-8 md:w-1/2 lg:w-2/3">
+          <div className="relative overflow-hidden rounded-lg bg-gray-300 w-full p-8 lg:w-2/3">
             <iframe
               width="100%"
               height="100%"
@@ -353,7 +380,7 @@ export default function IndexPage() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.622823347059!2d9.209506224148608!3d45.48499786482145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6dcb62ddc15%3A0xc9f0dbb97cdd103b!2sCaiazzo!5e0!3m2!1sen!2sit!4v1698854624071!5m2!1sen!2sit"
               style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}
             />
-            <div className="relative flex flex-wrap rounded bg-white py-6 shadow-md">
+            <div className="relative flex flex-1 flex-wrap rounded bg-white py-6 shadow-md">
               <div className="px-6 lg:w-1/2">
                 <h2 className="font-semibold tracking-widest text-brand">
                   Indirizzo

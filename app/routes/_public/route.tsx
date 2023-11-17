@@ -24,7 +24,7 @@ export default function IndexRouteLayout() {
               <span>Piazzale Caiazzo, 2 Milano, 20124</span>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-3 text-sm w-full lg:w-auto lg:text-base">
+          <div className="flex w-full items-center justify-center gap-3 text-sm lg:w-auto lg:text-base">
             <Clock size={20} className="stroke-1" />
             <span className="hidden lg:block">Orari ambulatorio:</span>
             <span>Lunedì - Sabato: 9:00 - 19:00</span>
@@ -35,9 +35,11 @@ export default function IndexRouteLayout() {
         <DesktopMenu links={publicLinks} />
         <MobileMenu links={publicLinks} />
       </Layout.Header>
+
       <Layout.Body>
         <Outlet />
       </Layout.Body>
+
       <Layout.Footer>
         <Footer />
       </Layout.Footer>
@@ -60,7 +62,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         <header
           {...h.getProps(Layout.Header)}
           className={tm(
-            'flex w-full items-center justify-between border-b border-gray-100 bg-white/90 py-5 shadow-sm backdrop-blur-sm transition-all',
+            'flex w-full items-center justify-between border-b border-gray-100 bg-white/90 py-5 shadow-sm backdrop-blur-sm px-10',
             direction === 'down' && '-top-20',
           )}
         />

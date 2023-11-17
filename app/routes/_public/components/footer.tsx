@@ -7,7 +7,7 @@ import {
 export function Footer() {
   return (
     <footer className="flex flex-col gap-10 bg-brand-light pb-14 pt-20 text-secondary">
-      <div className="container flex gap-32">
+      <div className="container flex flex-col md:gap-32">
         <div className="flex max-w-xs flex-col gap-10">
           <div className="flex items-center gap-3">
             <img
