@@ -1,84 +1,105 @@
-import { FacebookIcon, InstagramIcon, PhoneIcon } from 'lucide-react'
+import {
+  FacebookLogo,
+  InstagramLogo,
+  WhatsappLogo,
+} from '@phosphor-icons/react/dist/ssr'
 
 export function Footer() {
   return (
-    <footer className="bg-brand py-6 text-white">
-      <div className="container flex flex-col justify-center gap-5 px-10">
-        <div className="flex gap-10">
-          <div className="hidden flex-col gap-3 md:flex">
-            <div className="flex items-center gap-3">
-              <img
-                src="/assets/infinity-doc-logo-white.svg"
-                alt="InfinityDoc logo, a stethoscope"
-                className="w-14"
-              />
-              <span className="font-bold tracking-wider text-white md:text-xl">
-                InfinityDoc
-              </span>
-            </div>
-            <p className="text-lg">Un nuovo modo di prendersi cura di se.</p>
+    <footer className="flex flex-col gap-10 bg-brand-light pb-14 pt-20 text-secondary">
+      <div className="container flex gap-32">
+        <div className="flex max-w-xs flex-col gap-10">
+          <div className="flex items-center gap-3">
+            <img
+              src="/assets/new-id-logo.svg"
+              alt="InfinityDoc logo, a stethoscope"
+              className="w-14"
+            />
+            <span className="font-bold text-brand md:text-xl">infinitydoc</span>
           </div>
-          <div className="flex items-center gap-5">
-            <div className="flex flex-col gap-3">
-              <span className="text-lg font-bold lg:text-2xl">Menu</span>
-              <ul className="flex flex-col gap-1 font-medium">
-                <li className="max-w-lg flex-1">
-                  <a href="/chi-siamo">Chi siamo</a>
-                </li>
-                <li className="max-w-lg flex-1">
-                  <a href="/servizi">Servizi</a>
-                </li>
-                <li className="max-w-lg flex-1">
-                  <a href="/contattaci">Contattaci</a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-3">
-              <span className="text-lg font-bold lg:text-2xl">Link utili</span>
-              <ul className="flex flex-col gap-1 font-medium">
-                <li className="max-w-lg flex-1">
-                  <a href="/dona">Dona</a>
-                </li>
-                <li className="max-w-lg flex-1">
-                  <a href="/tos">Termini di servizio</a>
-                </li>
-                <li className="max-w-lg flex-1">
-                  <a href="/privacy">Privacy</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+
+          <p className="text-lg">
+            InfinityDoc cerca di migliorare costantemente il proprio servizio
+            per garantire la migliore esperienza possibile ai propri pazienti.
+          </p>
+
+          <ul className="flex gap-2">
+            <li>
+              <a
+                href="https://facebook.com/InfinityDocIt"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <FacebookLogo size={32} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/InfinityDocmi"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <InstagramLogo size={32} />
+              </a>
+            </li>
+            <li>
+              <div className="flex items-center gap-4">
+                <WhatsappLogo size={32} />
+
+                <span className="text-lg font-medium">0039 388 877 0022</span>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <ul className="flex gap-2">
-          <li>
-            <a
-              href="https://facebook.com/InfinityDocIt"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FacebookIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/InfinityDocmi"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <InstagramIcon />
-            </a>
-          </li>
-          <li>
-            <div className="flex gap-4">
-              <PhoneIcon />
+        <div className="flex w-full flex-col justify-between gap-10 lg:flex-row">
+          <div className="flex flex-col gap-6">
+            <span className="text-lg font-bold lg:text-2xl">Menu</span>
+            <ul className="flex flex-col gap-1 font-medium">
+              <li className="max-w-lg flex-1">
+                <a href="/chi-siamo">Chi siamo</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/servizi">Servizi</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/contattaci">Contattaci</a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-6 max-w-lg">
+            <span className="text-lg font-bold lg:text-xl">Link utili</span>
+            <ul className="flex flex-col gap-1 font-medium">
+              <li className="max-w-lg flex-1">
+                <a href="/dona">Dona</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/tos">Termini di servizio</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/privacy">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-6">
+            <span className="text-lg font-bold lg:text-xl">Contatti</span>
+            <ul className="flex flex-col gap-1 font-medium">
+              <li className="max-w-lg flex-1">
+                <a href="/dona">Dona</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/tos">Termini di servizio</a>
+              </li>
+              <li className="max-w-lg flex-1">
+                <a href="/privacy">Privacy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-              <span className="text-lg font-medium">0039.33888770022</span>
-            </div>
-          </li>
-        </ul>
-
-        <p className="lg:text-lg">
+      <div className="flex w-full justify-center">
+        <p>
           © {new Date().getFullYear()} Infinity Doc Milano. Tutti i diritti
           riservati
         </p>
