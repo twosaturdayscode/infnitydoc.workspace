@@ -9,10 +9,10 @@ import {
   Microphone,
   VideoCamera,
 } from '@phosphor-icons/react/dist/ssr'
-import { GoToTopButton } from './components/go-to-top'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
 import { Faq } from './components/faq'
+import { WhatsappButton } from './components/whatsapp-button'
 
 export const meta: MetaFunction = () => {
   return [
@@ -189,7 +189,7 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container -space-y-10 lg:px-52">
+        <div className="container space-y-5 lg:-space-y-10 lg:px-52">
           <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
             <div className="flex max-w-lg flex-col gap-3">
               <span className="text-2xl font-bold uppercase text-brand">
@@ -420,7 +420,8 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <GoToTopButton />
+      {/* <GoToTopButton /> */}
+      <WhatsappButton />
     </div>
   )
 }
