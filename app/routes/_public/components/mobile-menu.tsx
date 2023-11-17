@@ -16,7 +16,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ps => {
       <Sheet.Trigger className="rounded-full bg-white p-2 lg:hidden">
         <MenuIcon className="text-brand" />
       </Sheet.Trigger>
-      <Sheet.Content side="right" className="bg-white">
+      <Sheet.Content side="top" className="bg-white">
         <div className="flex flex-col gap-10">
           <div className="flex justify-between">
             <div className="flex items-center gap-3">
