@@ -56,7 +56,9 @@ export default function IndexPage() {
           </div>
           <div className="flex animate-fade-rotate-in-lg">
             <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
-              <a href="#servizi">Scopri di più</a>
+              <a href="javascript:document.getElementById('how-it-works').scrollIntoView(true);">
+                Scopri di più
+              </a>
             </Button>
           </div>
         </div>
@@ -371,7 +373,7 @@ export default function IndexPage() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-lg bg-gray-300 w-full p-8 lg:w-2/3">
+          <div className="relative w-full overflow-hidden rounded-lg bg-gray-300 p-8 lg:w-2/3">
             <iframe
               width="100%"
               height="100%"
