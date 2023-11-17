@@ -67,7 +67,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-6 max-w-lg">
+          <div className="flex max-w-lg flex-col gap-6">
             <span className="text-lg font-bold lg:text-xl">Link utili</span>
             <ul className="flex flex-col gap-1 font-medium">
               <li className="max-w-lg flex-1">
@@ -81,17 +81,21 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-6">
+          <div className="flex max-w-xs flex-col gap-6">
             <span className="text-lg font-bold lg:text-xl">Contatti</span>
-            <ul className="flex flex-col gap-1 font-medium">
-              <li className="max-w-lg flex-1">
-                <a href="/dona">Dona</a>
+            <ul className="flex flex-col gap-5 font-medium">
+              <li>
+                <p>
+                  Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata
+                  metro verde M2 Caiazzo
+                </p>
               </li>
-              <li className="max-w-lg flex-1">
-                <a href="/tos">Termini di servizio</a>
+              <li>
+                <span>info@infinitydoc.it</span>
+                <span>infinitydoc.it</span>
               </li>
-              <li className="max-w-lg flex-1">
-                <a href="/privacy">Privacy</a>
+              <li>
+                <span>+39 388 877 0022</span>
               </li>
             </ul>
           </div>
