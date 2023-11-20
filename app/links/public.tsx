@@ -4,7 +4,7 @@ export const publicLinks = {
       <img
         src="/assets/new-id-logo.svg"
         alt="Logo of infinitydoc"
-        className="h-10 w-10"
+        className="h-14 w-14"
       />
       <span className="text-lg font-bold text-brand">infinitydoc</span>
     </a>
@@ -40,9 +40,11 @@ export const publicLinks = {
     )
   },
   booking: () => (
-    <button className="group order-1 block whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium leading-5 text-white transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
-      <a href="/booking">Prenota online</a>
-    </button>
+    <a href="/booking">
+      <button className="group order-1 block whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
+        Prenota online
+      </button>
+    </a>
   ),
 }
 

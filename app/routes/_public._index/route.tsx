@@ -63,7 +63,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-        <div className="relative hidden flex-1 rounded-2xl bg-[url(/assets/rectangle.svg)] bg-cover xl:flex xl:items-center">
+        <div className="relative hidden flex-1 rounded-2xl bg-[url(/assets/rect.png)] bg-cover xl:flex xl:items-center">
           <img
             src="/assets/doctor-watch.png"
             alt=""

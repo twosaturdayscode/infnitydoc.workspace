@@ -20,8 +20,8 @@ export default {
         sans: ['Plus Jakarta Sans', ...fontFamily.sans],
       },
       colors: {
-        'brand': '#415DA1',
-        'brand-light': '#EBF2FF',
+        'brand': "#04B7AC", //'#415DA1',
+        'brand-light': '#EBFFFB',
         'primary': '#222',
         'secondary': '#39394A',
         'muted': '#d6d3d1',
