@@ -121,7 +121,7 @@ export default function PrenotaPage() {
                 <ServiceCard.Description>
                   Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*
                 </ServiceCard.Description>
-                <ServiceCard.Price>€ 30</ServiceCard.Price>
+                <ServiceCard.Price>€ 60</ServiceCard.Price>
                 <ServiceCard.Action data-cal-link="infinitydoc/visita-a-domicilio">
                   Seleziona
                 </ServiceCard.Action>
