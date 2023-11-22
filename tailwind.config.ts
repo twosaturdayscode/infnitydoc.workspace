@@ -23,7 +23,7 @@ export default {
         'brand': "#04B7AC", //'#415DA1',
         'brand-light': '#EBFFFB',
         'primary': '#222',
-        'secondary': '#39394A',
+        'secondary': '#67746F',
         'muted': '#d6d3d1',
         'border': '#e7e5e4',
       },

@@ -45,20 +45,28 @@ export default function IndexPage() {
               infinity doc studio medico
             </span>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-6">
             <h1 className="animate-fade-rotate-in-lg text-4xl font-medium opacity-0 delay-200 md:text-5xl lg:text-7xl">
               Un medico sempre a portata di mano
             </h1>
             <p className="animate-fade-rotate-in-lg tracking-wide text-secondary opacity-0 delay-500 lg:text-lg">
-              Ovunque tu sia e in qualsiasi momento, con infinitydoc hai un
-              medico sempre a portata di mano.
+              Ovunque tu sia e in qualsiasi momento, con Infinitydoc hai la
+              possibilità di effettuare una <b>Televisita</b> o una{' '}
+              <b>Video visita</b> 24 ore su 24, 7 giorni su 7.
+              <br />
+              {/* Puoi anche prenotare una visita ambulatoriale o domiciliare in
+              poche ore di preavviso. Non aspettare più per il tuo medico! */}
             </p>
           </div>
           <div className="flex animate-fade-rotate-in-lg">
             <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
-              <a href="javascript:document.getElementById('how-it-works').scrollIntoView(true);">
+              <button
+                onClick={() =>
+                  document.getElementById('how-it-works')?.scrollIntoView(true)
+                }
+              >
                 Scopri di più
-              </a>
+              </button>
             </Button>
           </div>
         </div>
@@ -108,9 +116,10 @@ export default function IndexPage() {
             I nostri servizi pensati per te
           </Title>
           <p className="text-lg text-secondary">
-            Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
-            weekend, puoi programmare consulti mensili o annuali ed avere la
-            sicurezza di ricevere un servizio di qualità in ogni momento.
+            Infinity Doc è il servizio di consulenza medica innovativa che ti
+            permette di accedere a un medico istantemente 24 ore su 24, 7 giorni
+            su 7. Se preferisci puoi anche presentarti in ambulatorio o
+            richiedere una visita domiciliare con le stesse disponibilità.
           </p>
         </div>
 
@@ -244,9 +253,10 @@ export default function IndexPage() {
             <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
               I nostri piani
             </span>
-            <Title of="section">La vera rivoluzione che stavi aspettando</Title>
+            <Title of="section">Scegli il piano che fa per te</Title>
             <p className="text-lg text-secondary">
-              Iscriviti a infinitydoc e non dovrai più preoccuparti di nulla.
+              Con la Infinitydoc Membership puoi accedere a livelli di
+              sottoscrizione di servizi su misura per te.
               <br />
               Tutti i nostri servizi a un prezzo fisso mensile.
             </p>
@@ -312,11 +322,13 @@ export default function IndexPage() {
             <span className="text-lg font-medium uppercase text-brand">
               I nostri punti forti
             </span>
-            <Title of="section">Tante funzionalità per la tua salute</Title>
-            <p className=" text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
-              dignissim aliquam interdum id tincidunt sed vitae lom elementum
-              sapien. In amet sapien.
+            <Title of="section">Investi ora nel tuo benessere</Title>
+            <p className="text-lg text-secondary">
+              Con InfinityDoc hai la possibilita di ottenere risoluzioni
+              immediata nel momento giusto. Qualunque cosa succede noi siamo in
+              grado di darti un primo orientamento per ottenere i migliori
+              risultati nel piu breve tempo possibili. Ecco un elenco Delle
+              problematiche piu frequentemente risolte con i nostril consulti.
             </p>
           </div>
 
@@ -340,10 +352,10 @@ export default function IndexPage() {
             <Title of="section">
               Rendere l'assistenza medica più accessibile e conveniente
             </Title>
-            <p className="text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
-              dignissim aliquam interdum id tincidunt sed vitae lom elementum
-              sapien. In amet sapien.
+            <p className="text-lg text-secondary">
+              Vogliamo alzare il livello di qualità dell'assistenza medica in
+              Italia e rendere l'accesso ai servizi sanitari più semplice e
+              conveniente.
             </p>
           </div>
 
@@ -367,9 +379,10 @@ export default function IndexPage() {
             </span>
             <Title of="section">Vieni a trovarci</Title>
             <p className="animate-fade-rotate-in-lg text-lg text-secondary opacity-0 delay-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere
-              dignissim aliquam interdum id tincidunt sed vitae lom elementum
-              sapien. In amet sapien.
+              Non vediamo l'ora di darti il benvenuto nel nostro studio medico.
+              <br />
+              <b>Infinitydoc</b> è situato in Piazzale Caiazzo 2, a pochi passi
+              dalla fermata della metro verde M2 Caiazzo.
             </p>
           </div>
 
@@ -420,31 +433,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      {/* <GoToTopButton /> */}
       <WhatsappButton />
     </div>
   )
 }
-
-// old
-
-/* <div className="mt-5 flex flex-col gap-10 py-20">
-          <div className="container flex flex-col gap-4">
-            <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
-              Perchè scegliere noi?
-            </span>
-            <Title of="section">Siamo sicuri che farà al caso tuo</Title>
-            <p className="text-secondary">
-              Con InfinityDoc hai un medico 24 ore su 24, anche di notte e nei
-              weekend, puoi programmare consulti specialistici e tenere sotto
-              controllo i tuoi parametri vitali. Avrai sempre con te la tua
-              storia medica e i tuoi dati da app e da pc.
-            </p>
-          </div>
-
-          <div className="grid grid-flow-row grid-cols-1 gap-10 px-10 md:grid-cols-2 2xl:grid-cols-4">
-            {cards.map((card, index) => (
-              <SimpleCard key={index} {...card} />
-            ))}
-          </div>
-        </div> */
