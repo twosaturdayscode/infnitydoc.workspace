@@ -12,8 +12,4 @@ export const serviceCardsIconMap = [
   () => <HouseLine className="h-7 w-7 text-brand" />,
 ]
 
-export const stepsImagesMap = [
-  '/assets/step1.png',
-  '/assets/step2.png',
-  '/assets/step3.png',
-]
+export const stepsImagesMap = ['/assets/step1.png', '/assets/step2.png']

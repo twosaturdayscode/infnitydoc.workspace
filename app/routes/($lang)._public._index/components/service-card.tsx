@@ -1,5 +1,4 @@
 import { Title } from '@src/_ref/title'
-import { Button } from '@src/components'
 import { createHost, createSlot } from 'create-slots'
 
 const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
@@ -9,7 +8,7 @@ const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
         <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-brand-light p-4">
           {h.get(ServiceCard.Icon)}
         </div>
-        <div className="flex max-w-max flex-col gap-3 lg:flex-row md:justify-between">
+        <div className="flex max-w-max flex-col gap-3 md:justify-between lg:flex-row">
           <Title of="article" brand>
             {h.get(ServiceCard.Title)}
           </Title>
@@ -17,22 +16,18 @@ const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
             {h.get(ServiceCard.Price)}
           </span>
         </div>
-        <p className="text-secondary">{h.get(ServiceCard.Description)}</p>
+        <p className="text-secondary" {...h.getProps(ServiceCard.Description)} />
       </div>
-      <div className="flex justify-end">
-        <Button className="flex items-center justify-between select-none capitalize" asChild>
-          {h.get(ServiceCard.Action)}
-        </Button>
-      </div>
+      <div className="flex justify-end">{h.get(ServiceCard.Action)}</div>
     </article>
   ))
 }
 
 export const ServiceCard = Object.assign(ServiceCardHost, {
   Icon: createSlot('div'),
-  Title: createSlot('h2'),
+  Title: createSlot('div'),
   Price: createSlot('span'),
   Description: createSlot('p'),
   Link: createSlot('a'),
-  Action: createSlot('span'),
+  Action: createSlot('div'),
 })

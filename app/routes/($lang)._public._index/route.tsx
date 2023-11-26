@@ -13,6 +13,7 @@ import { WhatsappButton } from './components/whatsapp-button'
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
 import { useLoaderData } from '@remix-run/react'
+import { publicLinks } from '@app/links/public'
 
 export const meta: MetaFunction = () => {
   return [
@@ -142,7 +143,7 @@ export default function IndexPage() {
                 {c['description']}
               </ServiceCard.Description>
               <ServiceCard.Action>
-                <a href="/booking">{c['cta']}</a>
+                <publicLinks.booking>{c['cta']}</publicLinks.booking>
               </ServiceCard.Action>
             </ServiceCard>
           ))}
@@ -165,11 +166,11 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container flex flex-col gap-10 justify-center">
+        <div className="container flex flex-col justify-center gap-20">
           {t['how_it_works']['content']['steps'].map((s, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-between gap-5 md:odd:flex-row-reverse md:flex-row"
+              className="flex flex-col items-center justify-center gap-40 md:flex-row md:justify-center md:even:flex-row-reverse"
             >
               <div className="flex max-w-lg flex-col gap-3">
                 <span className="text-2xl font-bold uppercase text-brand">
@@ -178,7 +179,9 @@ export default function IndexPage() {
                 <h2 className="text-3xl font-semibold">{s['title']}</h2>
                 <p className="text-secondary">{s['description']}</p>
               </div>
-              <img src={stepsImagesMap[i]} alt="" className="w-[380px]" />
+              {stepsImagesMap[i] && (
+                <img src={stepsImagesMap[i]} alt="" className="w-[380px]" />
+              )}
             </div>
           ))}
         </div>
