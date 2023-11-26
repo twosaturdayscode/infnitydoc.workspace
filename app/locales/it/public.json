@@ -85,7 +85,7 @@
           "5 Visite ambulatoriali",
           "1 check up salute",
           "1 Visite domiciliari con costo agevolato",
-          "1 Prenotazione consulenza specialistica a costo agevolato. (Fino a 15 di sconto)",
+          "1 Prenotazione consulenza specialistica a costo agevolato. (Fino a 15% di sconto)",
           "1 certificato gratuito"
         ],
         "cta": "Scopri"
@@ -99,7 +99,7 @@
           "10 Visite ambulatoriali",
           "2 check up salute",
           "2 Visite domiciliari con costo agevolato",
-          "3 Prenotazioni visite specialistiche a costo agevolato (fino a 15 di sconto)",
+          "3 Prenotazioni visite specialistiche a costo agevolato (Fino a 15% di sconto)",
           "2 certificate medici gratuiti (escluso cert. di invalidita)"
         ],
         "cta": "Scopri"
@@ -114,7 +114,7 @@
           "4 check up salute",
           "3 Visite domiciliari con costo agevolato",
           "5 Prenotazioni visite specialistiche a costo agevolato",
-          "3 certificati medici gratuiti (escluso cert di invalidita)"
+          "3 certificati medici gratuiti (escluso cert. di invalidita)"
         ],
         "cta": "Scopri"
       }

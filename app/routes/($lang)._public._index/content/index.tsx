@@ -6,10 +6,10 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 export const serviceCardsIconMap = [
-  () => <Microphone className="h-10 w-10 text-brand" />,
-  () => <VideoCamera className="h-10 w-10 text-brand" />,
-  () => <Buildings className="h-10 w-10 text-brand" />,
-  () => <HouseLine className="h-10 w-10 text-brand" />,
+  () => <Microphone className="h-7 w-7 text-brand" />,
+  () => <VideoCamera className="h-7 w-7 text-brand" />,
+  () => <Buildings className="h-7 w-7 text-brand" />,
+  () => <HouseLine className="h-7 w-7 text-brand" />,
 ]
 
 export const stepsImagesMap = [

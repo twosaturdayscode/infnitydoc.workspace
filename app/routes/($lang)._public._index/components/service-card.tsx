@@ -9,7 +9,7 @@ const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
         <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-brand-light p-4">
           {h.get(ServiceCard.Icon)}
         </div>
-        <div className="flex max-w-max flex-col gap-3 lg:flex-row lg:justify-between">
+        <div className="flex max-w-max flex-col gap-3 lg:flex-row md:justify-between">
           <Title of="article" brand>
             {h.get(ServiceCard.Title)}
           </Title>
@@ -20,7 +20,7 @@ const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
         <p className="text-secondary">{h.get(ServiceCard.Description)}</p>
       </div>
       <div className="flex justify-end">
-        <Button className="flex items-center justify-between select-none" asChild>
+        <Button className="flex items-center justify-between select-none capitalize" asChild>
           {h.get(ServiceCard.Action)}
         </Button>
       </div>

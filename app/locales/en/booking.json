@@ -1,0 +1,40 @@
+{
+  "general": {
+    "go_back": "Go back"
+  },
+  "page": {
+    "title": "Prenotazione online",
+    "description": "Benvenuto sul nostro servizio di prenotazione online. Da qui puoi scegliere le prestazioni che desideri e selezionare il giorno e l'orario che preferisci."
+  },
+  "services": [
+    {
+      "title": "Teleconsulenza",
+      "pricing": "€20",
+      "description": "Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con uno dei nostri medici professionisti.",
+      "cta": "Seleziona"
+    },
+    {
+      "title": "Videoconsulenza",
+      "pricing": "€20",
+      "description": "Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata con uno dei nostri medici professionisti.",
+      "cta": "Seleziona"
+    },
+    {
+      "title": "Consulenza in ambulatorio",
+      "pricing": "€20",
+      "description": "Prenota una visita presso la nostra clinica in centro a Milano.**",
+      "cta": "Seleziona"
+    },
+    {
+      "title": "Consulenza a domicilio",
+      "pricing": "€140",
+      "description": "Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.***",
+      "cta": "Seleziona"
+    }
+  ],
+  "footnote": [
+    "NOTA BENE: I prezzi elencati potrebbero subire delle variazioni in relazione all'urgenza della prestazione e a cause di forza maggiore (a titolo esemplificativo e non esaustivo: elevato numero di richieste, super festivi, necessità di particolari presidi, selezione del professionista, ecc). I prezzi elencati sono per prestazioni a soggetti con Codice fiscale italinao o residenti. I prezzi Delle Visite domiciliari soon calculati",
+    "** Prezzo per residenti con codice fiscale e tessera sanitaria nazionale",
+    "*** Il prezzo potrebbe variate asseconda della distanza. prezzo elencato solo per Visite su municipio 1, 2, 3"
+  ]
+}

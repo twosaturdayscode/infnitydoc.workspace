@@ -4,12 +4,11 @@ import {
   type MetaFunction,
   json,
 } from '@remix-run/cloudflare'
-import { Button } from '@src/components'
+import { Button, Dialog } from '@src/components'
 import { serviceCardsIconMap, stepsImagesMap } from './content'
 import { ArrowRight, CheckCircle } from '@phosphor-icons/react/dist/ssr'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
-import { Faq } from './components/faq'
 import { WhatsappButton } from './components/whatsapp-button'
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
@@ -166,11 +165,11 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container space-y-5 lg:-space-y-10 lg:px-52">
+        <div className="container flex flex-col gap-10 justify-center">
           {t['how_it_works']['content']['steps'].map((s, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-between gap-5 odd:flex-row-reverse md:flex-row"
+              className="flex flex-col items-center justify-between gap-5 md:odd:flex-row-reverse md:flex-row"
             >
               <div className="flex max-w-lg flex-col gap-3">
                 <span className="text-2xl font-bold uppercase text-brand">
@@ -179,7 +178,7 @@ export default function IndexPage() {
                 <h2 className="text-3xl font-semibold">{s['title']}</h2>
                 <p className="text-secondary">{s['description']}</p>
               </div>
-              <img src={stepsImagesMap[i]} alt="" className="h-[380px]" />
+              <img src={stepsImagesMap[i]} alt="" className="w-[380px]" />
             </div>
           ))}
         </div>
@@ -212,13 +211,51 @@ export default function IndexPage() {
                       </p>
                     </div>
                     <div className="flex">
-                      <Button
-                        size="lg"
-                        className="flex w-full items-center justify-between"
-                      >
-                        {p.cta}
-                        <ArrowRight className="ml-2 h-6 w-6" />
-                      </Button>
+                      <Dialog>
+                        <Dialog.Trigger asChild>
+                          <Button
+                            size="lg"
+                            className="flex w-full items-center justify-between"
+                          >
+                            {p.cta}
+                            <ArrowRight className="ml-2 h-6 w-6" />
+                          </Button>
+                        </Dialog.Trigger>
+                        <Dialog.Content>
+                          <h1 className="text-3xl font-medium">
+                            Tutto pensato per te
+                          </h1>
+                          <p>
+                            Sappiamo che le esigenze mediche non hanno orario e
+                            sono imprevedibili. Conoscendo le tue esigenze
+                            abbiamo pensato a soluzioni comprensive per la tua
+                            convenienza. Contattaci all'indirizzo{' '}
+                            <a
+                              className="text-brand"
+                              href="mailto:info@infitydoc.it"
+                            >
+                              info@infitydoc.it
+                            </a>
+                          </p>
+
+                          <div className="flex flex-col gap-3">
+                            <h2 className="text-2xl font-medium">
+                              Piano {p.title}
+                            </h2>
+                            <div className="flex flex-col items-start gap-3">
+                              {p.features.map(f => (
+                                <div
+                                  key={f}
+                                  className="flex flex-1 items-center gap-3"
+                                >
+                                  <CheckCircle className="h-7 w-7 text-brand" />
+                                  <span className="flex-1">{f}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </Dialog.Content>
+                      </Dialog>
                     </div>
                     <div className="flex flex-col items-start gap-3">
                       {p.features.map(f => (
@@ -229,13 +266,6 @@ export default function IndexPage() {
                       ))}
                     </div>
                   </div>
-                  <footer className="flex justify-end self-end">
-                    <a href="/" className="underline">
-                      <span className="text-xl text-secondary">
-                        Vedi dettagli
-                      </span>
-                    </a>
-                  </footer>
                 </div>
               ))}
             </div>
@@ -293,8 +323,6 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-
-      <Faq />
 
       <section className="container" id="where-we-are">
         <div className="flex flex-col items-center justify-center gap-10 py-8 lg:py-20">
