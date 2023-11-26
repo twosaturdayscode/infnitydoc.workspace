@@ -77,11 +77,11 @@
     "description": "Con la Infinitydoc Membership puoi accedere a livelli di sottoscrizione di servizi su misura per te. Tutti i nostri servizi a un prezzo fisso mensile.",
     "content": [
       {
-        "title": "standard",
+        "title": "Standard",
         "intro": "Per le esigenze di base",
-        "price": "€ 15",
+        "price": "€15",
         "features": [
-          "10 video/tele consulti 24/7",
+          "10 video-tele consulti 24/7",
           "5 Visite ambulatoriali",
           "1 check up salute",
           "1 Visite domiciliari con costo agevolato",
@@ -93,7 +93,7 @@
       {
         "title": "Premium",
         "intro": "Per una totale sicurezza",
-        "price": "€ 25",
+        "price": "€25",
         "features": [
           "20 video/tele consulti 24/7",
           "10 Visite ambulatoriali",
@@ -107,7 +107,7 @@
       {
         "title": "Family",
         "intro": "Per tutta la famiglia",
-        "price": "€ 40",
+        "price": "€35",
         "features": [
           "Illimitate video/tele consulti 24/7",
           "15 Visite ambulatoriali annuali",
@@ -180,5 +180,50 @@
     "title": "Vieni a trovarci",
     "description": "Non vediamo l'ora di darti il benvenuto nel nostro studio medico. Infinitydoc è situato in Piazzale Caiazzo 2, a pochi passi dalla fermata della metro verde M2 Caiazzo.",
     "cta": "Contattaci"
+  },
+  "footer": {
+    "contact": "Contact us",
+    "description": "InfinityDoc cerca di migliorare costantemente il proprio servizio per garantire la migliore esperienza possibile ai propri pazienti.",
+    "links": {
+      "menu": {
+        "title": "Menu",
+        "links": [
+          {
+            "title": "Chi siamo",
+            "url": "/about"
+          },
+          {
+            "title": "Servizi",
+            "url": "/services"
+          },
+          {
+            "title": "Contattaci",
+            "url": "/contact"
+          }
+        ]
+      },
+      "utils": {
+        "title": "Link utili",
+        "links": [
+          {
+            "title": "Dona",
+            "url": "/donate"
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "/privacy"
+          },
+          {
+            "title": "Termini e condizioni",
+            "url": "/terms"
+          }
+        ]
+      }
+    },
+    "contacts": [
+      "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+      "info@infinitydoc.itinfinitydoc.it",
+      "+39 388 877 0022"
+    ]
   }
 }

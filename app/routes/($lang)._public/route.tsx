@@ -1,4 +1,4 @@
-import { Outlet } from '@remix-run/react'
+import { Outlet, useLoaderData } from '@remix-run/react'
 import { Footer } from './components/footer'
 import { createHost, createSlot } from 'create-slots'
 import { tm } from '@src/components'
@@ -29,6 +29,7 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 }
 
 export default function IndexRouteLayout() {
+  const { t } = useLoaderData<typeof loader>()
   return (
     <Layout>
       <Layout.Topbar>
@@ -47,7 +48,7 @@ export default function IndexRouteLayout() {
           <div className="flex w-full items-center justify-center gap-3 text-sm lg:w-auto lg:text-base">
             <Clock size={20} className="stroke-1" />
             <span className="hidden lg:block">Orari ambulatorio:</span>
-            <span>Lunedì - Sabato: 9:00 - 19:00</span>
+            <span>{t['general']['office_hours']}</span>
           </div>
         </>
       </Layout.Topbar>

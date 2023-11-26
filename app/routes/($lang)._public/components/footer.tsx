@@ -1,10 +1,14 @@
+import type { loader } from '@app/routes/($lang)._public._index/route'
 import {
   FacebookLogo,
   InstagramLogo,
   WhatsappLogo,
 } from '@phosphor-icons/react/dist/ssr'
+import { Link, useLoaderData } from '@remix-run/react'
+import { publicLinks } from '@app/links/public'
 
 export function Footer() {
+  const { t } = useLoaderData<typeof loader>()
   return (
     <footer className="flex flex-col gap-10 bg-brand-light pb-14 pt-20 text-secondary">
       <div className="container flex flex-col md:flex-row md:gap-32">
@@ -18,15 +22,12 @@ export function Footer() {
             <span className="font-bold text-brand md:text-xl">infinitydoc</span>
           </div>
 
-          <p className="text-lg">
-            InfinityDoc cerca di migliorare costantemente il proprio servizio
-            per garantire la migliore esperienza possibile ai propri pazienti.
-          </p>
+          <p className="text-lg">{t['footer']['description']}</p>
 
           <ul className="flex gap-2">
             <li>
               <a
-                href="https://facebook.com/InfinityDocIt"
+                href="https://facebook.com/InfinityDocMI"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -43,60 +44,57 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <div className="flex items-center gap-4">
-                <WhatsappLogo size={32} />
-
-                <span className="text-lg font-medium">0039 388 877 0022</span>
-              </div>
+              <a
+                href="https://wa.me/393888770022"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <div className="flex items-center gap-4">
+                  <WhatsappLogo size={32} />
+                  {/* <span className="text-lg font-medium">+39 388 877 0022</span> */}
+                </div>
+              </a>
             </li>
           </ul>
         </div>
 
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row">
           <div className="flex flex-col gap-6">
-            <span className="text-lg font-bold lg:text-2xl">Menu</span>
-            <ul className="flex flex-col gap-1 font-medium">
-              <li className="max-w-lg flex-1">
-                <a href="/chi-siamo">Chi siamo</a>
-              </li>
-              <li className="max-w-lg flex-1">
-                <a href="/servizi">Servizi</a>
-              </li>
-              <li className="max-w-lg flex-1">
-                <a href="/contattaci">Contattaci</a>
-              </li>
+            <span className="text-lg font-bold lg:text-2xl">
+              {t.footer.links.menu.title}
+            </span>
+            <ul className="flex max-w-lg flex-col gap-1 font-medium">
+              {t.footer.links.menu.links.map((l, i) => (
+                <li key={i} className="flex-1">
+                  {footerMenuLinks[i]()}
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="flex max-w-lg flex-col gap-6">
-            <span className="text-lg font-bold lg:text-xl">Link utili</span>
-            <ul className="flex flex-col gap-1 font-medium">
-              <li className="max-w-lg flex-1">
-                <a href="/dona">Dona</a>
-              </li>
-              <li className="max-w-lg flex-1">
-                <a href="/tos">Termini di servizio</a>
-              </li>
-              <li className="max-w-lg flex-1">
-                <a href="/privacy">Privacy</a>
-              </li>
+
+          <div className="flex flex-col gap-6">
+            <span className="text-lg font-bold lg:text-2xl">
+              {t.footer.links.utils.title}
+            </span>
+            <ul className="flex max-w-lg flex-col gap-1 font-medium">
+              {t.footer.links.utils.links.map((l, i) => (
+                <li key={i} className="flex-1">
+                  <Link to={l.url}>{l.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="flex max-w-xs flex-col gap-6">
-            <span className="text-lg font-bold lg:text-xl">Contatti</span>
-            <ul className="flex flex-col gap-5 font-medium">
-              <li>
-                <p>
-                  Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata
-                  metro verde M2 Caiazzo
-                </p>
-              </li>
-              <li>
-                <span>info@infinitydoc.it</span>
-                <span>infinitydoc.it</span>
-              </li>
-              <li>
-                <span>+39 388 877 0022</span>
-              </li>
+
+          <div className="flex flex-col gap-6">
+            <span className="text-lg font-bold lg:text-2xl">
+              {t.footer.contact}
+            </span>
+            <ul className="flex max-w-lg flex-col gap-3 font-medium">
+              {t.footer.contacts.map((c, i) => (
+                <li key={i} className="flex-1">
+                  <span>{c}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -111,3 +109,9 @@ export function Footer() {
     </footer>
   )
 }
+
+const footerMenuLinks = [
+  () => <publicLinks.howItWorks />,
+  () => <publicLinks.services />,
+  () => <publicLinks.whereWeAre />,
+]

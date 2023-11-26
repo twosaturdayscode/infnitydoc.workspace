@@ -77,14 +77,16 @@ export default function PrenotaPage() {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
               {t['services'].map((s, i) => (
                 <ServiceCard key={i}>
-                  <ServiceCard.Icon>{serviceCardsIconMap[i]()}</ServiceCard.Icon>
+                  <ServiceCard.Icon>
+                    {serviceCardsIconMap[i]()}
+                  </ServiceCard.Icon>
                   <ServiceCard.Title>{s['title']}</ServiceCard.Title>
                   <ServiceCard.Price>{s['pricing']}</ServiceCard.Price>
                   <ServiceCard.Description>
                     {s['description']}
                   </ServiceCard.Description>
-                  <ServiceCard.Action data-cal-link="infinitydoc/tele-consulto">
-                    {s['cta']}
+                  <ServiceCard.Action>
+                    <Button data-cal-link="infinitydoc/tele-consulto">{s['cta']}</Button>
                   </ServiceCard.Action>
                 </ServiceCard>
               ))}

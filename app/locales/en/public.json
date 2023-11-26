@@ -81,7 +81,7 @@
         "intro": "For basic needs",
         "price": "€15",
         "features": [
-          "10 video/teleconsultations 24/7",
+          "10 video-teleconsultations 24/7",
           "5 Clinic visits",
           "1 health check-up",
           "1 Home visits at a discounted cost",
@@ -107,7 +107,7 @@
       {
         "title": "Family",
         "intro": "For the whole family",
-        "price": "€40",
+        "price": "€35",
         "features": [
           "Unlimited video/teleconsultations 24/7",
           "15 Annual clinic visits",
@@ -180,5 +180,50 @@
     "title": "Come visit us",
     "description": "We look forward to welcoming you to our medical office. Infinitydoc is located at Piazzale Caiazzo 2, just steps away from the green metro stop M2 Caiazzo.",
     "cta": "Contact Us"
+  },
+  "footer": {
+    "contact": "Contattaci",
+    "description": "InfinityDoc cerca di migliorare costantemente il proprio servizio per garantire la migliore esperienza possibile ai propri pazienti.",
+    "links": {
+      "menu": {
+        "title": "Menu",
+        "links": [
+          {
+            "title": "Chi siamo",
+            "url": "/about"
+          },
+          {
+            "title": "Servizi",
+            "url": "/services"
+          },
+          {
+            "title": "Contattaci",
+            "url": "/contact"
+          }
+        ]
+      },
+      "utils": {
+        "title": "Link utili",
+        "links": [
+          {
+            "title": "Dona",
+            "url": "donate"
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "privacy"
+          },
+          {
+            "title": "Termini e condizioni",
+            "url": "terms"
+          }
+        ]
+      }
+    },
+    "contacts": [
+      "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+      "info@infinitydoc.itinfinitydoc.it",
+      "+39 388 877 0022"
+    ]
   }
 }

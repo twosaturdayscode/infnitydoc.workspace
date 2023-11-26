@@ -33,8 +33,53 @@
     }
   ],
   "footnote": [
-    "NOTA BENE: I prezzi elencati potrebbero subire delle variazioni in relazione all'urgenza della prestazione e a cause di forza maggiore (a titolo esemplificativo e non esaustivo: elevato numero di richieste, super festivi, necessità di particolari presidi, selezione del professionista, ecc). I prezzi elencati sono per prestazioni a soggetti con Codice fiscale italinao o residenti. I prezzi Delle Visite domiciliari soon calculati",
+    "NOTA BENE: I prezzi elencati potrebbero subire delle variazioni in relazione all'urgenza della prestazione e a cause di forza maggiore (a titolo esemplificativo e non esaustivo: elevato numero di richieste, super festivi, necessità di particolari presidi, selezione del professionista, ecc).",
     "** Prezzo per residenti con codice fiscale e tessera sanitaria nazionale",
-    "*** Il prezzo potrebbe variate asseconda della distanza. prezzo elencato solo per Visite su municipio 1, 2, 3"
-  ]
+    "*** Il prezzo potrebbe variare asseconda della distanza. Prezzo elencato solo per visite su Milano municipio 1, 2, 3. Differenza di prezzo concordata previo conferma del servizio."
+  ],
+  "footer": {
+  "contact": "Contattaci",
+    "description": "InfinityDoc cerca di migliorare costantemente il proprio servizio per garantire la migliore esperienza possibile ai propri pazienti.",
+    "links": {
+      "menu": {
+        "title": "Menu",
+        "links": [
+          {
+            "title": "Chi siamo",
+            "url": "/about"
+          },
+          {
+            "title": "Servizi",
+            "url": "/services"
+          },
+          {
+            "title": "Contattaci",
+            "url": "/contact"
+          }
+        ]
+      },
+      "utils": {
+        "title": "Link utili",
+        "links": [
+          {
+            "title": "Dona",
+            "url": "/donate"
+          },
+          {
+            "title": "Privacy Policy",
+            "url": "/privacy"
+          },
+          {
+            "title": "Termini e condizioni",
+            "url": "/terms"
+          }
+        ]
+      }
+    },
+    "contacts": [
+      "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+      "info@infinitydoc.itinfinitydoc.it",
+      "+39 388 877 0022"
+    ]
+  }
 }
