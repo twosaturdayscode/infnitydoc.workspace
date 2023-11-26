@@ -13,7 +13,7 @@ export const publicLinks = {
     return (
       <button
         className="text-lg text-secondary transition-colors hover:text-primary"
-        onClick={() => scrollTo('how-it-works')}
+        onClick={() => scrollTo('how_it_works')}
       >
         Come funziona
       </button>

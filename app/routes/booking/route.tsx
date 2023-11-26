@@ -4,7 +4,7 @@ import { getCalApi } from '@calcom/embed-react'
 import { useEffect } from 'react'
 import { publicLinks } from '@app/links/public'
 import { useNavigate } from '@remix-run/react'
-import { ServiceCard } from '../_public._index/components/service-card'
+import { ServiceCard } from '../($lang)._public._index/components/service-card'
 import {
   ArrowLeft,
   Buildings,
@@ -12,8 +12,8 @@ import {
   Microphone,
   VideoCamera,
 } from '@phosphor-icons/react/dist/ssr'
-import { Footer } from '../_public/components/footer'
-import { Faq } from '../_public._index/components/faq'
+import { Footer } from '../($lang)._public/components/footer'
+import { Faq } from '../($lang)._public._index/components/faq'
 
 export default function PrenotaPage() {
   const nav = useNavigate()

@@ -1,0 +1,184 @@
+{
+  "general": {
+    "phone": "388 877 0022",
+    "address_extended": "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+    "office_hours": "Lunedì - Sabato: 9:00 - 19:00",
+    "email": "info@infinitydoc.it"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "services": "Servizi",
+    "contact": "Contattaci",
+    "donate": "Dona"
+  },
+  "header": {
+    "office_hours_intro": "Orari ambulatorio:",
+    "cta_booking": "Prenota online"
+  },
+  "hero": {
+    "title": "Un medico sempre a portata di mano",
+    "description": "Ovunque tu sia e in qualsiasi momento, con Infinitydoc hai la possibilità di effettuare una Televisita o una Video visita 24 ore su 24, 7 giorni su 7.",
+    "cta_discover": "Scopri di più"
+  },
+  "services": {
+    "intro": "I nostri servizi",
+    "title": "I nostri servizi pensati per te",
+    "description": "Infinitydoc è il servizio di consulenza medica innovativa che ti permette di accedere a un medico istantemente 24 ore su 24, 7 giorni su 7. Se preferisci puoi anche presentarti in ambulatorio o richiedere una visita domiciliare con le stesse disponibilità.",
+    "content": {
+      "list": [
+        {
+          "title": "Teleconsulenza",
+          "description": "Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con uno dei nostri medici professionisti.",
+          "cta": "prenota"
+        },
+        {
+          "title": "Videoconsulenza",
+          "description": "Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata con uno dei nostri medici professionisti.",
+          "cta": "prenota"
+        },
+        {
+          "title": "Consulenza in ambulatorio",
+          "description": "Prenota una visita presso la nostra clinica in centro a Milano.",
+          "cta": "prenota"
+        },
+        {
+          "title": "Consulenza a domicilio",
+          "description": "Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*",
+          "cta": "prenota"
+        }
+      ]
+    }
+  },
+  "how_it_works": {
+    "intro": "Di cosa si tratta?",
+    "title": "In pochi click sei in contatto con il tuo medico",
+    "description": "Abbiamo ripensato il processo di prenotazione di una visita medica per renderlo più semplice e veloce. Con InfinityDoc puoi prenotare una visita medica in pochi click, senza dover aspettare in coda o recarti in ambulatorio.",
+    "content": {
+      "steps": [
+        {
+          "title": "Seleziona la tipologia di visita",
+          "description": "Scegli tra teleconsulenza, videoconsulenza, visita in ambulatorio o visita a domicilio."
+        },
+        {
+          "title": "Seleziona la data e l'orario",
+          "description": "Scegli la data e l'orario che preferisci per la tua visita medica."
+        },
+        {
+          "title": "Fatto! Il tuo medico ti aspetta",
+          "description": "Il tuo medico ti contatterà all'orario stabilito per la tua visita medica."
+        }
+      ]
+    }
+  },
+  "plans": {
+    "intro": "I nostri piani",
+    "title": "Scegli il piano che fa per te",
+    "description": "Con la Infinitydoc Membership puoi accedere a livelli di sottoscrizione di servizi su misura per te. Tutti i nostri servizi a un prezzo fisso mensile.",
+    "content": [
+      {
+        "title": "standard",
+        "intro": "Per le esigenze di base",
+        "price": "€ 15",
+        "features": [
+          "10 video/tele consulti 24/7",
+          "5 Visite ambulatoriali",
+          "1 check up salute",
+          "1 Visite domiciliari con costo agevolato",
+          "1 Prenotazione consulenza specialistica a costo agevolato. (Fino a 15 di sconto)",
+          "1 certificato gratuito"
+        ],
+        "cta": "Scopri"
+      },
+      {
+        "title": "Premium",
+        "intro": "Per una totale sicurezza",
+        "price": "€ 25",
+        "features": [
+          "20 video/tele consulti 24/7",
+          "10 Visite ambulatoriali",
+          "2 check up salute",
+          "2 Visite domiciliari con costo agevolato",
+          "3 Prenotazioni visite specialistiche a costo agevolato (fino a 15 di sconto)",
+          "2 certificate medici gratuiti (escluso cert. di invalidita)"
+        ],
+        "cta": "Scopri"
+      },
+      {
+        "title": "Family",
+        "intro": "Per tutta la famiglia",
+        "price": "€ 40",
+        "features": [
+          "Illimitate video/tele consulti 24/7",
+          "15 Visite ambulatoriali annuali",
+          "4 check up salute",
+          "3 Visite domiciliari con costo agevolato",
+          "5 Prenotazioni visite specialistiche a costo agevolato",
+          "3 certificati medici gratuiti (escluso cert di invalidita)"
+        ],
+        "cta": "Scopri"
+      }
+    ]
+  },
+  "cures": {
+    "intro": "Le nostre cure",
+    "title": "Investi ora nel tuo benessere",
+    "description": "Con Infinitydoc hai la possibilita di ottenere risoluzioni immediata nel momento giusto. Qualunque cosa succede noi siamo in grado di darti un primo orientamento per ottenere i migliori risultati nel piu breve tempo possibili. Ecco un elenco Delle problematiche piu frequentemente risolte con i nostril consulti.",
+    "content": {
+      "list": [
+        "Tosse, raffreddore, febbre",
+        "Infezioni del tratto urinario",
+        "Intossicazione alimentare, diarrea",
+        "Occhio rosa",
+        "Mal di gola, mal di gola",
+        "Infezioni sinusali, dolore all'orecchio",
+        "Infezioni da lieviti vaginali",
+        "Vaginosi batterica",
+        "Ipotiroidismo",
+        "Ordine di laboratorio per le malattie sessualmente trasmissibili",
+        "Ricariche di prescrizione",
+        "Eruzione cutanea ed eczema",
+        "Punture di insetti, infezioni della pelle",
+        "Asma",
+        "Reflusso acido",
+        "Acne",
+        "Disfunzione erettile",
+        "Herpes genitale",
+        "Herpes labiale",
+        "Gotta"
+      ]
+    }
+  },
+  "mission": {
+    "intro": "La nostra missione",
+    "title": "Rendere l'assistenza medica più accessibile e conveniente",
+    "description": "Vogliamo alzare il livello di qualità dell'assistenza medica in Italia e rendere l'accesso ai servizi sanitari più semplice e conveniente."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "questions": [
+      {
+        "title": "Come funziona la prenotazione online?",
+        "answer": "Scegli il servizio che desideri, seleziona il giorno e l'orario che preferisci e procedi con il pagamento. Una volta completato il pagamento riceverai una mail di conferma."
+      },
+      {
+        "title": "Come posso pagare?",
+        "answer": "Accettiamo pagamenti con carta di credito, PayPal, Apple Pay, Google Pay e bonifico bancario."
+      },
+      {
+        "title": "Posso annullare la prenotazione?",
+        "answer": "Puoi annullare la prenotazione fino a 24 ore prima dell'appuntamento. Per annullare la prenotazione contattaci via mail o telefonicamente."
+      },
+      {
+        "title": "Come posso contattarvi?",
+        "description": "Puoi contattarci via mail all'indirizzo info@infinitydoc.it o telefonicamente al numero +39 000 000 000."
+      }
+    ]
+  },
+  "contacts": {
+    "intro": "Qui per ascoltarti",
+    "title": "Vieni a trovarci",
+    "description": "Non vediamo l'ora di darti il benvenuto nel nostro studio medico. Infinitydoc è situato in Piazzale Caiazzo 2, a pochi passi dalla fermata della metro verde M2 Caiazzo.",
+    "cta": "Contattaci"
+  }
+}

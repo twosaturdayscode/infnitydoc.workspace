@@ -1,18 +1,19 @@
-import type { MetaFunction } from '@remix-run/cloudflare'
-import { Button } from '@src/components'
-import { plans, treatments } from './content'
 import {
-  ArrowRight,
-  Buildings,
-  CheckCircle,
-  HouseLine,
-  Microphone,
-  VideoCamera,
-} from '@phosphor-icons/react/dist/ssr'
+  redirect,
+  type LoaderFunctionArgs,
+  type MetaFunction,
+  json,
+} from '@remix-run/cloudflare'
+import { Button } from '@src/components'
+import { serviceCardsIconMap, stepsImagesMap } from './content'
+import { ArrowRight, CheckCircle } from '@phosphor-icons/react/dist/ssr'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
 import { Faq } from './components/faq'
 import { WhatsappButton } from './components/whatsapp-button'
+import it from '../../locales/it/public.json'
+import en from '../../locales/en/public.json'
+import { useLoaderData } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {
   return [
@@ -24,7 +25,25 @@ export const meta: MetaFunction = () => {
   ]
 }
 
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+  const { lang } = params
+
+  if (!lang) {
+    return redirect('/it')
+  }
+
+  switch (lang) {
+    case 'en':
+      return json({ t: en })
+
+    default:
+      return json({ t: it })
+  }
+}
+
 export default function IndexPage() {
+  const { t } = useLoaderData<typeof loader>()
+
   return (
     <div className="relative overflow-x-hidden pt-20 text-primary">
       <img
@@ -47,25 +66,20 @@ export default function IndexPage() {
           </div>
           <div className="flex flex-col gap-6">
             <h1 className="animate-fade-rotate-in-lg text-4xl font-medium opacity-0 delay-200 md:text-5xl lg:text-7xl">
-              Un medico sempre a portata di mano
+              {t['hero']['title']}
             </h1>
             <p className="animate-fade-rotate-in-lg tracking-wide text-secondary opacity-0 delay-500 lg:text-lg">
-              Ovunque tu sia e in qualsiasi momento, con Infinitydoc hai la
-              possibilità di effettuare una <b>Televisita</b> o una{' '}
-              <b>Video visita</b> 24 ore su 24, 7 giorni su 7.
-              <br />
-              {/* Puoi anche prenotare una visita ambulatoriale o domiciliare in
-              poche ore di preavviso. Non aspettare più per il tuo medico! */}
+              {t['hero']['description']}
             </p>
           </div>
           <div className="flex animate-fade-rotate-in-lg">
             <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
               <button
                 onClick={() =>
-                  document.getElementById('how-it-works')?.scrollIntoView(true)
+                  document.getElementById('how_it_works')?.scrollIntoView(true)
                 }
               >
-                Scopri di più
+                {t['hero']['cta_discover']}
               </button>
             </Button>
           </div>
@@ -110,70 +124,29 @@ export default function IndexPage() {
             id="services"
             className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-lg"
           >
-            I nostri servizi
+            {t['services']['intro']}
           </span>
           <Title as="h2" of="section">
-            I nostri servizi pensati per te
+            {t['services']['title']}
           </Title>
           <p className="text-lg text-secondary">
-            Infinity Doc è il servizio di consulenza medica innovativa che ti
-            permette di accedere a un medico istantemente 24 ore su 24, 7 giorni
-            su 7. Se preferisci puoi anche presentarti in ambulatorio o
-            richiedere una visita domiciliare con le stesse disponibilità.
+            {t['services']['description']}
           </p>
         </div>
 
         <div className="container grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4">
-          <ServiceCard>
-            <ServiceCard.Icon>
-              <Microphone className="h-7 w-7 text-brand" />
-            </ServiceCard.Icon>
-            <ServiceCard.Title>Teleconsulenza</ServiceCard.Title>
-            <ServiceCard.Description>
-              Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con
-              uno dei nostri medici professionisti.
-            </ServiceCard.Description>
-            <ServiceCard.Action>
-              <a href="/booking">Prenota</a>
-            </ServiceCard.Action>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceCard.Icon>
-              <VideoCamera className="h-7 w-7 text-brand" />
-            </ServiceCard.Icon>
-            <ServiceCard.Title>Videoconsulenza</ServiceCard.Title>
-            <ServiceCard.Description>
-              Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata
-              con uno dei nostri medici professionisti.
-            </ServiceCard.Description>
-            <ServiceCard.Action>
-              <a href="/booking">Prenota</a>
-            </ServiceCard.Action>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceCard.Icon>
-              <Buildings className="h-7 w-7 text-brand" />
-            </ServiceCard.Icon>
-            <ServiceCard.Title>Consulenza in ambulatorio</ServiceCard.Title>
-            <ServiceCard.Description>
-              Prenota una visita presso la nostra clinica in centro a Milano.
-            </ServiceCard.Description>
-            <ServiceCard.Action>
-              <a href="/booking">Prenota</a>
-            </ServiceCard.Action>
-          </ServiceCard>
-          <ServiceCard>
-            <ServiceCard.Icon>
-              <HouseLine className="h-7 w-7 text-brand" />
-            </ServiceCard.Icon>
-            <ServiceCard.Title>Consulenza a domicilio</ServiceCard.Title>
-            <ServiceCard.Description>
-              Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*
-            </ServiceCard.Description>
-            <ServiceCard.Action>
-              <a href="/booking">Prenota</a>
-            </ServiceCard.Action>
-          </ServiceCard>
+          {t['services']['content']['list'].map((c, i) => (
+            <ServiceCard key={i}>
+              <ServiceCard.Icon>{serviceCardsIconMap[i]()}</ServiceCard.Icon>
+              <ServiceCard.Title>{c['title']}</ServiceCard.Title>
+              <ServiceCard.Description>
+                {c['description']}
+              </ServiceCard.Description>
+              <ServiceCard.Action>
+                <a href="/booking">{c['cta']}</a>
+              </ServiceCard.Action>
+            </ServiceCard>
+          ))}
         </div>
       </div>
 
@@ -181,97 +154,57 @@ export default function IndexPage() {
         <div className="container flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <span
-              id="how-it-works"
+              id="how_it_works"
               className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-lg"
             >
-              Di cosa si tratta?
+              {t['how_it_works']['intro']}
             </span>
-            <Title of="section">
-              In pochi click sei in contatto con il tuo medico
-            </Title>
+            <Title of="section">{t['how_it_works']['title']}</Title>
           </div>
           <p className="text-xl text-secondary">
-            Abbiamo ripensato il processo di prenotazione di una visita medica
-            per renderlo più semplice e veloce. Con InfinityDoc puoi prenotare
-            una visita medica in pochi click, senza dover aspettare in coda o
-            recarti in ambulatorio.
+            {t['how_it_works']['description']}
           </p>
         </div>
 
         <div className="container space-y-5 lg:-space-y-10 lg:px-52">
-          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
-            <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-2xl font-bold uppercase text-brand">
-                step 1
-              </span>
-              <h2 className="text-3xl font-semibold">
-                Seleziona la tipologia di visita
-              </h2>
-              <p className="text-secondary">
-                Scegli tra teleconsulenza, videoconsulenza, visita in
-                ambulatorio o visita a domicilio.
-              </p>
+          {t['how_it_works']['content']['steps'].map((s, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-between gap-5 odd:flex-row-reverse md:flex-row"
+            >
+              <div className="flex max-w-lg flex-col gap-3">
+                <span className="text-2xl font-bold uppercase text-brand">
+                  step {i + 1}
+                </span>
+                <h2 className="text-3xl font-semibold">{s['title']}</h2>
+                <p className="text-secondary">{s['description']}</p>
+              </div>
+              <img src={stepsImagesMap[i]} alt="" className="h-[380px]" />
             </div>
-            <img src="/assets/step-1.png" alt="" className="h-[380px]" />
-          </div>
-
-          <div className="flex flex-col items-center justify-between gap-5 md:flex-row-reverse">
-            <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-2xl font-bold uppercase text-brand">
-                step 2
-              </span>
-              <h2 className="text-3xl font-semibold">
-                Seleziona la data e l'orario
-              </h2>
-              <p className="text-secondary">
-                Scegli la data e l'orario che preferisci per la tua visita
-                medica.
-              </p>
-            </div>
-            <img src="/assets/step-2.png" alt="" className="h-[380px]" />
-          </div>
-
-          <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
-            <div className="flex max-w-lg flex-col gap-3">
-              <span className="text-2xl font-bold uppercase text-brand">
-                step 3
-              </span>
-              <h2 className="text-3xl font-semibold">
-                Fatto! Il tuo medico ti aspetta
-              </h2>
-              <p className="text-secondary">
-                Il tuo medico ti contatterà all'orario stabilito per la tua
-                visita medica.
-              </p>
-            </div>
-            <img src="/assets/step-1.png" alt="" className="h-[380px]" />
-          </div>
+          ))}
         </div>
 
         <div className="flex flex-col gap-10 py-20">
           <div className="container flex flex-col gap-4">
             <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
-              I nostri piani
+              {t['plans']['intro']}
             </span>
-            <Title of="section">Scegli il piano che fa per te</Title>
+            <Title of="section">{t['plans']['title']}</Title>
             <p className="text-lg text-secondary">
-              Con la Infinitydoc Membership puoi accedere a livelli di
-              sottoscrizione di servizi su misura per te.
-              <br />
-              Tutti i nostri servizi a un prezzo fisso mensile.
+              {t['plans']['description']}
             </p>
           </div>
 
           <div className="flex flex-col gap-12">
             <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-stretch">
-              {plans.map(p => (
+              {t['plans']['content'].map(p => (
                 <div
                   key={p.title}
                   className="flex max-w-md flex-1 flex-col justify-between gap-8 rounded bg-white px-7 py-8 shadow-md"
                 >
                   <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-3">
-                      <span className="text-brand">{p.description}</span>
+                      <span className="text-brand">{p.intro}</span>
                       <h1 className="text-2xl font-semibold">{p.title}</h1>
                       <p className="flex items-center gap-2 text-3xl text-brand">
                         <b>{p.price}</b>
@@ -283,7 +216,7 @@ export default function IndexPage() {
                         size="lg"
                         className="flex w-full items-center justify-between"
                       >
-                        Scopri
+                        {p.cta}
                         <ArrowRight className="ml-2 h-6 w-6" />
                       </Button>
                     </div>
@@ -320,20 +253,16 @@ export default function IndexPage() {
         <div className="container flex flex-col justify-between gap-10">
           <div className="flex flex-col gap-4">
             <span className="text-lg font-medium uppercase text-brand">
-              I nostri punti forti
+              {t['cures']['intro']}
             </span>
-            <Title of="section">Investi ora nel tuo benessere</Title>
+            <Title of="section">{t['cures']['title']}</Title>
             <p className="text-lg text-secondary">
-              Con InfinityDoc hai la possibilita di ottenere risoluzioni
-              immediata nel momento giusto. Qualunque cosa succede noi siamo in
-              grado di darti un primo orientamento per ottenere i migliori
-              risultati nel piu breve tempo possibili. Ecco un elenco Delle
-              problematiche piu frequentemente risolte con i nostril consulti.
+              {t['cures']['description']}
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {treatments.map((r, i) => (
+            {t['cures']['content']['list'].map((r, i) => (
               <div key={i} className="flex flex-1 items-center gap-4">
                 <CheckCircle className="h-10 w-10 text-brand" />
                 <span className="flex-1 text-lg">{r}</span>
@@ -347,15 +276,11 @@ export default function IndexPage() {
         <div className="container flex flex-col items-center justify-between gap-10 md:flex-row-reverse md:gap-20">
           <div className="flex flex-col gap-4">
             <span className="text-lg font-medium uppercase text-brand">
-              La nostra missione
+              {t['mission']['intro']}
             </span>
-            <Title of="section">
-              Rendere l'assistenza medica più accessibile e conveniente
-            </Title>
+            <Title of="section">{t['mission']['title']}</Title>
             <p className="text-lg text-secondary">
-              Vogliamo alzare il livello di qualità dell'assistenza medica in
-              Italia e rendere l'accesso ai servizi sanitari più semplice e
-              conveniente.
+              {t['mission']['description']}
             </p>
           </div>
 
@@ -375,14 +300,11 @@ export default function IndexPage() {
         <div className="flex flex-col items-center justify-center gap-10 py-8 lg:py-20">
           <div className="flex max-w-3xl flex-col justify-center gap-5 text-center">
             <span className="animate-fade-in text-lg font-medium uppercase text-brand opacity-0">
-              qui per ascoltarti
+              {t['contacts']['intro']}
             </span>
-            <Title of="section">Vieni a trovarci</Title>
+            <Title of="section">{t['contacts']['title']}</Title>
             <p className="animate-fade-rotate-in-lg text-lg text-secondary opacity-0 delay-500">
-              Non vediamo l'ora di darti il benvenuto nel nostro studio medico.
-              <br />
-              <b>Infinitydoc</b> è situato in Piazzale Caiazzo 2, a pochi passi
-              dalla fermata della metro verde M2 Caiazzo.
+              {t['contacts']['description']}
             </p>
           </div>
 
