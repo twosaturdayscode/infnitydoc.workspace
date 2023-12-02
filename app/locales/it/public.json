@@ -30,22 +30,26 @@
         {
           "title": "Teleconsulenza",
           "description": "Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con uno dei nostri medici professionisti.",
-          "cta": "prenota"
+          "cta": "prenota",
+          "price": "€19,90"
         },
         {
           "title": "Videoconsulenza",
           "description": "Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata con uno dei nostri medici professionisti.",
-          "cta": "prenota"
+          "cta": "prenota",
+          "price": "€19,90"
         },
         {
           "title": "Consulenza in ambulatorio",
           "description": "Prenota una visita presso la nostra clinica in centro a Milano.",
-          "cta": "prenota"
+          "cta": "prenota",
+          "price": "€19,90"
         },
         {
           "title": "Consulenza a domicilio",
           "description": "Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*",
-          "cta": "prenota"
+          "cta": "prenota",
+          "price": "€19,90"
         }
       ]
     }

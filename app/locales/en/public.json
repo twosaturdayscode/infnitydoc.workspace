@@ -30,22 +30,26 @@
         {
           "title": "Teleconsultation",
           "description": "Available 24/7. Immediate phone call with one of our professional doctors.",
-          "cta": "Book"
+          "cta": "Book",
+          "price": "€19,90"
         },
         {
           "title": "Video Consultation",
           "description": "Available 24/7. Immediate video call with one of our professional doctors.",
-          "cta": "Book"
+          "cta": "Book",
+          "price": "€19,90"
         },
         {
           "title": "Clinic Consultation",
           "description": "Book a visit at our clinic in the center of Milan.",
-          "cta": "Book"
+          "cta": "Book",
+          "price": "€19,90"
         },
         {
           "title": "Home Consultation",
           "description": "We come to you anywhere in Milan and the province.*",
-          "cta": "Book"
+          "cta": "Book",
+          "price": "€19,90"
         }
       ]
     }
