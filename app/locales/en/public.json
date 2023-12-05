@@ -31,25 +31,37 @@
           "title": "Teleconsultation",
           "description": "Available 24/7. Immediate phone call with one of our professional doctors.",
           "cta": "Book",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Video Consultation",
           "description": "Available 24/7. Immediate video call with one of our professional doctors.",
           "cta": "Book",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Clinic Consultation",
           "description": "Book a visit at our clinic in the center of Milan.",
           "cta": "Book",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Home Consultation",
           "description": "We come to you anywhere in Milan and the province.*",
           "cta": "Book",
-          "price": "€19,90"
+          "price": "€20"
+        },
+        {
+          "title": "Sport medical certificate",
+          "description": "The medical certificate for sports activities.",
+          "cta": "Book",
+          "price": "€40"
+        },
+        {
+          "title": "Medical certificate for driving license",
+          "description": "The medical certificate for driving license.",
+          "cta": "Book",
+          "price": "€40"
         }
       ]
     }

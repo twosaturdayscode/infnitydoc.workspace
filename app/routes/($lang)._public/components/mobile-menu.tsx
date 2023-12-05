@@ -34,7 +34,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ps => {
             </Sheet.Close>
           </div>
           <div className="flex flex-col gap-5 text-left">
-            <ps.links.howItWorks />
             <ps.links.services />
           </div>
           <ps.links.booking />

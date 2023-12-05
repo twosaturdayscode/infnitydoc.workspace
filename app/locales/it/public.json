@@ -17,7 +17,7 @@
     "cta_booking": "Prenota online"
   },
   "hero": {
-    "title": "Un medico sempre a portata di mano",
+    "title": "Immagina avere un medico sempre a disposizione",
     "description": "Ovunque tu sia e in qualsiasi momento, con Infinitydoc hai la possibilità di effettuare una Televisita o una Video visita 24 ore su 24, 7 giorni su 7.",
     "cta_discover": "Scopri di più"
   },
@@ -31,25 +31,37 @@
           "title": "Teleconsulenza",
           "description": "Disponibile 24 ore su 24, 7 giorni su 7. Telefonata immediata con uno dei nostri medici professionisti.",
           "cta": "prenota",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Videoconsulenza",
           "description": "Disponibile 24 ore su 24, 7 giorni su 7. Videochiamata immediata con uno dei nostri medici professionisti.",
           "cta": "prenota",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Consulenza in ambulatorio",
           "description": "Prenota una visita presso la nostra clinica in centro a Milano.",
           "cta": "prenota",
-          "price": "€19,90"
+          "price": "€20"
         },
         {
           "title": "Consulenza a domicilio",
           "description": "Ti raggiungiamo ovunque tu sia in tutta Milano e provincia.*",
           "cta": "prenota",
-          "price": "€19,90"
+          "price": "€20"
+        },
+        {
+          "title": "Idoneità sportiva",
+          "description": "Il certificato di idoneità sportiva è un documento che attesta se un soggetto è idoneo o meno a praticare attività sportiva.",
+          "cta": "prenota",
+          "price": "€40"
+        },
+        {
+          "title": "Certificato anamnestico per patente",
+          "description": "Il certificato anamnestico è un documento che attesta se un soggetto ha 'idoneità psico-fisica per avere la patente.",
+          "cta": "prenota",
+          "price": "€40"
         }
       ]
     }

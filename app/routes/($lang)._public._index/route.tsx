@@ -4,16 +4,21 @@ import {
   type MetaFunction,
   json,
 } from '@remix-run/cloudflare'
-import { Button, Dialog } from '@src/components'
-import { serviceCardsIconMap, stepsImagesMap } from './content'
-import { ArrowRight, CheckCircle } from '@phosphor-icons/react/dist/ssr'
+import { Dialog } from '@src/components'
+import { serviceCardsIconMap } from './content'
+import {
+  CheckCircle,
+  PhoneCall,
+  WhatsappLogo,
+  Chat,
+} from '@phosphor-icons/react/dist/ssr'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
 import { WhatsappButton } from './components/whatsapp-button'
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
 import { useLoaderData } from '@remix-run/react'
-import { publicLinks } from '@app/links/public'
+import { Mail } from 'lucide-react'
 
 export const meta: MetaFunction = () => {
   return [
@@ -72,17 +77,6 @@ export default function IndexPage() {
               {t['hero']['description']}
             </p>
           </div>
-          <div className="flex animate-fade-rotate-in-lg">
-            <Button size="lg" className="mt-4 w-full lg:w-auto" asChild>
-              <button
-                onClick={() =>
-                  document.getElementById('how_it_works')?.scrollIntoView(true)
-                }
-              >
-                {t['hero']['cta_discover']}
-              </button>
-            </Button>
-          </div>
         </div>
 
         <div className="relative hidden flex-1 rounded-2xl bg-[url(/assets/rect.png)] bg-cover xl:flex xl:items-center">
@@ -134,147 +128,87 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="container grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-4">
+        <div className="container grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
           {t['services']['content']['list'].map((c, i) => (
             <ServiceCard key={i}>
               <ServiceCard.Icon>{serviceCardsIconMap[i]()}</ServiceCard.Icon>
               <ServiceCard.Title>{c['title']}</ServiceCard.Title>
+              <ServiceCard.Price>{c['price']}</ServiceCard.Price>
               <ServiceCard.Description>
                 {c['description']}
               </ServiceCard.Description>
               <ServiceCard.Action>
-                <publicLinks.booking>{c['cta']}</publicLinks.booking>
+                <Dialog>
+                  <Dialog.Trigger asChild>
+                    <button className="group order-1 block whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
+                      {c['cta']}
+                    </button>
+                  </Dialog.Trigger>
+                  <Dialog.Content>
+                    <div className="flex flex-col gap-5 py-8">
+                      <div className="flex w-full flex-col gap-4 px-6">
+                        <h1 className="text-3xl font-medium text-brand">
+                          {c['title']}
+                        </h1>
+                        <span className="text-2xl font-medium text-secondary">
+                          {c['price']}
+                        </span>
+                      </div>
+                      <div className="flex flex-col gap-4 px-8">
+                        <p>{c['description']} </p>
+                        <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                          <a
+                            href={`https://wa.me/393888770022?text=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(
+                              c['title'].toUpperCase(),
+                            )}%2C%20preferibilmente%20%28specifica%20quando%29.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                          >
+                            <WhatsappLogo className="h-6 w-6" />
+                            Whatsapp
+                          </a>
+                          <a
+                            href={`mailto:info@infinitydoc.it?subject=Prenotazione%20${encodeURI(
+                              c['title'].toUpperCase(),
+                            )}&body=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(
+                              c['title'].toUpperCase(),
+                            )}%2C%20preferibilmente%20%28specifica%20quando%29.`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                          >
+                            <Mail className="h-6 w-6" />
+                            Email
+                          </a>
+                          <a
+                            href="sms:+393888770022"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                          >
+                            <Chat className="h-6 w-6" />
+                            SMS
+                          </a>
+                          <a
+                            href="tel:+393888770022"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                          >
+                            <PhoneCall className="h-6 w-6" />
+                            Telefono
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </Dialog.Content>
+                </Dialog>
               </ServiceCard.Action>
             </ServiceCard>
           ))}
         </div>
       </div>
-
-      <section className="relative flex flex-col gap-10 py-20 lg:px-28">
-        <div className="container flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <span
-              id="how_it_works"
-              className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-lg"
-            >
-              {t['how_it_works']['intro']}
-            </span>
-            <Title of="section">{t['how_it_works']['title']}</Title>
-          </div>
-          <p className="text-xl text-secondary">
-            {t['how_it_works']['description']}
-          </p>
-        </div>
-
-        <div className="container flex flex-col justify-center gap-20">
-          {t['how_it_works']['content']['steps'].map((s, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center justify-center gap-40 md:flex-row md:justify-center md:even:flex-row-reverse"
-            >
-              <div className="flex max-w-lg flex-col gap-3">
-                <span className="text-2xl font-bold uppercase text-brand">
-                  step {i + 1}
-                </span>
-                <h2 className="text-3xl font-semibold">{s['title']}</h2>
-                <p className="text-secondary">{s['description']}</p>
-              </div>
-              {stepsImagesMap[i] && (
-                <img src={stepsImagesMap[i]} alt="" className="w-[380px]" />
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-10 py-20">
-          <div className="container flex flex-col gap-4">
-            <span className="animate-fade-rotate-in-lg text-base font-medium uppercase text-brand opacity-0 md:text-xl">
-              {t['plans']['intro']}
-            </span>
-            <Title of="section">{t['plans']['title']}</Title>
-            <p className="text-lg text-secondary">
-              {t['plans']['description']}
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-12">
-            <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-stretch">
-              {t['plans']['content'].map(p => (
-                <div
-                  key={p.title}
-                  className="flex max-w-md flex-1 flex-col justify-between gap-8 rounded bg-white px-7 py-8 shadow-md"
-                >
-                  <div className="flex flex-col gap-8">
-                    <div className="flex flex-col gap-3">
-                      <span className="text-brand">{p.intro}</span>
-                      <h1 className="text-2xl font-semibold">{p.title}</h1>
-                      <p className="flex items-center gap-2 text-3xl text-brand">
-                        <b>{p.price}</b>
-                        <span className="text-sm text-secondary">/mese</span>
-                      </p>
-                    </div>
-                    <div className="flex">
-                      <Dialog>
-                        <Dialog.Trigger asChild>
-                          <Button
-                            size="lg"
-                            className="flex w-full items-center justify-between"
-                          >
-                            {p.cta}
-                            <ArrowRight className="ml-2 h-6 w-6" />
-                          </Button>
-                        </Dialog.Trigger>
-                        <Dialog.Content>
-                          <h1 className="text-3xl font-medium">
-                            Tutto pensato per te
-                          </h1>
-                          <p>
-                            Sappiamo che le esigenze mediche non hanno orario e
-                            sono imprevedibili. Conoscendo le tue esigenze
-                            abbiamo pensato a soluzioni comprensive per la tua
-                            convenienza. Contattaci all'indirizzo{' '}
-                            <a
-                              className="text-brand"
-                              href="mailto:info@infitydoc.it"
-                            >
-                              info@infitydoc.it
-                            </a>
-                          </p>
-
-                          <div className="flex flex-col gap-3">
-                            <h2 className="text-2xl font-medium">
-                              Piano {p.title}
-                            </h2>
-                            <div className="flex flex-col items-start gap-3">
-                              {p.features.map(f => (
-                                <div
-                                  key={f}
-                                  className="flex flex-1 items-center gap-3"
-                                >
-                                  <CheckCircle className="h-7 w-7 text-brand" />
-                                  <span className="flex-1">{f}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </Dialog.Content>
-                      </Dialog>
-                    </div>
-                    <div className="flex flex-col items-start gap-3">
-                      {p.features.map(f => (
-                        <div key={f} className="flex flex-1 items-center gap-3">
-                          <CheckCircle className="h-7 w-7 text-brand" />
-                          <span className="flex-1">{f}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="relative flex flex-col gap-14 py-20">
         <img

@@ -13,7 +13,6 @@ export function DesktopMenu(ps: DesktopMenuProps) {
     <div className="flex h-full items-center justify-between px-10 lg:container">
       <ps.links.home />
       <div className="hidden gap-7 lg:flex">
-        <ps.links.howItWorks />
         <ps.links.services />
         <ps.links.whereWeAre />
       </div>

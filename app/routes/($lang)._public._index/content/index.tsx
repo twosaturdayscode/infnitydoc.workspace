@@ -1,5 +1,6 @@
 import {
   Buildings,
+  Certificate,
   HouseLine,
   Microphone,
   VideoCamera,
@@ -10,6 +11,8 @@ export const serviceCardsIconMap = [
   () => <VideoCamera className="h-7 w-7 text-brand" />,
   () => <Buildings className="h-7 w-7 text-brand" />,
   () => <HouseLine className="h-7 w-7 text-brand" />,
+  () => <Certificate className="h-7 w-7 text-brand" />,
+  () => <Certificate className="h-7 w-7 text-brand" />,
 ]
 
 export const stepsImagesMap = ['/assets/step1.png', '/assets/step2.png']
