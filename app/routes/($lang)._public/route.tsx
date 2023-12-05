@@ -54,7 +54,9 @@ export default function IndexRouteLayout() {
       </Layout.Topbar>
       <Layout.Header>
         <DesktopMenu links={publicLinks} />
-        <MobileMenu links={publicLinks} />
+        {/* <div>
+          <MobileMenu links={publicLinks} />
+        </div> */}
       </Layout.Header>
 
       <Layout.Body>
@@ -69,8 +71,6 @@ export default function IndexRouteLayout() {
 }
 
 const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
-  const { direction } = useScrollDirection()
-
   return createHost(ps.children, h => {
     return (
       <>
@@ -83,8 +83,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         <header
           {...h.getProps(Layout.Header)}
           className={tm(
-            'flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-10 py-5 shadow-sm backdrop-blur-sm',
-            direction === 'down' && '-top-20',
+            'relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-10 py-5 shadow-sm backdrop-blur-sm',
           )}
         />
         <main {...h.getProps(Layout.Body)} />

@@ -50,7 +50,7 @@ export default function IndexPage() {
   const { t } = useLoaderData<typeof loader>()
 
   return (
-    <div className="relative overflow-x-hidden pt-20 text-primary">
+    <div className="relative overflow-x-hidden pt-10 lg:pt-20 text-primary">
       <img
         src="/assets/blob.svg"
         alt="blob"
@@ -62,7 +62,7 @@ export default function IndexPage() {
         className="absolute -bottom-0 -right-48 -z-10 will-change-transform"
       />
       <div className="container flex flex-col-reverse gap-20 lg:flex-row lg:justify-between lg:py-20">
-        <div className="flex flex-col gap-3 py-14 lg:max-w-2xl">
+        <div className="flex flex-col gap-3 py-9 lg:py-14 lg:max-w-2xl">
           <div className="flex animate-fade-rotate-in items-center gap-1 opacity-0">
             <div className="h-1 w-6 bg-brand" />
             <span className="uppercase text-brand">
