@@ -2,9 +2,6 @@ import { Outlet, useLoaderData } from '@remix-run/react'
 import { Footer } from './components/footer'
 import { createHost, createSlot } from 'create-slots'
 import { tm } from '@src/components'
-import { useScrollDirection } from '@app/hooks'
-import { DesktopMenu } from './components/desktop-menu'
-import { MobileMenu } from './components/mobile-menu'
 import { publicLinks } from '@app/links/public'
 import { Clock, MapPin, Phone } from '@phosphor-icons/react/dist/ssr'
 import { redirect, type LoaderFunctionArgs, json } from '@remix-run/cloudflare'
@@ -47,13 +44,22 @@ export default function IndexRouteLayout() {
           </div>
           <div className="flex w-full items-center justify-center gap-3 text-sm lg:w-auto lg:text-base">
             <Clock size={20} className="stroke-1" />
-            <span className="hidden lg:block">Orari ambulatorio:</span>
+            <span className="hidden lg:block">{t['header']['office_hours_intro']}</span>
             <span>{t['general']['office_hours']}</span>
           </div>
         </>
       </Layout.Topbar>
       <Layout.Header>
-        <DesktopMenu links={publicLinks} />
+        <div className="flex h-full items-center justify-between px-10 lg:container">
+          <publicLinks.home />
+          <div className="hidden gap-7 lg:flex">
+            <publicLinks.services content= {t['menu']['services']} />
+            <publicLinks.findUs content={t['menu']['find-us']} />
+          </div>
+          <div className="hidden lg:block">
+            <publicLinks.booking content={t['menu']['book']} />
+          </div>
+        </div>
         {/* <div>
           <MobileMenu links={publicLinks} />
         </div> */}

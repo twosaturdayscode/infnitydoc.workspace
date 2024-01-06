@@ -9,6 +9,13 @@ import { publicLinks } from '@app/links/public'
 
 export function Footer() {
   const { t } = useLoaderData<typeof loader>()
+
+  const footerMenuLinks = [
+    publicLinks.howItWorks,
+    publicLinks.services,
+    publicLinks.findUs,
+  ]
+
   return (
     <footer className="flex flex-col gap-10 bg-brand-light pb-14 pt-20 text-secondary">
       <div className="container flex flex-col md:flex-row md:gap-32">
@@ -66,7 +73,7 @@ export function Footer() {
             <ul className="flex max-w-lg flex-col gap-1 font-medium">
               {t.footer.links.menu.links.map((l, i) => (
                 <li key={i} className="flex-1">
-                  {footerMenuLinks[i]()}
+                  {footerMenuLinks[i]({ content: l.title })}
                 </li>
               ))}
             </ul>
@@ -109,9 +116,3 @@ export function Footer() {
     </footer>
   )
 }
-
-const footerMenuLinks = [
-  () => <publicLinks.howItWorks />,
-  () => <publicLinks.services />,
-  () => <publicLinks.whereWeAre />,
-]

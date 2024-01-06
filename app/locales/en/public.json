@@ -1,7 +1,7 @@
 {
   "general": {
-    "phone": "388 877 0022",
-    "address_extended": "Piazzale Caiazzo, 2 Milan, 20124, Italy Near green metro stop M2 Caiazzo",
+    "phone": "0039 388 877 0022",
+    "address_extended": "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
     "office_hours": "Monday - Saturday: 9:00 - 19:00",
     "email": "info@infinitydoc.it"
   },
@@ -9,156 +9,146 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "contact": "Contact Us",
-    "donate": "Donate"
+    "contact": "Contact us",
+    "donate": "Dona",
+    "find-us": "Find Us",
+    "book": "Book online"
   },
   "header": {
-    "office_hours_intro": "Clinic Hours:",
-    "cta_booking": "Book Online"
+    "office_hours_intro": "Clinic Opening hours:",
+    "cta_booking": "Book now"
   },
   "hero": {
-    "title": "A doctor always at your fingertips",
-    "description": "Wherever you are and at any time, with Infinitydoc, you have the opportunity to have a Televisit or Video visit 24/7.",
-    "cta_discover": "Learn More"
+    "title": " Consult a doctor in just a few steps ",
+    "description": " With infinitydoc you have the possibility to talk to a local doctor wherever you are whenever you are .",
+    "cta_discover": " Find out more."
   },
   "services": {
-    "intro": "Our Services",
-    "title": "Our services designed for you",
-    "description": "Infinitydoc is the innovative medical consulting service that allows you to access a doctor instantly 24/7. If you prefer, you can also visit the clinic or request a home visit with the same availability.",
+    "intro": "Our services",
+    "title": "Our services tailored on your needs",
+    "description": " Infinitydoc is the innovative medical consultancy service that allows you to access a doctor instantly 24 hours a day, 7 days a week. If you prefer, you can also show up at the clinic or request a home visit with the same availability.",
     "content": {
       "list": [
         {
-          "title": "Teleconsultation",
-          "description": "Available 24/7. Immediate phone call with one of our professional doctors.",
-          "cta": "Book",
+          "title": "Tele-consulting",
+          "description": " Available 24 hours a day, 7 days a week. Immediate phone call with one of our medical professionals.",
+          "cta": "Book Now",
           "price": "€20"
         },
         {
-          "title": "Video Consultation",
-          "description": "Available 24/7. Immediate video call with one of our professional doctors.",
-          "cta": "Book",
+          "title": "Video-consulting",
+          "description": " Available 24 hours a day, 7 days a week. Immediate video call with one of our professional doctors.",
+          "cta": "Book Now",
           "price": "€20"
         },
         {
-          "title": "Clinic Consultation",
-          "description": "Book a visit at our clinic in the center of Milan.",
-          "cta": "Book",
-          "price": "€20"
-        },
-        {
-          "title": "Home Consultation",
-          "description": "We come to you anywhere in Milan and the province.*",
-          "cta": "Book",
+          "title": "Clinic Appointment",
+          "description": " Book a visit at our clinic in the city center of Milan. You can book within 1 h notice.",
+          "cta": "Book Now",
           "price": "€140"
         },
         {
-          "title": "Sport medical certificate",
-          "description": "The medical certificate for sports activities.",
-          "cta": "Book",
-          "price": "€40"
-        },
-        {
-          "title": "Medical certificate for driving license",
-          "description": "The medical certificate for driving license.",
-          "cta": "Book",
+          "title": " Home visitconsultation ",
+          "description": " We reach you wherever you are throughout Milan and its province.*",
+          "cta": "Book Now",
           "price": "€40"
         }
       ]
     }
   },
   "how_it_works": {
-    "intro": "What is it about?",
-    "title": "In a few clicks, you are in touch with your doctor",
-    "description": "We have reimagined the process of scheduling a medical visit to make it simpler and faster. With InfinityDoc, you can book a medical visit in just a few clicks, without waiting in line or going to the clinic.",
+    "intro": " What is it about?",
+    "title": " In just a few clicks you are in contact with a local doctor ",
+    "description": " We have rethought the process of booking a medical visit to make it simpler and faster. With Infinitydoc you can book a medical visit in just a few clicks, without having to wait in line or go to the clinic.",
     "content": {
       "steps": [
         {
-          "title": "Select the type of visit",
-          "description": "Choose from teleconsultation, video consultation, clinic visit, or home visit."
+          "title": " Select the type of visit ",
+          "description": " Choose between a tele-consultation, video-consultation, clinic visit or a home visit."
         },
         {
-          "title": "Select the date and time",
-          "description": "Choose the date and time that suits you for your medical visit."
+          "title": " Select the date and time ",
+          "description": " Choose the date and time you prefer for your medical visit."
         },
         {
-          "title": "Done! Your doctor is waiting for you",
-          "description": "Your doctor will contact you at the scheduled time for your medical visit."
+          "title": " All Done! Your doctor is waiting for you !",
+          "description": " Your doctor will contact you at the scheduled time for your medical consultation."
         }
       ]
     }
   },
   "plans": {
-    "intro": "Our Plans",
-    "title": "Choose the plan that suits you",
-    "description": "With Infinitydoc Membership, you can access subscription levels tailored to you. All our services at a fixed monthly price.",
+    "intro": " Our subscribtions",
+    "title": " Choose the subscription that's right for you ",
+    "description": " With the Infinitydoc subscrition you can access levels of services tailored for you. Benefit from all our services at a fixed monthly price!",
     "content": [
       {
         "title": "Standard",
-        "intro": "For basic needs",
-        "price": "€15",
+        "intro": " For basic needs ",
+        "price": "€ 15",
         "features": [
-          "10 video-teleconsultations 24/7",
-          "5 Clinic visits",
-          "1 health check-up",
-          "1 Home visits at a discounted cost",
-          "1 Booking for specialized consultation at a discounted cost (Up to 15% off)",
-          "1 free certificate"
+          "10 video/tele-consultations 24h/7 annually",
+          "5 Cinic visits ",
+          "1 health check-up ",
+          "1 home visits at a discounted cost ",
+          "1 specialist consultation bookings at a discounted cost (Up to 15% off)",
+          "1 free medical certificate."
         ],
-        "cta": "Discover"
+        "cta": "Find out more!"
       },
       {
         "title": "Premium",
-        "intro": "For total security",
-        "price": "€25",
+        "intro": " For your total ease of mind",
+        "price": "€ 25",
         "features": [
-          "20 video/teleconsultations 24/7",
-          "10 Clinic visits",
-          "2 health check-ups",
-          "2 Home visits at a discounted cost",
-          "3 Bookings for specialized consultations at a discounted cost (Up to 15% off)",
-          "2 free medical certificates (excluding disability certificate)"
+          " 20 video/tele-consultations 24h/7 annually ",
+          "5 Cinic visits ",
+          "2 health checks annually",
+          "2 home visits at a discounted cost",
+          "3 specialist consultation bookings at a discounted cost (Up to 15% off)",
+          "2 free medical certificates "
         ],
-        "cta": "Discover"
+        "cta": " Find out more!"
       },
       {
         "title": "Family",
-        "intro": "For the whole family",
-        "price": "€35",
+        "intro": " For the whole family ",
+        "price": "€ 40",
         "features": [
-          "Unlimited video/teleconsultations 24/7",
-          "15 Annual clinic visits",
-          "4 health check-ups",
-          "3 Home visits at a discounted cost",
-          "5 Bookings for specialized consultations at a discounted cost",
-          "3 free medical certificates (excluding disability certificate)"
+          "Unlimited video/tele-consultations 24h/7 annually ",
+          "15 clinic visits",
+          "4 health checks annually",
+          "3 home visits at a discounted cost",
+          "5 specialist consultation bookings at a discounted cost (Up to 15% off)",
+          "3 free medical certificates"
         ],
-        "cta": "Discover"
+        "cta": "Find out more"
       }
     ]
   },
   "cures": {
-    "intro": "Our Cures",
-    "title": "Invest in your well-being now",
-    "description": "With Infinitydoc, you have the possibility of immediate resolutions at the right time. Whatever happens, we can give you initial guidance to achieve the best results in the shortest possible time. Here is a list of the most frequently resolved issues with our consultations.",
+    "intro": "Most commonly treated consitions",
+    "title": "Invest now in your future’s wellbeing",
+    "description": "With Infinitydoc you have the possibility to get immediate remedies at the right time. Whatever happens we are able to give you initial guidance to obtain the best results in the shortest possible time. Here is a list of the most frequently resolved conditions with our consultations.",
     "content": {
       "list": [
         "Cough, cold, fever",
         "Urinary tract infections",
         "Food poisoning, diarrhea",
-        "Pink eye",
-        "Sore throat",
+        "Pink Eye",
+        "Sore throat, sore throat",
         "Sinus infections, ear pain",
-        "Yeast infections",
-        "Bacterial vaginosis",
+        "Vaginal yeast infections",
+        "Bacterial Vaginosis",
         "Hypothyroidism",
         "Laboratory order for sexually transmitted diseases",
-        "Prescription refills",
-        "Rash and eczema",
+        "Prescription Refills",
+        "Skin rash and eczema",
         "Insect bites, skin infections",
         "Asthma",
         "Acid reflux",
         "Acne",
-        "Erectile dysfunction",
+        "Erectile Dysfunction",
         "Genital herpes",
         "Cold sores",
         "Gout"
@@ -166,78 +156,83 @@
     }
   },
   "mission": {
-    "intro": "Our Mission",
-    "title": "Make healthcare more accessible and affordable",
-    "description": "We aim to raise the quality of healthcare in Italy and make access to healthcare services simpler and more affordable."
+    "intro": "Our mission",
+    "title": " Making medical care more accessible and affordable ",
+    "description": " We want to raise the quality level of medical care in Milan and make access to health services simpler and more convenient."
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Frequently asked questions",
     "questions": [
       {
-        "title": "How does online booking work?",
-        "answer": "Choose the service you want, select the day and time you prefer, and proceed with payment. Once the payment is completed, you will receive a confirmation email."
+        "title": " How does online booking work?",
+        "answer": " Choose the service you want, select the day and time you prefer and proceed with payment. Once payment is completed you will receive a confirmation email."
       },
       {
-        "title": "How can I pay?",
-        "answer": "We accept payments by credit card, PayPal, Apple Pay, Google Pay, and bank transfer."
+        "title": "Methods of payment",
+        "answer": " We accept payments by credit card, PayPal, Apple Pay, Google Pay and bank transfer."
       },
       {
-        "title": "Can I cancel the reservation?",
-        "answer": "You can cancel the reservation up to 24 hours before the appointment. To cancel the reservation, contact us by email or phone."
+        "title": " Can I cancel the booking?",
+        "answer": " You can cancel your reservation up to 12 hours before your appointment. To cancel your reservation, contact us by email or telephone."
       },
       {
-        "title": "How can I contact you?",
-        "description": "You can contact us by email at info@infinitydoc.it or by phone at +39 000 000 000."
+        "title": "How to get in touch",
+        "description": " You can contact us by email at: info@infinitydoc.it or by telephone at +39 3888770022."
       }
     ]
   },
   "contacts": {
-    "intro": "Here to listen",
-    "title": "Come visit us",
-    "description": "We look forward to welcoming you to our medical office. Infinitydoc is located at Piazzale Caiazzo 2, just steps away from the green metro stop M2 Caiazzo.",
-    "cta": "Contact Us"
+    "intro": "Here to help!",
+    "title": "Come visit us!",
+    "description": " We look forward to welcoming you to our medical practice. Infinitydoc is located in Piazzale Caiazzo 2, a few steps from the M2 Caiazzo green metro stop.",
+    "cta": "Contact Us",
+    "card": {
+      "address": "Address",
+      "phone": "Phone",
+      "google-map": "See on Google Maps"
+    }
   },
   "footer": {
-    "contact": "Contattaci",
-    "description": "InfinityDoc cerca di migliorare costantemente il proprio servizio per garantire la migliore esperienza possibile ai propri pazienti.",
+    "contact": "Contact us",
+    "description": "InfinityDoc is constantly looking to improve its service to ensure the best possible experience for its patients.",
     "links": {
       "menu": {
         "title": "Menu",
         "links": [
           {
-            "title": "Chi siamo",
+            "title": "Who are we",
             "url": "/about"
           },
           {
-            "title": "Servizi",
+            "title": "Services",
             "url": "/services"
           },
           {
-            "title": "Contattaci",
+            "title": "Contacts",
             "url": "/contact"
           }
         ]
       },
       "utils": {
-        "title": "Link utili",
+        "title": "Useful links",
         "links": [
           {
-            "title": "Dona",
-            "url": "donate"
+            "title": "Donate",
+            "url": "/donate"
           },
           {
             "title": "Privacy Policy",
-            "url": "privacy"
+            "url": "/privacy"
           },
           {
-            "title": "Termini e condizioni",
-            "url": "terms"
+            "title": "Terms and Conditions",
+            "url": "/terms"
           }
         ]
       }
     },
     "contacts": [
-      "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+      "Piazzale Caiazzo, 2 Milano, 20124, Italia Near Green Underground M2 stop 'Caiazzo'",
       "info@infinitydoc.itinfinitydoc.it",
       "+39 388 877 0022"
     ]

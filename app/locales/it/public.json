@@ -10,7 +10,9 @@
     "about": "Chi siamo",
     "services": "Servizi",
     "contact": "Contattaci",
-    "donate": "Dona"
+    "donate": "Dona",
+    "find-us": "Dove siamo",
+    "book": "Prenota online"
   },
   "header": {
     "office_hours_intro": "Orari ambulatorio:",
@@ -195,7 +197,12 @@
     "intro": "Qui per ascoltarti",
     "title": "Vieni a trovarci",
     "description": "Non vediamo l'ora di darti il benvenuto nel nostro studio medico. Infinitydoc è situato in Piazzale Caiazzo 2, a pochi passi dalla fermata della metro verde M2 Caiazzo.",
-    "cta": "Contattaci"
+    "cta": "Contattaci",
+    "card": {
+      "address": "Indirizzo",
+      "phone": "Telefono",
+      "google-map": "Vedi su Google Maps"
+    }
   },
   "footer": {
     "contact": "Contact us",

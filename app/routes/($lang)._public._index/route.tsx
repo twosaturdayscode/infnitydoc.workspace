@@ -261,7 +261,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="container" id="where-we-are">
+      <section className="container" id="find-us">
         <div className="flex flex-col items-center justify-center gap-10 py-8 lg:py-20">
           <div className="flex max-w-3xl flex-col justify-center gap-5 text-center">
             <span className="animate-fade-in text-lg font-medium uppercase text-brand opacity-0">
