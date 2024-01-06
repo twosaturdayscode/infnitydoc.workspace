@@ -229,10 +229,6 @@
         "title": "Link utili",
         "links": [
           {
-            "title": "Dona",
-            "url": "/donate"
-          },
-          {
             "title": "Privacy Policy",
             "url": "/privacy"
           },
