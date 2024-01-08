@@ -129,7 +129,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         </div>
         <header
           {...h.getProps(Layout.Header)}
-          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-10 py-5 shadow-sm backdrop-blur-sm'
+          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-5 py-5 shadow-sm backdrop-blur-sm'
         />
         <main {...h.getProps(Layout.Body)} />
         <footer {...h.getProps(Layout.Footer)} />
