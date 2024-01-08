@@ -72,7 +72,7 @@ export default function IndexRouteLayout() {
         </>
       </Layout.Topbar>
       <Layout.Header>
-        <div className="flex h-full items-center justify-between px-4 lg:px-10 lg:container w-full">
+        <div className="flex h-full items-center justify-between lg:px-10 lg:container w-full">
           <publicLinks.home />
           <div className="flex gap-7">
             <div className='hidden gap-7 lg:flex'>
@@ -129,7 +129,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         </div>
         <header
           {...h.getProps(Layout.Header)}
-          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-5 py-5 shadow-sm backdrop-blur-sm'
+          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-3 py-5 shadow-sm backdrop-blur-sm'
         />
         <main {...h.getProps(Layout.Body)} />
         <footer {...h.getProps(Layout.Footer)} />
