@@ -72,7 +72,7 @@ export default function IndexRouteLayout() {
         </>
       </Layout.Topbar>
       <Layout.Header>
-        <div className="flex h-full items-center justify-between px-10 lg:container w-full">
+        <div className="flex h-full items-center justify-between px-4 lg:px-10 lg:container w-full">
           <publicLinks.home />
           <div className="flex gap-7">
             <div className='hidden gap-7 lg:flex'>
