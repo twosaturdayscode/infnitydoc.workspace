@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
   presets: [require('./src/styles/animations.preset')],
-  content: ['./app/**/*.{html,ts,tsx}', './src/**/*.tsx'],
+  content: ['./app/**/*.{html,ts,tsx}', './src/**/*.{html,ts,tsx}'],
   theme: {
     container: {
       center: true,
@@ -20,7 +20,7 @@ export default {
         sans: ['Plus Jakarta Sans', ...fontFamily.sans],
       },
       colors: {
-        'brand': "#04B7AC", //'#415DA1',
+        'brand': '#04B7AC', //'#415DA1',
         'brand-light': '#EBFFFB',
         'primary': '#222',
         'secondary': '#67746F',
@@ -43,5 +43,7 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-react-aria-components')
+  ],
 } satisfies Config

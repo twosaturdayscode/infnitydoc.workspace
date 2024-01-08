@@ -1,0 +1,34 @@
+/** @type {import('eslint').Linter.Config} */
+{
+  "extends": ["@remix-run/eslint-config", "@remix-run/eslint-config/node"],
+  "plugins": ["@stylistic"],
+  "rules": {
+    "@stylistic/indent": ["warn", 2],
+    "@stylistic/arrow-parens": ["warn", "as-needed"],
+    "@stylistic/block-spacing": ["warn", "always"],
+    "@stylistic/padded-blocks": ["warn", { "classes": "always" }],
+    "@stylistic/quotes": ["warn", "single", { 
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }],
+    "@stylistic/semi": ["warn", "never"],
+    "@stylistic/eol-last": ["warn", "always"],
+    "@stylistic/max-len": ["warn", { 
+      "code": 85, 
+      "tabWidth": 2, 
+      "comments": 80, 
+      "ignoreUrls": true, 
+      "ignoreTrailingComments": true ,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }],
+    "@stylistic/no-trailing-spaces": ["warn"],
+    "@stylistic/lines-around-comment": ["warn", { 
+      "beforeBlockComment": true, 
+      "afterBlockComment": false,
+      "beforeLineComment": true,
+      "afterLineComment": false,
+      "allowBlockStart": true  
+    }]
+  }
+}

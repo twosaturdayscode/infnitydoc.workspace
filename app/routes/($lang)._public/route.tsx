@@ -1,13 +1,26 @@
-import { Outlet, useLoaderData } from '@remix-run/react'
-import { Footer } from './components/footer'
+import { redirect, type LoaderFunctionArgs, json, type ActionFunctionArgs } from '@remix-run/cloudflare'
+import { Outlet, useFetcher, useLoaderData } from '@remix-run/react'
 import { createHost, createSlot } from 'create-slots'
-import { tm } from '@src/components'
-import { publicLinks } from '@app/links/public'
 import { Clock, MapPin, Phone } from '@phosphor-icons/react/dist/ssr'
-import { redirect, type LoaderFunctionArgs, json } from '@remix-run/cloudflare'
+
+import { publicLinks } from '@app/links/public'
+import { Footer } from './components/footer'
+import { Select } from '@src/ui.web/select'
+import { type Language, Languages, LanguagesConfig } from '@app/locales/config'
 
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
+
+export const action = async ({ request }: ActionFunctionArgs) => {
+  const fd = Object.fromEntries(await request.formData())
+  const { _action, ...values } = fd
+
+  if (_action === 'change-language') {
+    return redirect(`/${values.lang}`)
+  }
+
+  return null
+}
 
 export const loader = ({ params }: LoaderFunctionArgs) => {
   const { lang } = params
@@ -18,15 +31,22 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 
   switch (lang) {
     case 'en':
-      return json({ t: en })
+      return json({ t: en, lang: lang as Language })
 
     default:
-      return json({ t: it })
+      return json({ t: it, lang: lang as Language })
   }
 }
 
 export default function IndexRouteLayout() {
-  const { t } = useLoaderData<typeof loader>()
+  const { t, lang } = useLoaderData<typeof loader>()
+
+  const f = useFetcher()
+
+  function changeLanguage(lang: string) {
+    f.submit({ _action: 'change-language', lang }, { method: 'POST' })
+  }
+
   return (
     <Layout>
       <Layout.Topbar>
@@ -44,17 +64,38 @@ export default function IndexRouteLayout() {
           </div>
           <div className="flex w-full items-center justify-center gap-3 text-sm lg:w-auto lg:text-base">
             <Clock size={20} className="stroke-1" />
-            <span className="hidden lg:block">{t['header']['office_hours_intro']}</span>
+            <span className="hidden lg:block">
+              {t['header']['office_hours_intro']}
+            </span>
             <span>{t['general']['office_hours']}</span>
           </div>
         </>
       </Layout.Topbar>
       <Layout.Header>
-        <div className="flex h-full items-center justify-between px-10 lg:container">
+        <div className="flex h-full items-center justify-between px-10 lg:container w-full">
           <publicLinks.home />
-          <div className="hidden gap-7 lg:flex">
-            <publicLinks.services content= {t['menu']['services']} />
-            <publicLinks.findUs content={t['menu']['find-us']} />
+          <div className="flex gap-7">
+            <div className='hidden gap-7 lg:flex'>
+              <publicLinks.services content={t['menu']['services']} />
+              <publicLinks.findUs content={t['menu']['find-us']} />
+            </div>
+            <f.Form>
+              <Select
+                defaultValue={lang}
+                options={Languages}
+                onChange={l => changeLanguage(l)}
+                map={l => (
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={LanguagesConfig[l].icon.src}
+                      alt={LanguagesConfig[l].icon.alt}
+                      className="w-5 h-5"
+                    />
+                    <span>{LanguagesConfig[l].label}</span>
+                  </div>
+                )}
+              />
+            </f.Form>
           </div>
           <div className="hidden lg:block">
             <publicLinks.booking content={t['menu']['book']} />
@@ -88,9 +129,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         </div>
         <header
           {...h.getProps(Layout.Header)}
-          className={tm(
-            'relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-10 py-5 shadow-sm backdrop-blur-sm',
-          )}
+          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-10 py-5 shadow-sm backdrop-blur-sm'
         />
         <main {...h.getProps(Layout.Body)} />
         <footer {...h.getProps(Layout.Footer)} />
@@ -105,3 +144,4 @@ const Layout = Object.assign(LayoutHost, {
   Body: createSlot('main'),
   Footer: createSlot('footer'),
 })
+

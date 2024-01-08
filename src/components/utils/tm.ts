@@ -1,1 +1,0 @@
-export { twMerge as tm } from 'tailwind-merge'

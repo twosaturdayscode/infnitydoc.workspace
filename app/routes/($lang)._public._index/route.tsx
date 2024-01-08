@@ -1,24 +1,13 @@
-import {
-  redirect,
-  type LoaderFunctionArgs,
-  type MetaFunction,
-  json,
-} from '@remix-run/cloudflare'
-import { Dialog } from '@src/components'
+import { redirect, type LoaderFunctionArgs, type MetaFunction, json } from '@remix-run/cloudflare'
 import { serviceCardsIconMap } from './content'
-import {
-  CheckCircle,
-  PhoneCall,
-  WhatsappLogo,
-  Chat,
-} from '@phosphor-icons/react/dist/ssr'
+import { CheckCircle, PhoneCall, WhatsappLogo, EnvelopeSimple } from '@phosphor-icons/react/dist/ssr'
 import { Title } from '@src/_ref/title'
 import { ServiceCard } from './components/service-card'
 import { WhatsappButton } from './components/whatsapp-button'
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
 import { useLoaderData } from '@remix-run/react'
-import { Mail } from 'lucide-react'
+import { Dialog } from '@src/ui.web/dialog'
 
 export const meta: MetaFunction = () => {
   return [
@@ -138,71 +127,54 @@ export default function IndexPage() {
                 {c['description']}
               </ServiceCard.Description>
               <ServiceCard.Action>
-                <Dialog>
-                  <Dialog.Trigger asChild>
-                    <button className="group order-1 block whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5">
-                      {c['cta']}
-                    </button>
-                  </Dialog.Trigger>
-                  <Dialog.Content>
-                    <div className="flex flex-col gap-5 py-8">
-                      <div className="flex w-full flex-col gap-4 px-6">
-                        <h1 className="text-3xl font-medium text-brand">
-                          {c['title']}
-                        </h1>
-                        <span className="text-2xl font-medium text-secondary">
-                          {c['price']}
-                        </span>
-                      </div>
-                      <div className="flex flex-col gap-4 px-8">
-                        <p>{c['description']} </p>
-                        <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                          <a
-                            href={`https://wa.me/393888770022?text=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(
-                              c['title'].toUpperCase(),
-                            )}%2C%20preferibilmente%20%28specifica%20quando%29.`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
-                          >
-                            <WhatsappLogo className="h-6 w-6" />
+                <Dialog caption={c['cta']}>
+                  <div className="flex flex-col gap-5 py-8">
+                    <div className="flex w-full flex-col gap-4 px-6">
+                      <h1 className="text-3xl font-medium text-brand">
+                        {c['title']}
+                      </h1>
+                      <span className="text-2xl font-medium text-secondary">
+                        {c['price']}
+                      </span>
+                    </div>
+                    <div className="flex flex-col gap-4 px-8">
+                      <p>{c['description']} </p>
+                      <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                        <a
+                          href={`https://wa.me/393888770022?text=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(c['title'].toUpperCase())}%2C%20preferibilmente%20%28specifica%20quando%29.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                        >
+                          <WhatsappLogo className="h-6 w-6" />
                             Whatsapp
-                          </a>
-                          <a
-                            href={`mailto:info@infinitydoc.it?subject=Prenotazione%20${encodeURI(
-                              c['title'].toUpperCase(),
-                            )}&body=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(
-                              c['title'].toUpperCase(),
-                            )}%2C%20preferibilmente%20%28specifica%20quando%29.`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
-                          >
-                            <Mail className="h-6 w-6" />
+                        </a>
+                        <a
+                          href={`mailto:info@infinitydoc.it?subject=Prenotazione%20${encodeURI(
+                            c['title'].toUpperCase(),
+                          )}&body=Salve%21%20Sono%20interessato%20a%20prenotare%20una%20${encodeURI(
+                            c['title'].toUpperCase(),
+                          )}%2C%20preferibilmente%20%28specifica%20quando%29.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                        >
+                          <EnvelopeSimple className="h-6 w-6" />
                             Email
-                          </a>
-                          <a
-                            href="sms:+393888770022"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
-                          >
-                            <Chat className="h-6 w-6" />
-                            SMS
-                          </a>
-                          <a
-                            href="tel:+393888770022"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
-                          >
-                            <PhoneCall className="h-6 w-6" />
+                        </a>
+                        <a
+                          href="tel:+393888770022"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group flex flex-1 items-center gap-3 whitespace-nowrap rounded-lg border-brand bg-brand px-6 py-3 text-center font-medium capitalize leading-5 text-white ring-brand-light transition-opacity hover:bg-opacity-75 focus:outline-none focus:ring-4 disabled:opacity-50 disabled:hover:bg-opacity-100 lg:order-2 2xl:leading-5"
+                        >
+                          <PhoneCall className="h-6 w-6" />
                             Telefono
-                          </a>
-                        </div>
+                        </a>
                       </div>
                     </div>
-                  </Dialog.Content>
+                  </div>
+
                 </Dialog>
               </ServiceCard.Action>
             </ServiceCard>
