@@ -1,4 +1,9 @@
-import { redirect, type LoaderFunctionArgs, json, type ActionFunctionArgs } from '@remix-run/cloudflare'
+import {
+  redirect,
+  type LoaderFunctionArgs,
+  json,
+  type ActionFunctionArgs,
+} from '@remix-run/cloudflare'
 import { Outlet, useFetcher, useLoaderData } from '@remix-run/react'
 import { createHost, createSlot } from 'create-slots'
 import { Clock, MapPin, Phone } from '@phosphor-icons/react/dist/ssr'
@@ -10,6 +15,7 @@ import { type Language, Languages, LanguagesConfig } from '@app/locales/config'
 
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
+import cn from '../../locales/cn/public.json'
 
 export const action = async ({ request }: ActionFunctionArgs) => {
   const fd = Object.fromEntries(await request.formData())
@@ -32,6 +38,9 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
   switch (lang) {
     case 'en':
       return json({ t: en, lang: lang as Language })
+
+    case 'cn':
+      return json({ t: cn, lang: lang as Language })
 
     default:
       return json({ t: it, lang: lang as Language })
@@ -72,10 +81,10 @@ export default function IndexRouteLayout() {
         </>
       </Layout.Topbar>
       <Layout.Header>
-        <div className="flex h-full items-center justify-between lg:px-10 lg:container w-full">
+        <div className="flex h-full w-full items-center justify-between lg:container lg:px-10">
           <publicLinks.home />
           <div className="flex gap-7">
-            <div className='hidden gap-7 lg:flex'>
+            <div className="hidden gap-7 lg:flex">
               <publicLinks.services content={t['menu']['services']} />
               <publicLinks.findUs content={t['menu']['find-us']} />
             </div>
@@ -89,7 +98,7 @@ export default function IndexRouteLayout() {
                     <img
                       src={LanguagesConfig[l].icon.src}
                       alt={LanguagesConfig[l].icon.alt}
-                      className="w-5 h-5"
+                      className="h-5 w-5"
                     />
                     <span>{LanguagesConfig[l].label}</span>
                   </div>
@@ -129,7 +138,7 @@ const LayoutHost: React.FC<{ children: React.ReactNode }> = ps => {
         </div>
         <header
           {...h.getProps(Layout.Header)}
-          className='relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-3 py-5 shadow-sm backdrop-blur-sm'
+          className="relative flex w-full items-center justify-between border-b border-gray-100 bg-white/90 px-3 py-5 shadow-sm backdrop-blur-sm"
         />
         <main {...h.getProps(Layout.Body)} />
         <footer {...h.getProps(Layout.Footer)} />
@@ -144,4 +153,3 @@ const Layout = Object.assign(LayoutHost, {
   Body: createSlot('main'),
   Footer: createSlot('footer'),
 })
-

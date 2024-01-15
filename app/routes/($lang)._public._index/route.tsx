@@ -6,6 +6,7 @@ import { ServiceCard } from './components/service-card'
 import { WhatsappButton } from './components/whatsapp-button'
 import it from '../../locales/it/public.json'
 import en from '../../locales/en/public.json'
+import cn from '../../locales/cn/public.json'
 import { useLoaderData } from '@remix-run/react'
 import { Dialog } from '@src/ui.web/dialog'
 
@@ -29,6 +30,8 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   switch (lang) {
     case 'en':
       return json({ t: en })
+    case 'cn':
+      return json({ t: cn })
 
     default:
       return json({ t: it })

@@ -1,0 +1,240 @@
+{
+  "general": {
+    "phone": "0039 388 877 0022",
+    "address_extended": "Piazzale Caiazzo, 2 Milano, 20124, Italia Vicino a fermata metro verde M2 Caiazzo",
+    "office_hours": "Monday - Saturday: 9:00 - 19:00",
+    "email": "info@infinitydoc.it"
+  },
+  "menu": {
+    "home": "主页",
+    "about": "关于我们",
+    "services": "服务",
+    "contact": "联系我们",
+    "donate": "捐赠",
+    "find-us": "我们在哪",
+    "book": "在线预约"
+  },
+  "header": {
+    "office_hours_intro": "门诊时间:",
+    "cta_booking": "立即预定"
+  },
+  "hero": {
+    "title": " 只需简单几步即可问诊  ",
+    "description": " 您可以在任何地方任何时间在InfinityDoc进行问诊.",
+    "cta_discover": " 更多... "
+  },
+  "services": {
+    "intro": "我们的服务",
+    "title": "我们的服务根据您的需求量身定制",
+    "description": " Infinitydoc 是一项创新的医疗咨询服务，可让您每周 7 天、每天 24 小时即时联系医生。 如果您愿意，您也可以前往诊所问诊或者上门问诊.",
+    "content": {
+      "list": [
+        {
+          "title": "远程问诊",
+          "description": " 每周 7 天、每天 24 小时提供服务。 立即致电我们的医疗专业人员。",
+          "cta": "立即预订",
+          "price": "€20"
+        },
+        {
+          "title": "视频问诊",
+          "description": "每周 7 天、每天 24 小时提供服务。 立即与我们的医生进行视频通话。",
+          "cta": "立即预订",
+          "price": "€20"
+        },
+        {
+          "title": "门诊预约",
+          "description": " Book a visit at our clinic in the city center of Milan. You can book within 1 h notice.",
+          "cta": "立即预订",
+          "price": "€140"
+        },
+        {
+          "title": " 上门问诊 ",
+          "description": "预约我们位于米兰市中心的诊所。 您可以在提前 1 小时内预订。",
+          "cta": "立即预订",
+          "price": "€40"
+        }
+      ]
+    }
+  },
+  "how_it_works": {
+    "intro": " 关于",
+    "title": " 只需点击几下，您就可以联系当地医生 ",
+    "description": " 我们重新制定的预约就诊的流程，使其变得更简单、更快捷。 借助 Infinitydoc，您只需点击几下即可预约问诊，无需排队等候或前往诊所。",
+    "content": {
+      "steps": [
+        {
+          "title": " 选择就诊类型 ",
+          "description": " 选择电话咨询、视频咨询、诊所访问或上门问诊。"
+        },
+        {
+          "title": " 选择日期和时间 ",
+          "description": " 选择您所需的就诊日期和时间。"
+        },
+        {
+          "title": " 全做完了！ 你的医生正在等你！",
+          "description": "您的医生将在预定时间联系您进行医疗咨询。 "
+        }
+      ]
+    }
+  },
+  "plans": {
+    "intro": " 我们的订阅",
+    "title": " 选择适合您的订阅 ",
+    "description": "通过 Infinity Doc 订阅，您可以访问为您量身定制的服务计划。 以每月固定价格享受我们的所有服务！",
+    "content": [
+      {
+        "title": "基础",
+        "intro": " 满足基本需求 ",
+        "price": "€ 15",
+        "features": [
+          "10次每年7*24视频/电话咨询",
+          "5次门诊问诊 ",
+          "1次体检 ",
+          "1次折扣价格的上门会诊 ",
+          "1次以折扣价格预约专科医生。(最高15%折扣)",
+          "1份免费医疗证明"
+        ],
+        "cta": "了解更多"
+      },
+      {
+        "title": "高级",
+        "intro": " 让您完全安心",
+        "price": "€ 25",
+        "features": [
+          "20次每年7*24视频/电话咨询 ",
+          "5次门诊会诊 ",
+          "2体检",
+          "2次折扣价格的上门会诊",
+          "3次以折扣价格预约专科医生。(最高15%折扣)",
+          "2份免费医疗证明 "
+        ],
+        "cta": " 了解更多!"
+      },
+      {
+        "title": "家庭",
+        "intro": " 为了整个家庭",
+        "price": "€ 40",
+        "features": [
+          "无限次每年7*24视频/电话咨询 ",
+          "15次门诊会诊",
+          "4次健康检查",
+          "3次折扣价格的上门会诊",
+          "5次以折扣价格预约专科医生(最高15%折扣)",
+          "3份免费医疗证明"
+        ],
+        "cta": "了解更多"
+      }
+    ]
+  },
+  "cures": {
+    "intro": "最常治疗的病症",
+    "title": "现在就投资您未来的福祉",
+    "description": "借助 Infinitydoc，您可以在正确的时间立即获得治疗。 无论发生什么情况，我们都能为您提供初步指导，以便在最短的时间内获得最佳结果。 以下是我们咨询中最常解决病症。",
+    "content": {
+      "list": [
+        "咳嗽、感冒、发烧",
+        "尿路感染",
+        "食物中毒、腹泻",
+        "红眼病",
+        "喉咙痛",
+        "鼻窦感染,耳痛",
+        "阴道酵母菌感染",
+        "细菌性阴道炎",
+        "甲状腺功能减退症",
+        "性病实验室检查",
+        "处方补充",
+        "皮疹和湿疹",
+        "昆虫叮咬、皮肤感染",
+        "哮喘",
+        "胃酸反流",
+        "粉刺",
+        "勃起功能障碍",
+        "生殖器疱疹",
+        "唇疱疹",
+        "痛风"
+      ]
+    }
+  },
+  "mission": {
+    "intro": "我们的使命",
+    "title": " 让医疗服务更容易获得和负担得起 ",
+    "description": " 我们希望提高意大利的医疗质量水平，让获得医疗服务更加简单便捷。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "questions": [
+      {
+        "title": " 网上预约如何运作？",
+        "answer": "选择您想要的服务，选择您喜欢的日期和时间并继续付款。 付款完成后，您将收到一封确认电子邮件。"
+      },
+      {
+        "title": "如何付款",
+        "answer": "我们接受信用卡、PayPal、Apple Pay、Google Pay 和银行转账付款。 "
+      },
+      {
+        "title": "我可以取消预订吗？",
+        "answer": "您可以在预约前 12 小时取消预订。 要取消您的预订，请通过电子邮件或电话联系我们。"
+      },
+      {
+        "title": "如何联系",
+        "description": "  您可以通过电子邮件联系我们：info@infinitydoc.it 或致电: +39 3888770022."
+      }
+    ]
+  },
+  "contacts": {
+    "intro": "在这里提供帮助！",
+    "title": "可以来诊所询问.",
+    "description": " 我们期待您来到我们的医疗诊所。 Infinitydoc 位于 Piazzale Caiazzo 2，距离 M2 Caiazzo 绿色地铁站仅几步之遥。",
+    "cta": "联系我们",
+    "card": {
+      "address": "地址",
+      "phone": "电话",
+      "google-map": "在GoogleMap查看地址"
+    }
+  },
+  "footer": {
+    "contact": "联系我们",
+    "description": "InfinityDoc 不断寻求改进其服务，以确保为患者提供最佳体验。",
+    "links": {
+      "menu": {
+        "title": "菜单",
+        "links": [
+          {
+            "title": "我们是谁",
+            "url": "/关于"
+          },
+          {
+            "title": "服务",
+            "url": "/服务"
+          },
+          {
+            "title": "联系",
+            "url": "/联系"
+          }
+        ]
+      },
+      "utils": {
+        "title": "有用的链接",
+        "links": [
+          {
+            "title": "捐款",
+            "url": "/捐款"
+          },
+          {
+            "title": "隐私政策",
+            "url": "/隐私政策"
+          },
+          {
+            "title": "条款",
+            "url": "/条款"
+          }
+        ]
+      }
+    },
+    "contacts": [
+      "Piazzale Caiazzo, 2 Milano, 20124, Italia Near Green Underground M2 stop 'Caiazzo'",
+      "info@infinitydoc.itinfinitydoc.it",
+      "+39 388 877 0022"
+    ]
+  }
+}
