@@ -4,6 +4,7 @@
   "plugins": ["@stylistic"],
   "rules": {
     "@stylistic/indent": ["warn", 2],
+    "@stylistic/jsx/jsx-indent": [2, 2, { "checkAttributes": true }],
     "@stylistic/arrow-parens": ["warn", "as-needed"],
     "@stylistic/block-spacing": ["warn", "always"],
     "@stylistic/padded-blocks": ["warn", { "classes": "always" }],
