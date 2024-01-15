@@ -94,7 +94,7 @@ export default function IndexRouteLayout() {
                 options={Languages}
                 onChange={l => changeLanguage(l)}
                 map={l => (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 select-none">
                     <img
                       src={LanguagesConfig[l].icon.src}
                       alt={LanguagesConfig[l].icon.alt}
