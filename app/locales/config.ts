@@ -9,28 +9,28 @@ type LanguageConfig = {
 }
 
 export const LanguagesConfig: Record<Language, LanguageConfig> = {
-  'it': {
+  it: {
     label: 'Italiano',
     icon: {
       src: 'assets/flags/it.svg',
-      alt: 'Italiano'
-    }
+      alt: 'Italiano',
+    },
   },
-  'en': {
+  en: {
     label: 'English',
     icon: {
       src: 'assets/flags/en.svg',
-      alt: 'English'
-    }
+      alt: 'English',
+    },
   },
 
-  // 'cn': {
-  //   label: 'Chinese',
-  //   icon: {
-  //     src: 'assets/flags/cn.svg',
-  //     alt: 'Chinese'
-  //   }
-  // }
+  cn: {
+    label: '中文',
+    icon: {
+      src: 'assets/flags/cn.svg',
+      alt: '中文',
+    },
+  },
 }
 
 export const Languages = Object.keys(LanguagesConfig) as Language[]

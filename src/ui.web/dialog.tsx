@@ -29,8 +29,8 @@ export function Dialog(ps: DialogProps) {
           <AriaDialog className='outline-none'>
             {({ close }) => (
               <div className='w-full h-full relative'>
-                <button className='absolute bg-stone-200 top-3 right-3 p-2 rounded-full flex justify-center items-center' aria-label='close'>
-                  <X onClick={close} />
+                <button onClick={close} className='absolute bg-stone-200 top-3 right-3 p-2 rounded-full flex justify-center items-center' aria-label='close'>
+                  <X />
                 </button>
 
                 {ps.children}
