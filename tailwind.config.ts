@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', ...fontFamily.sans],
+        sans: ['Open Sans', ...fontFamily.sans],
       },
       colors: {
         'brand': '#04B7AC', //'#415DA1',
@@ -43,7 +43,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-react-aria-components')
-  ],
+  plugins: [require('tailwindcss-react-aria-components')],
 } satisfies Config

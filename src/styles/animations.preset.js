@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 3s linear infinite',
+        'spin-slow': 'spin 5s linear infinite',
         'fade-in': 'fade-in 0.5s ease forwards',
         'fade-rotate-scale-in': 'fade-rotate-scale-in 0.5s ease forwards',
         'fade-rotate-in': 'fade-rotate-in 0.5s ease-in-out forwards',
@@ -15,6 +15,7 @@ module.exports = {
         'float-rotate-lg': 'float-rotate-lg 2s ease-in-out infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
         'checkmark': 'checkmark 0.5s ease-in-out',
+        'gradient': 'gradient 15s ease infinite',
       },
       keyframes: {
         spin: {
@@ -130,6 +131,17 @@ module.exports = {
             transform: 'rotate(-3deg)'
           }
         },
+        'gradient': {
+          '0%': {
+            'background-position': '0% 50%'
+          },
+          '50%': {
+            'background-position': '100% 50%'
+          },
+          to: {
+            'background-position': '0% 50%'
+          }
+        }
       }
     },
   },
