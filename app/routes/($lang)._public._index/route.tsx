@@ -125,7 +125,6 @@ export default function IndexPage() {
             <ServiceCard key={i}>
               <ServiceCard.Icon>{serviceCardsIconMap[i]()}</ServiceCard.Icon>
               <ServiceCard.Title>{c['title']}</ServiceCard.Title>
-              <ServiceCard.Price>{c['price']}</ServiceCard.Price>
               <ServiceCard.Description>
                 {c['description']}
               </ServiceCard.Description>
@@ -136,9 +135,6 @@ export default function IndexPage() {
                       <h1 className="text-3xl font-medium text-brand">
                         {c['title']}
                       </h1>
-                      <span className="text-2xl font-medium text-secondary">
-                        {c['price']}
-                      </span>
                     </div>
                     <div className="flex flex-col gap-4 px-8">
                       <p>{c['description']} </p>
