@@ -12,9 +12,6 @@ const ServiceCardHost = (ps: { children: React.ReactElement[] }) => {
           <Title of="article" brand>
             {h.get(ServiceCard.Title)}
           </Title>
-          <span className="whitespace-nowrap text-2xl font-bold">
-            {h.get(ServiceCard.Price)}
-          </span>
         </div>
         <p
           className="text-secondary"
